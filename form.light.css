@@ -1,0 +1,484 @@
+/* ==========================================================
+   FILALMA — FORM ADESIONE LIGHT (1:1 con DARK)
+   SOLO COLORI / FINITURE (NO layout changes)
+   Coerente con INDEX2 light (white layers + blue/turquoise)
+   ========================================================== */
+
+   :root{
+    --filalma-blue-dark:#031426;
+    --filalma-blue:#0d6efd;
+    --filalma-turquoise:#00c2ff;
+  
+    /* livelli chiari (index2) */
+    --filalma-bg:#f6f9ff;
+    --filalma-bg-2:#ffffff;
+    --filalma-bg-3:#d7eaff;
+  
+    --filalma-text:#0b1b2b;
+    --filalma-muted:#516479;
+  
+    --line: rgba(3,20,38,0.14);
+    --soft: rgba(3,20,38,0.06);
+  
+    /* ombre (stessi numeri del dark, colore light) */
+    --shadow-card: 0 26px 70px rgba(3,20,38,0.16);
+    --shadow-soft: 0 18px 55px rgba(3,20,38,0.14);
+    --shadow-btn:  0 6px 18px rgba(0,194,255,0.22);
+  
+    --ring: 0 0 0 .2rem rgba(0,194,255,0.18);
+  }
+  
+  /* Base */
+  body{
+    background: var(--filalma-bg);
+    color: var(--filalma-text);
+  
+    /* “grain” leggero come index2 */
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(0,194,255,0.07), transparent 35%),
+      radial-gradient(circle at 85% 15%, rgba(13,110,253,0.06), transparent 40%),
+      radial-gradient(circle at 45% 90%, rgba(0,194,255,0.05), transparent 45%);
+    background-attachment: fixed;
+  }
+  
+  .page-wrap{ padding-top: 90px; }
+  
+  /* Fix per classi/inline usate nel dark */
+  .page-wrap .text-white,
+  .page-wrap .text-light{ color: var(--filalma-text) !important; }
+  
+  /* Alcuni elementi hanno inline style="color:white" (es. link download) */
+  .page-wrap [style*="color: white"],
+  .page-wrap [style*="color:white"]{
+    color: var(--filalma-text) !important;
+  }
+  
+  /* ==========================================================
+     HERO (stessa struttura del dark, solo palette light)
+     ========================================================== */
+  
+  .join-hero{
+    position:relative;
+    padding: 44px 0 36px;
+    background:
+      radial-gradient(circle at top left, rgba(13,110,253,0.16), rgba(246,249,255,0.92) 55%, rgba(215,234,255,0.95) 100%);
+    overflow:hidden;
+    border-bottom: 1px solid var(--line);
+  }
+  
+  .join-hero-bg{
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 20% 0, rgba(0,194,255,0.12), transparent 55%),
+      radial-gradient(circle at 80% 18%, rgba(13,110,253,0.12), transparent 60%);
+    pointer-events:none;
+  }
+  
+  .join-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem;
+    border-radius:999px;
+    padding:4px 12px;
+    font-size:.75rem;
+  
+    background: rgba(255,255,255,0.78);
+    color: var(--filalma-blue);
+    border:1px solid rgba(0,194,255,0.22);
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    margin-bottom: 1rem;
+  
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 22px rgba(3,20,38,0.06);
+  }
+  
+  .join-hero-title{
+    font-size: clamp(2.1rem, 3vw + 1rem, 3rem);
+    font-weight: 800;
+    line-height: 1.08;
+    margin-bottom: .8rem;
+    color: #073b7a;
+  }
+  
+  /* manteniamo lo stesso “accent” (testo in gradient) */
+  .join-hero-title .accent{
+    background: linear-gradient(135deg, var(--filalma-turquoise), #60a5fa);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  
+  .join-hero-subtitle{
+    color: var(--filalma-muted);
+    font-size: 1rem;
+    max-width: 720px;
+    margin-bottom: 1rem;
+  }
+  
+  .join-hero-bullets{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .bullet{
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(3,20,38,0.14);
+    font-size: 0.78rem;
+  
+    color: rgba(11,27,43,0.82);
+    background: rgba(255,255,255,0.72);
+  
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 22px rgba(3,20,38,0.05);
+  }
+  
+  .bullet i{
+    color: var(--filalma-blue);
+    margin-right: .35rem;
+  }
+  
+  .join-hero-cta{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:.9rem;
+  }
+  
+  .microcopy{
+    font-size:.88rem;
+    color: var(--filalma-muted);
+  }
+  
+  /* HERO CARD (stessa struttura, solo colori) */
+  .hero-card{
+    background: radial-gradient(circle at top, rgba(0,194,255,0.10), rgba(255,255,255,0.90) 65%, rgba(255,255,255,0.80) 100%);
+    border-radius: 1.4rem;
+    border: 1px solid rgba(0,194,255,0.22);
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow:hidden;
+    padding: 1.25rem 1.25rem 1.05rem;
+    backdrop-filter: blur(12px);
+  }
+  
+  .hero-card::before{
+    content:"";
+    position:absolute;
+    inset:-30%;
+    background: radial-gradient(circle at 0 0, rgba(0,194,255,0.14), transparent 60%);
+    opacity:.75;
+    mix-blend-mode: normal; /* su light evitiamo “screen” per non sporcare */
+    pointer-events:none;
+  }
+  
+  .hero-card > *{ position:relative; z-index:1; }
+  
+  .hero-card-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem;
+    padding:4px 10px;
+    border-radius:999px;
+  
+    background: rgba(255,255,255,0.78);
+    border: 1px solid rgba(3,20,38,0.14);
+    color: rgba(11,27,43,0.80);
+    font-size:.8rem;
+    margin-bottom: .8rem;
+    box-shadow: 0 10px 22px rgba(3,20,38,0.05);
+  }
+  
+  .hero-card-badge i{ color: var(--filalma-turquoise); }
+  
+  .hero-card-list{
+    list-style:none;
+    padding-left:0;
+    margin: 0 0 .8rem 0;
+    color: rgba(11,27,43,0.82);
+    font-size:.92rem;
+  }
+  
+  .hero-card-list li{
+    display:flex;
+    gap:.5rem;
+    align-items:flex-start;
+    margin-bottom: .5rem;
+  }
+  
+  .hero-card-list i{
+    color: var(--filalma-blue);
+    font-size:.85rem;
+    margin-top: .2rem;
+  }
+  
+  .hero-card-footer{
+    border-top: 1px dashed rgba(3,20,38,0.18);
+    padding-top: .7rem;
+    color: var(--filalma-muted);
+    font-size: .86rem;
+  }
+  
+  /* ==========================================================
+     SECTION FORM (stesso layout, sfondo light)
+     ========================================================== */
+  
+  .section-join{
+    padding: 60px 0;
+    background:
+      radial-gradient(circle at 18% 0, rgba(0,194,255,0.06), transparent 55%),
+      linear-gradient(180deg, var(--filalma-bg-3), var(--filalma-bg));
+  }
+  
+  .section-title{
+    font-size: 1.8rem;
+    font-weight: 750;
+    margin-bottom: .4rem;
+    color: #073b7a;
+  }
+  
+  .section-subtitle{
+    color: var(--filalma-muted);
+    font-size: .98rem;
+    max-width: 560px;
+  }
+  
+  /* CARD ELEVATED (usata sia a sinistra sia per form) */
+  .card-elevated{
+    background: radial-gradient(circle at top, rgba(0,194,255,0.10), rgba(255,255,255,0.90) 65%, rgba(255,255,255,0.80) 100%);
+    border-radius: 1.4rem;
+    border: 1px solid rgba(0,194,255,0.22);
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow:hidden;
+    backdrop-filter: blur(12px);
+  }
+  
+  .card-elevated::before{
+    content:"";
+    position:absolute;
+    inset:-30%;
+    background: radial-gradient(circle at 0 0, rgba(0,194,255,0.14), transparent 60%);
+    opacity:.75;
+    mix-blend-mode: normal;
+    pointer-events:none;
+  }
+  
+  .card-elevated > *{ position:relative; z-index:1; }
+  
+  .ico{
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  
+    background: rgba(255,255,255,0.86);
+    border: 1px solid rgba(0,194,255,0.22);
+    color: var(--filalma-blue);
+    box-shadow: 0 10px 22px rgba(3,20,38,0.05);
+  }
+  
+  /* Note box: nel dark usavi text-light */
+  .card-elevated .fw-bold.text-light{
+    color: rgba(11,27,43,0.90) !important;
+  }
+  
+  .join-highlights .hl{
+    display:flex;
+    gap:.6rem;
+    align-items:center;
+    padding:.6rem .75rem;
+    border-radius: 1rem;
+  
+    border: 1px dashed rgba(3,20,38,0.18);
+    background: rgba(255,255,255,0.70);
+    color: rgba(11,27,43,0.82);
+    font-size: .9rem;
+    margin-top: .6rem;
+  }
+  
+  .join-highlights .hl i{ color: var(--filalma-turquoise); }
+  
+  /* ==========================================================
+     FORM CONTROLS (stessa struttura, colori light)
+     ========================================================== */
+  
+  .form-label{
+    font-size:.85rem;
+    color: rgba(11,27,43,0.78);
+    margin-bottom:.35rem;
+  }
+  
+  .form-control{
+    background: rgba(255,255,255,0.88);
+    border: 1px solid rgba(3,20,38,0.14);
+    color: rgba(11,27,43,0.92);
+    border-radius: .95rem;
+    padding: .7rem .95rem;
+  }
+  
+  .form-control::placeholder{
+    color: rgba(81,100,121,0.70);
+  }
+  
+  .form-control:focus{
+    border-color: rgba(0,194,255,0.55);
+    box-shadow: var(--ring);
+    background: rgba(255,255,255,0.95);
+    color: rgba(11,27,43,0.95);
+  }
+  
+  .form-check-label{
+    color: var(--filalma-muted);
+    font-size: .92rem;
+  }
+  
+  .form-check-input{
+    background-color: rgba(255,255,255,0.92);
+    border-color: rgba(3,20,38,0.22);
+  }
+  
+  .form-check-input:checked{
+    background-color: var(--filalma-turquoise);
+    border-color: var(--filalma-turquoise);
+  }
+  
+  .required::after{
+    content:" *";
+    color: var(--filalma-turquoise);
+    font-weight: 700;
+  }
+  
+  .tiny{
+    font-size:.85rem;
+    color: var(--filalma-muted);
+  }
+  
+  /* ==========================================================
+     BUTTONS (coerenti con index2 light)
+     ========================================================== */
+  
+  .btn-accent{
+    border-radius: 999px;
+    padding: .7rem 1.2rem;
+    font-weight: 650;
+    border:none;
+    background: linear-gradient(135deg, var(--filalma-blue), var(--filalma-turquoise));
+    color:#fff;
+    box-shadow: var(--shadow-btn);
+  }
+  
+  .btn-accent:hover{
+    filter: brightness(1.06);
+    box-shadow: 0 10px 26px rgba(0,194,255,0.32);
+    color:#fff;
+  }
+  
+  /* Questo bottone esiste nel dark e lo usi come download */
+  .btn-outline-soft{
+    border-radius: 999px;
+    border: 1px solid rgba(13,110,253,0.18);
+    background: rgba(255,255,255,0.78);
+    color: rgba(11,27,43,0.92) !important;
+    font-weight: 800;
+    padding: .65rem 1rem;
+    box-shadow: 0 10px 22px rgba(3,20,38,0.06);
+  }
+  
+  .btn-outline-soft:hover{
+    background: rgba(255,255,255,0.92);
+    color: rgba(11,27,43,0.95) !important;
+    border-color: rgba(0,194,255,0.24);
+  }
+  
+  .join-form-card{
+    backdrop-filter: blur(10px);
+  }
+  
+  /* ==========================================================
+     FOOTER (light)
+     ========================================================== */
+  
+  .page-footer{
+    padding-block: 18px;
+    background: linear-gradient(180deg, #ffffff, var(--filalma-bg));
+    font-size:.8rem;
+    color: rgba(11,27,43,0.62);
+    border-top: 1px solid var(--line);
+  }
+  
+  /* ==========================================================
+     TOP SLIDER (nel tuo HTML è in <style> e resta “dark”)
+     Se vuoi la resa light coerente, senza cambiare layout:
+     ========================================================== */
+  
+  /* ==========================================================
+   TOP SLIDER — micro-rifinitura istituzionale (LIGHT)
+   Solo finiture/colore, NO layout changes
+   Incollare in fondo a form.light.css
+   ========================================================== */
+
+/* card del carousel: più “white layered” + cornice più pulita */
+.top-carousel{
+  background:
+    radial-gradient(circle at 18% 10%, rgba(0,194,255,0.10), transparent 45%),
+    radial-gradient(circle at 82% 20%, rgba(13,110,253,0.08), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.84)) !important;
+
+  border: 1px solid rgba(13,110,253,0.16) !important;
+  box-shadow: 0 28px 70px rgba(3,20,38,0.14) !important;
+}
+
+/* overlay: meno “nero”, più blu istituzionale (leggibilità caption) */
+.carousel-overlay{
+  background:
+    radial-gradient(circle at 20% 15%, rgba(0,194,255,0.14), transparent 55%),
+    radial-gradient(circle at 80% 25%, rgba(13,110,253,0.14), transparent 60%),
+    linear-gradient(to top, rgba(3,20,38,0.55), rgba(3,20,38,0.03)) !important;
+}
+
+/* kicker: pill glass coerente con index2 */
+.cap-kicker{
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.72)) !important;
+  color: var(--filalma-blue) !important;
+  border: 1px solid rgba(0,194,255,0.22) !important;
+  box-shadow: 0 12px 26px rgba(3,20,38,0.10) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* titolo: più “istituzionale” e stabile in contrasto */
+.cap-title{
+  color: rgba(255,255,255,0.96) !important;
+  text-shadow: 0 16px 42px rgba(3,20,38,0.58) !important;
+}
+
+/* testo: leggermente più leggibile e pulito */
+.cap-text{
+  color: rgba(255,255,255,0.92) !important;
+  text-shadow: 0 14px 34px rgba(3,20,38,0.52) !important;
+}
+
+/* indicatori: effetto “gioiello” come index2 */
+.top-carousel .carousel-indicators [data-bs-target]{
+  border: 1px solid rgba(0,194,255,0.55) !important;
+  background: rgba(255,255,255,0.75) !important;
+  box-shadow: 0 10px 18px rgba(3,20,38,0.10) !important;
+  opacity: 1 !important;
+}
+
+.top-carousel .carousel-indicators .active{
+  background: linear-gradient(135deg, var(--filalma-blue), var(--filalma-turquoise)) !important;
+  border-color: rgba(255,255,255,0.65) !important;
+}
+
+/* controlli: meno “dark” e più coerenti (solo filtro, no layout) */
+.top-carousel .carousel-control-prev-icon,
+.top-carousel .carousel-control-next-icon{
+  filter: drop-shadow(0 10px 22px rgba(3,20,38,0.45)) saturate(1.05) !important;
+}

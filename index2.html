@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Filalma - Consorzio Stabile Global Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icone (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link id="theme-light" rel="stylesheet" href="index2.light.css">
+  <link id="theme-dark" rel="stylesheet" href="index2.css">
+  <style>
+    :root {
+      --filalma-blue-dark: #031426;
+      --filalma-blue: #0d6efd;
+      --filalma-turquoise: #00c2ff;
+      --filalma-text: #f8f9fa;
+      --filalma-muted: #a6b0c3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #020712;
+      color: var(--filalma-text);
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* NAVBAR */
+    /* .navbar {
+      background: rgba(3, 20, 38, 0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .navbar-brand img {
+      height: 44px;
+      object-fit: contain;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus,
+    .navbar-nav .nav-link.active {
+      color: var(--filalma-turquoise);
+    }
+
+    .navbar-toggler {
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 10px;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: 0 0 0 0.15rem rgba(0, 194, 255, 0.55);
+    }
+
+    .navbar-toggler-icon-custom {
+      font-size: 1.15rem;
+      color: #ffffff;
+    }
+
+    .btn-nav {
+      border-radius: 999px;
+      padding-inline: 1.1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .btn-home {
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #ffffff;
+      background: transparent;
+    }
+
+    .btn-home:hover {
+      background: rgba(255,255,255,0.1);
+      color: #ffffff;
+    } */
+
+    /* .btn-consorziate {
+      background: linear-gradient(135deg, var(--filalma-blue), var(--filalma-turquoise));
+      border: none;
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 194, 255, 0.4);
+    }
+
+    .btn-consorziate:hover {
+      filter: brightness(1.06);
+      box-shadow: 0 8px 24px rgba(0, 194, 255, 0.55);
+      color: #ffffff;
+    } */
+
+    /* .offcanvas {
+      background: #020814;
+    }
+
+    .offcanvas-header {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .offcanvas-title {
+      font-size: 1rem;
+      color: #ffffff;
+    }
+
+    .dropdown-menu {
+      background: #020814;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(0,194,255,0.3);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .dropdown-item {
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      padding-block: 0.45rem;
+    }
+
+    .dropdown-item:hover {
+      background: rgba(13,110,253,0.15);
+      color: #ffffff;
+    } */
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding-top: 90px;
+      padding-bottom: 40px;
+      background: radial-gradient(circle at top left, #073b7a, #020712 60%, #000000);
+      overflow: hidden;
+    }
+
+    .hero-overlay-blur {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 0, rgba(0, 194, 255, 0.12), transparent 55%),
+        radial-gradient(circle at 80% 20%, rgba(13, 110, 253, 0.25), transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      background: rgba(0, 0, 0, 0.45);
+      color: var(--filalma-turquoise);
+      border: 1px solid rgba(0, 194, 255, 0.5);
+      margin-bottom: 1rem;
+    }
+
+    .hero-kicker span {
+      color: #e5e7eb;
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 3.2vw + 1rem, 3.4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span.accent {
+      background: linear-gradient(135deg, #00c2ff, #60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      max-width: 600px;
+      color: var(--filalma-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 0.75rem;
+      color: #cbd5f5;
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-secondary-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--filalma-muted);
+    }
+
+    .hero-secondary-link i {
+      font-size: 0.75rem;
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      color: var(--filalma-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .hero-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hero-meta-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.6);
+    }
+
+    /* HERO RIGHT CARD */
+    .hero-right-card {
+      position: relative;
+      background: radial-gradient(circle at top, rgba(0, 194, 255, 0.15), rgba(15, 23, 42, 1));
+      border-radius: 1.5rem;
+      border: 1px solid rgba(0, 194, 255, 0.45);
+      padding: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+      min-height: 260px;
+    }
+
+    .hero-right-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 0 0, rgba(0, 194, 255, 0.25), transparent 60%);
+      opacity: 0.7;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .hero-right-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--filalma-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-right-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #e5e7eb;
+    }
+
+    .hero-right-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--filalma-turquoise);
+      border: 1px solid rgba(0, 194, 255, 0.6);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-right-list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      color: #cbd5f5;
+    }
+
+    .hero-right-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-right-list i {
+      font-size: 0.7rem;
+      color: var(--filalma-turquoise);
+    }
+
+    .hero-right-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--filalma-muted);
+      border-top: 1px dashed rgba(148, 163, 184, 0.4);
+      padding-top: 0.7rem;
+      margin-top: 0.4rem;
+    }
+
+    /* CANVAS SECTION */
+    .canvas-section {
+      position: relative;
+      background: radial-gradient(circle at top, #05213e, #020712);
+      padding-block: 40px;
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    #filalmaCanvas {
+      width: 100%;
+      height: 220px;
+      display: block;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(0, 194, 255, 0.4);
+      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.8);
+      background: radial-gradient(circle at 10% 0, #021526, #06162b 35%, #020712 100%);
+    }
+
+    .canvas-caption {
+      margin-top: 0.9rem;
+      font-size: 0.8rem;
+      color: var(--filalma-muted);
+      text-align: center;
+    }
+
+    /* GENERIC SECTION */
+    .section {
+      padding-block: 60px;
+      background: #020712;
+    }
+
+    .section-alt {
+      background: #020814;
+    }
+
+    .section-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .section-kicker {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--filalma-turquoise);
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--filalma-muted);
+      font-size: 0.95rem;
+    }
+
+    /* CARDS SERVIZI */
+    .service-card {
+      background: radial-gradient(circle at top, rgba(0, 194, 255, 0.12), #020814);
+      border-radius: 1.1rem;
+      border: 1px solid rgba(15, 23, 42, 1);
+      padding: 1.2rem 1.3rem;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 194, 255, 0.7);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.85);
+      background: radial-gradient(circle at top, rgba(0, 194, 255, 0.18), #020814);
+    }
+
+    .service-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(0, 194, 255, 0.6);
+      color: var(--filalma-turquoise);
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .service-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .service-text {
+      font-size: 0.9rem;
+      color: var(--filalma-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.75rem;
+      color: #cbd5f5;
+    }
+
+    .service-tag i {
+      font-size: 0.7rem;
+      color: var(--filalma-turquoise);
+    }
+
+    /* BIENNALE SECTION */
+    .biennale-card {
+      background: radial-gradient(circle at top left, rgba(0, 194, 255, 0.25), #020814 50%, #000000 100%);
+      border-radius: 1.4rem;
+      border: 1px solid rgba(0, 194, 255, 0.55);
+      padding: 1.5rem;
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .biennale-badge {
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(0, 194, 255, 0.8);
+      color: var(--filalma-turquoise);
+      margin-bottom: 0.8rem;
+    }
+
+    .biennale-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .biennale-text {
+      font-size: 0.9rem;
+      color: #d1d5db;
+      margin-bottom: 1rem;
+    }
+
+    .biennale-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .biennale-tag {
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--filalma-muted);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .biennale-meta {
+      font-size: 0.8rem;
+      color: var(--filalma-muted);
+    }
+
+    /* VANTAGGI SOCI */
+    .benefit-item {
+      display: flex;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .benefit-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(0, 194, 255, 0.7);
+      color: var(--filalma-turquoise);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .benefit-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .benefit-text {
+      font-size: 0.88rem;
+      color: var(--filalma-muted);
+    }
+
+    /* CTA FINALE */
+    .cta-section {
+      padding-block: 60px;
+      background: radial-gradient(circle at center, #031426, #01030a);
+      border-top: 1px solid rgba(15, 23, 42, 1);
+    }
+
+    .cta-card {
+      background: radial-gradient(circle at top, rgba(0, 194, 255, 0.23), #020814 55%);
+      border-radius: 1.6rem;
+      border: 1px solid rgba(0, 194, 255, 0.7);
+      padding: 2rem 1.6rem;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.9);
+    }
+
+    .cta-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-text {
+      font-size: 0.93rem;
+      color: var(--filalma-muted);
+      margin-bottom: 1.3rem;
+    }
+
+    /* FOOTER */
+    footer {
+      padding-block: 18px;
+      background: #02030a;
+      font-size: 0.8rem;
+      color: var(--filalma-muted);
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    @media (max-width: 767.98px) {
+      .hero {
+        padding-top: 80px;
+        padding-bottom: 30px;
+      }
+
+      .hero-right-card {
+        margin-top: 1.5rem;
+      }
+
+      #filalmaCanvas {
+        height: 200px;
+      }
+    }
+
+    .cert-card {
+      background: #001f48;
+      border-radius: 1rem;
+      box-shadow: 0 6px 16px rgba(40, 120, 225, 0.10);
+      padding: 2rem 1.5rem 1.4rem 1.5rem;
+      text-align: center;
+      transition: transform .22s, box-shadow .22s;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(40, 120, 225, 0.12);
+    }
+
+    .cert-badge {
+      font-size: 3rem;
+      color: #2878e1;
+      margin-bottom: 1rem;
+    }
+  </style>
+  <style>
+    /* ===== TOP SLIDER ===== */
+    .top-slider {
+      margin-top: 10px;
+      padding: 10px 0 0;
+    }
+
+    .top-carousel {
+      border-radius: 1.4rem;
+      overflow: hidden;
+      border: 1px solid rgba(0, 194, 255, 0.30);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.85);
+      background: #020814;
+      position: relative;
+    }
+
+    .top-carousel .carousel-inner {
+      border-radius: 1.4rem;
+    }
+
+    .top-carousel img {
+      object-fit: cover;
+    }
+
+    .carousel-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 15%, rgba(0, 194, 255, 0.18), transparent 55%),
+        radial-gradient(circle at 80% 25%, rgba(13, 110, 253, 0.18), transparent 60%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.05));
+      pointer-events: none;
+    }
+
+    .top-carousel .carousel-caption {
+      left: 6%;
+      right: 6%;
+      bottom: 10%;
+      text-shadow: 0 10px 35px rgba(0, 0, 0, 0.75);
+    }
+
+    .cap-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: .75rem;
+      background: rgba(0, 0, 0, .45);
+      color: var(--filalma-turquoise);
+      border: 1px solid rgba(0, 194, 255, .5);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-bottom: .6rem;
+    }
+
+    .cap-title {
+      font-size: clamp(1.25rem, 2vw + .9rem, 2rem);
+      font-weight: 800;
+      margin-bottom: .35rem;
+    }
+
+    .cap-text {
+      color: rgba(226, 232, 240, 0.85);
+      font-size: 1rem;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    /* “premium” */
+    .top-carousel .carousel-control-prev,
+    .top-carousel .carousel-control-next {
+      width: 12%;
+    }
+
+    .top-carousel .carousel-control-prev-icon,
+    .top-carousel .carousel-control-next-icon {
+      filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.75));
+    }
+
+    /* indicatori più discreti */
+    .top-carousel .carousel-indicators [data-bs-target] {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 194, 255, 0.55);
+      background: rgba(2, 8, 20, 0.6);
+      opacity: 1;
+    }
+
+    .top-carousel .carousel-indicators .active {
+      background: var(--filalma-turquoise);
+    }
+
+    */
+
+    /* /* spacing: lo slider “stacca” dalla hero  */
+    .join-hero {
+      padding-top: 36px;
+      /* prima era 44px  */
+    }
+
+    @media (max-width: 575.98px) {
+      .top-slider {
+        margin-top: 6px;
+        padding-top: 6px;
+      }
+
+      .top-carousel {
+        border-radius: 1.1rem;
+      }
+
+      .top-carousel .carousel-caption {
+        bottom: 8%;
+      }
+
+      .cap-text {
+        font-size: .95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div id="navbar-container"></div>
+  </nav>
+  <br>
+  <br>
+
+  <section class="top-slider" aria-label="Filalma highlights" style="margin-top: 2rem;">
+    <div class="container">
+      <div id="filalmaTopCarousel" class="carousel slide carousel-fade top-carousel" data-bs-ride="carousel"
+        data-bs-interval="6500">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#filalmaTopCarousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#filalmaTopCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#filalmaTopCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner ratio ratio-16x9">
+          <!-- SLIDE 1 -->
+          <div class="carousel-item active">
+
+            <img src="img/home2.jpeg" class="d-block w-100" alt="Filalma - Slide 1">
+
+            <div class="carousel-overlay"></div>
+
+            <div class="carousel-caption text-start">
+              <div class="cap-kicker">
+                <i class="fa-solid fa-globe"></i>
+                Global Services
+              </div>
+              <h2 class="cap-title">Un unico consorzio, molte competenze</h2>
+              <p class="cap-text d-none d-md-block">
+                Facility management, pulizie,traslochi, manutenzioni e servizi integrati con regia unica.
+              </p>
+            </div>
+          </div>
+
+          <!-- SLIDE 2 -->
+          <div class="carousel-item">
+            <img src="img/consorzioHome.jpeg" class="d-block w-100" alt="Filalma - Slide 2">
+
+            <div class="carousel-overlay"></div>
+
+            <div class="carousel-caption text-start">
+              <div class="cap-kicker">
+                <i class="fa-solid fa-handshake-angle"></i>
+                Network operativo
+              </div>
+              <h2 class="cap-title">Cresci nel network Filalma</h2>
+              <p class="cap-text d-none d-md-block">
+                Candidati per entrare nel consorzio e accedere a commesse strutturate e sinergie tra aziende.
+              </p>
+            </div>
+          </div>
+          <!-- SLIDE 3 -->
+<div class="carousel-item">
+  <img src="img/fila1.png" class="d-block w-100" alt="Filalma - Slide 3">
+
+  <div class="carousel-overlay"></div>
+
+  <div class="carousel-caption d-flex justify-content-between align-items-end">
+    <div class="text-start">
+      <div class="cap-kicker">
+        <i class="fa-solid fa-seedling"></i>
+        Partnership
+      </div>
+      <h2 class="cap-title">Cresciamo insieme</h2>
+      <p class="cap-text d-none d-md-block">
+        Un network operativo pensato per aziende che vogliono scalare su commesse strutturate.
+      </p>
+    </div>
+
+    <div class="text-end">
+      <a href="diventaConsorziata.html" class="btn btn-primary btn-sm px-3 py-2 rounded-pill">
+        Scopri di più <i class="fa-solid fa-arrow-right ms-1"></i>
+      </a>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#filalmaTopCarousel" data-bs-slide="prev"
+          aria-label="Slide precedente">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#filalmaTopCarousel" data-bs-slide="next"
+          aria-label="Slide successiva">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- HERO -->
+  <header id="top" class="hero">
+    <div class="hero-overlay-blur"></div>
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <div class="hero-kicker">
+            <i class="fa-solid fa-globe"></i>
+            Fornitore <strong>Global Services</strong>
+            <span>per logistica, servizi e facility</span>
+          </div>
+
+          <h1 class="hero-title">
+            Consorzio stabile <span class="accent">Filalma</span><br>
+            facility management e servizi integrati.
+          </h1>
+
+          <p class="hero-subtitle">
+            Filalma è un consorzio di imprese con esperienza pluridecennale nei settori
+            <strong>traslochi</strong>, <strong>facchinaggio</strong>, <strong>pulizie civili e industriali</strong>,
+            <strong>manutenzioni</strong>, <strong>aree verdi</strong>, gestione di <strong>depositi e
+              magazzini</strong> e
+            <strong>servizi di giardinaggio</strong>.
+          </p>
+
+          <div class="hero-badges">
+            <div class="hero-badge"><i class="fa-solid fa-users-gear"></i> Consorzio di aziende specializzate</div>
+            <div class="hero-badge"><i class="fa-solid fa-award"></i> Esperienza &gt; 10 anni</div>
+            <div class="hero-badge"><i class="fa-solid fa-recycle"></i> Focus su efficienza e sostenibilità</div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#servizi" class="btn btn-consorziate btn-nav">
+              Scopri i servizi
+            </a>
+            <a href="#biennale" class="hero-secondary-link">
+              <i class="fa-regular fa-circle-play"></i>
+              Progetto in corso: Biennale di Venezia
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <i class="fa-solid fa-building"></i> Consorzio stabile multi-servizio
+            </div>
+            <span class="hero-meta-dot"></span>
+            <div class="hero-meta-item">
+              <i class="fa-solid fa-check-circle"></i> Unico interlocutore per più attività
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="hero-right-card">
+            <div class="hero-right-label">Servizi di maggior prestigio</div>
+            <div class="hero-right-title">Servizi alla Biennale di Venezia</div>
+            <div class="hero-right-pill">
+              <i class="fa-solid fa-location-dot"></i>
+              Venezia · In corso
+            </div>
+
+            <ul class="hero-right-list">
+              <li><i class="fa-solid fa-circle"></i> Trasloco e movimentazione materiali</li>
+              <li><i class="fa-solid fa-circle"></i> Facchinaggio dedicato per allestimenti</li>
+              <li><i class="fa-solid fa-circle"></i> Pulizie civili e industriali degli spazi</li>
+            </ul>
+
+            <div class="hero-right-footer">
+              <span><i class="fa-solid fa-layer-group"></i> Servizio integrato global services</span>
+              <span><i class="fa-regular fa-clock"></i> Coordinamento continuo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- GREEN & SUSTAINABILITY -->
+<section class="green-section" id="green">
+  <div class="container">
+    <div class="row align-items-center g-4">
+
+      <!-- TEXT -->
+      <div class="col-lg-6">
+        <div class="green-kicker">
+          <i class="fa-solid fa-leaf"></i>
+          Impegno ambientale
+        </div>
+
+        <h2 class="green-title">
+          Filalma è attivamente impegnata nella
+          <span>riduzione della CO₂</span>
+          e nella tutela dell’ambiente.
+        </h2>
+
+        <p class="green-text">
+          Il consorzio stabile Filalma adotta pratiche operative volte
+          all’abbassamento delle emissioni di CO₂, attraverso ottimizzazione logistica,
+          pianificazione integrata dei servizi e utilizzo di imballaggi progettati
+          per ridurre l’impatto ambientale.
+        </p>
+
+        <p class="green-text">
+          Utilizziamo materiali di imballaggio a basso impatto,
+          soluzioni riutilizzabili e procedure orientate all’efficienza
+          nelle attività operative.
+        </p>
+
+        <!-- COUNTER -->
+        <div class="green-metric" aria-label="CO2 assorbita">
+          <div class="metric-ico" aria-hidden="true">
+            <i class="fa-solid fa-cloud-arrow-down"></i>
+          </div>
+
+          <div class="metric-body">
+            <div class="metric-value">
+              <span id="co2Counter" data-target="2900">0</span>
+              <span class="metric-unit">kg</span>
+            </div>
+            <div class="metric-label">CO₂ assorbiti dall’atmosfera</div>
+            <div class="metric-note">Valore indicativo aggiornabile con rendicontazione periodica.</div>
+          </div>
+        </div>
+
+        <div class="green-cta">
+          <a href="#certificazioni" class="btn-leaf">
+            <i class="fa-solid fa-certificate me-2"></i>
+            La nostra certificazione
+          </a>
+        </div>
+      </div>
+
+      <!-- IMAGES -->
+      <div class="col-lg-6">
+        <div class="green-media-grid">
+          <div class="green-media">
+            <img src="img/green1.png" alt="Sostenibilità Filalma">
+          </div>
+          <div class="green-media">
+            <img src="img/green2.png" alt="Imballaggi sostenibili">
+          </div>
+        </div>
+        <div class="green-badges">
+          <div class="green-packaging-badge">
+            <i class="fa-solid fa-box-open"></i>
+            Packaging a basso impatto ambientale
+          </div>
+        
+          <div class="green-packaging-badge green-cam-badge">
+            <i class="fa-solid fa-leaf"></i>
+            Prodotti pulizia conformi CAM
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- CANVAS ANIMATO -->
+  <section class="canvas-section">
+    <div class="container">
+      <canvas id="filalmaCanvas"></canvas>
+      <div class="canvas-caption">
+        Visual identity dinamica · <strong>Consorzio stabile Filalma</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE SERVIZI -->
+  <section id="servizi" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Servizi</div>
+        <h2 class="section-title">Un unico consorzio, molti servizi integrati</h2>
+        <p class="section-subtitle">
+          Filalma coordina aziende consorziate con forte specializzazione operativa, in grado di erogare
+          servizi integrati per realtà pubbliche e private, eventi, istituzioni culturali e grandi strutture.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Trasloco -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+            <h3 class="service-title">Trasloco</h3>
+            <p class="service-text">
+              Gestione completa di traslochi per uffici, sedi operative, archivi e spazi espositivi,
+              con pianificazione e tempi certi.
+            </p>
+            <div class="service-tag">
+              <i class="fa-solid fa-check"></i> Movimentazioni delicate coordinate
+            </div>
+          </div>
+        </div>
+
+        <!-- Facility management -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-building-circle-check"></i></div>
+            <h3 class="service-title">Facility management</h3>
+            <p class="service-text">
+              Servizi di gestione integrata degli immobili, con manutenzioni e supporti operativi
+              coordinati da un unico interlocutore.
+            </p>
+            <div class="service-tag">
+              <i class="fa-solid fa-check"></i> Visione globale e operatività concreta
+            </div>
+          </div>
+        </div>
+
+        <!-- Pulizie civili -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+            <h3 class="service-title">Pulizie civili</h3>
+            <p class="service-text">
+              Servizi di pulizia per uffici, spazi pubblici e privati, con standard qualitativi
+              elevati e attenzione all’immagine.
+            </p>
+            <div class="service-tag">
+              <i class="fa-solid fa-check"></i> Ambienti accoglienti e curati
+            </div>
+          </div>
+        </div>
+
+        <!-- Pulizie industriali -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-industry"></i></div>
+            <h3 class="service-title">Pulizie industriali</h3>
+            <p class="service-text">
+              Interventi strutturati in contesti produttivi e logistici, nel rispetto di
+              procedure, sicurezza e continuità operativa.
+            </p>
+            <div class="service-tag">
+              <i class="fa-solid fa-check"></i> Efficienza e sicurezza al centro
+            </div>
+          </div>
+        </div>
+
+        <!-- Manutenzioni -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3 class="service-title">Manutenzioni</h3>
+            <p class="service-text">
+              Manutenzioni ordinarie e straordinarie su immobili, strutture e impianti
+              a supporto delle attività quotidiane.
+            </p>
+            <div class="service-tag">
+              <i class="fa-solid fa-check"></i> Continuità operativa garantita
+            </div>
+          </div>
+        </div>
+
+        <!-- Aree verdi -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-tree"></i></div>
+            <h3 class="service-title">Aree verdi</h3>
+            <p class="service-text">
+              Cura e manutenzione di giardini, parchi e spazi esterni aziendali, per un’immagine
+              sempre ordinata e professionale.
+            </p>
+            <div class="service-tag">
+              <i class="fa-solid fa-check"></i> Valorizzazione degli spazi esterni
+            </div>
+          </div>
+        </div>
+
+        <!-- Deposito -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-warehouse"></i></div>
+            <h3 class="service-title">Deposito e magazzino</h3>
+            <p class="service-text">
+              Soluzioni di deposito e gestione magazzino, con movimentazione, stoccaggio
+              e gestione delle giacenze.
+            </p>
+            <div class="service-tag">
+              <i class="fa-solid fa-check"></i> Logistica integrata e tracciabile
+            </div>
+          </div>
+        </div>
+
+        <!-- Servizi di giardinaggio -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3 class="service-title">Servizi di giardinaggio</h3>
+            <p class="service-text">
+              Interventi specifici di giardinaggio e manutenzione del verde,
+              dalla potatura alla riqualificazione degli spazi.
+            </p>
+            <div class="service-tag">
+              <i class="fa-solid fa-check"></i> Dettaglio e cura estetica
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIENNALE DI VENEZIA -->
+  <section id="biennale" class="section-alt">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <div class="section-header text-start mb-3">
+            <div class="section-kicker">Progetto in corso</div>
+            <h2 class="section-title">Biennale di Venezia · Servizi integrati</h2>
+            <p class="section-subtitle text-start">
+              Filalma è attualmente impegnata nell’erogazione di un servizio di
+              <strong>trasloco</strong>, <strong>facchinaggio</strong> e <strong>pulizia</strong>
+              alla Biennale di Venezia, in qualità di fornitore <strong>global services</strong>.
+            </p>
+          </div>
+          <p style="color: var(--filalma-muted); font-size:0.95rem;">
+            Un contesto di alto profilo che richiede coordinamento, attenzione ai dettagli e
+            operatività discreta, con team in grado di lavorare in presenza di allestimenti,
+            opere e vincoli organizzativi complessi.
+          </p>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="biennale-card">
+            <div class="biennale-badge">
+              <i class="fa-solid fa-briefcase"></i> Global services attivo
+            </div>
+            <h3 class="biennale-title">Un unico partner per più esigenze</h3>
+            <p class="biennale-text">
+              La forza del consorzio Filalma è quella di offrire un interlocutore unico in grado di coordinare
+              più servizi: movimentazione materiale, supporto facchinaggio e pulizie, mantenendo continuità,
+              sicurezza e standard elevati.
+            </p>
+
+            <div class="biennale-tags">
+              <span class="biennale-tag"><i class="fa-solid fa-people-carry-box me-1"></i> Squadre dedicate</span>
+              <span class="biennale-tag"><i class="fa-solid fa-stopwatch me-1"></i> Rispetto delle finestre
+                operative</span>
+              <span class="biennale-tag"><i class="fa-solid fa-shield-halved me-1"></i> Procedure e sicurezza</span>
+              <span class="biennale-tag"><i class="fa-solid fa-handshake-angle me-1"></i> Coordinamento con
+                l’ente</span>
+            </div>
+
+            <div class="biennale-meta">
+              <i class="fa-solid fa-circle-info me-1"></i>
+              Un esempio concreto di come il consorzio possa gestire progetti complessi come fornitore globale.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <section class="cert-section" id="certificazioni" style="color: rgb(255, 255, 255);">
+      <div class="container" style="padding-bottom: 2rem;">
+        <h2 class="fw-bold text-center mb-5 text-primary" style="padding-top: 2rem;">Le nostre certificazioni</h2>
+
+        <div class="row g-4 justify-content-center">
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="cert-card animate__animated animate__fadeIn">
+              <span class="cert-badge"><i class="fa-solid fa-award"></i></span>
+              <h4 class="fw-bold mb-2">ISO 9001:2015</h4>
+              <p class="mb-3">
+                Filalma Consorzio Stabile è orgogliosa di offrire servizi conformi ai più alti standard internazionali
+                di qualità.<br>
+                Scarica qui la nostra certificazione ufficiale:
+              </p>
+              <a href="/pdf/SAI SERVICE SRL ISO 9001_URS.pdf" class="btn btn-primary" target="_blank">
+                <i class="fa-solid fa-file-pdf me-2"></i> Visualizza Certificato PDF
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="cert-card animate__animated animate__fadeIn">
+              <span class="cert-badge"><i class="fa-solid fa-award"></i></span>
+              <h4 class="fw-bold mb-2">ISO 14001:2015</h4>
+              <p class="mb-3">
+                Filalma Consorzio Stabile è orgogliosa di offrire servizi conformi ai sistemi di gestione
+                ambientale.<br>
+                Scarica qui la nostra certificazione ufficiale:
+              </p>
+              <a href="/pdf/SAI SERVICE SRL ISO 14001_URS.pdf" class="btn btn-primary" target="_blank">
+                <i class="fa-solid fa-file-pdf me-2"></i> Visualizza Certificato PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- Aggiungi qui altre card -->
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CHI SIAMO / GOVERNANCE / VANTAGGIO SOCI / CERTIFICAZIONI -->
+    <section id="chi-siamo" class="section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="section-header text-start">
+              <div class="section-kicker">Consorzio</div>
+              <h2 class="section-title">Chi siamo</h2>
+              <p class="section-subtitle text-start">
+                Filalma è un <strong>consorzio stabile</strong> che riunisce aziende con più di dieci anni
+                di esperienza operativa nei settori traslochi, logistica, servizi di pulizia, manutenzioni
+                e gestione delle aree verdi.
+              </p>
+            </div>
+
+            <p style="color: var(--filalma-muted); font-size:0.94rem;">
+              La logica consortile permette di concentrare competenze, mezzi e risorse, garantendo
+              al cliente finale un servizio strutturato, scalabile e coordinato, mantenendo al tempo stesso
+              la flessibilità delle singole realtà operative.
+            </p>
+
+            <section id="governance" style="margin-top: 1.7rem;">
+              <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:0.4rem;">Governance</h3>
+              <p style="color: var(--filalma-muted); font-size:0.9rem;">
+                La governance del consorzio è orientata alla trasparenza, alla pianificazione condivisa e al controllo
+                puntuale delle attività. La struttura organizzativa coordina le aziende consorziate, definendo ruoli,
+                responsabilità e processi chiari verso il cliente.
+              </p>
+            </section>
+          </div>
+
+          <div class="col-lg-6">
+            <section id="vantaggio-soci">
+              <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:0.8rem;">Il vantaggio di essere soci Filalma
+              </h3>
+
+              <div class="benefit-item">
+                <div class="benefit-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <div>
+                  <div class="benefit-title">Accesso a gare e commesse strutturate</div>
+                  <div class="benefit-text">
+                    I soci possono partecipare, tramite il consorzio, a commesse che richiedono
+                    capacità organizzative e operative su larga scala.
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                  <div class="benefit-title" style="color: #95c8c3;">Sinergia tra aziende</div>
+                  <div class="benefit-text">
+                    Condivisione di competenze, mezzi e best practice tra imprese con storicità
+                    consolidata nei rispettivi ambiti.
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="benefit-title">Crescita e sviluppo</div>
+                  <div class="benefit-text">
+                    Possibilità di accedere a progetti complessi, incrementare i volumi di lavoro e
+                    consolidare la propria posizione nel mercato di riferimento.
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="certificazioni" style="margin-top: 1.7rem;">
+              <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:0.4rem;">Certificazioni e iscrizioni</h3>
+              <p style="color: var(--filalma-muted); font-size:0.9rem;">
+                Filalma valorizza le certificazioni delle aziende consorziate (es. sistemi qualità, sicurezza, ambiente)
+                e le iscrizioni a registri, albi e piattaforme abilitate, garantendo requisiti tecnici e amministrativi
+                allineati alle esigenze dei clienti pubblici e privati.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSORZIATE -->
+    <section id="consorziate" class="cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <h2 class="cta-title">Aziende consorziate con esperienza decennale</h2>
+              <p class="cta-text">
+                Le imprese che fanno parte di Filalma vantano un’esperienza operativa di oltre dieci anni
+                nei rispettivi ambiti. Questa storia condivisa si traduce in affidabilità, continuità e capacità
+                di gestire contesti complessi con la sicurezza di chi è abituato a “stare sul campo”.
+              </p>
+              <p class="cta-text">
+                Entrare in contatto con il consorzio significa avere a disposizione un network strutturato,
+                in grado di rispondere a esigenze articolate con un approccio coordinato e una cabina di regia unica.
+              </p>
+            </div>
+            <div class="col-lg-5 text-lg-end text-center">
+              <a href="#contatti" class="btn btn-consorziate btn-nav">
+                Contattaci per maggiori informazioni
+              </a>
+              <p class="mt-2 mb-0" style="font-size:0.8rem; color:var(--filalma-muted);">
+                Scopri come entrare nel network o richiedere un servizio integrato.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="section">
+      <div class="container text-center">
+        <div class="section-header">
+          <div class="section-kicker">Contatti</div>
+          <h2 class="section-title">Parliamo del tuo prossimo progetto</h2>
+          <p class="section-subtitle">
+            Di seguito i riferimenti del consorzio Filalma. In questa sezione potrai in futuro
+            inserire un form di contatto o ulteriori dettagli operativi.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <p style="font-size:0.92rem; color:var(--filalma-muted);">
+              <strong>Sede operativa:</strong><br>
+              Via del Babbuino 21<br>
+              00187 Roma (RM)
+            </p>
+            <p style="font-size:0.92rem; color:var(--filalma-muted);">
+              <strong>Sede legale:</strong><br>
+              Via degli Olmetti 5<br>
+              00060 Formello (RM)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>© <span id="year"></span> Consorzio stabile Filalma · Tutti i diritti riservati</span>
+        <span style="opacity:0.8;">
+          Sede operativa: Via del Babbuino 21, Roma · Sede legale: Via degli Olmetti 5, Formello (RM)
+        </span>
+      </div>
+    </footer>
+
+    <!-- JS: Bootstrap + Canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="navbar.js"></script>
+    <script>
+      // Anno dinamico
+      // Anno dinamico
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Canvas animato "Consorzio stabile Filalma" senza bordi bianchi
+      (function () {
+        const canvas = document.getElementById('filalmaCanvas');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        let dpr = window.devicePixelRatio || 1;
+
+        function resizeCanvas() {
+          const rect = canvas.getBoundingClientRect();
+          dpr = window.devicePixelRatio || 1;
+
+          // dimensione reale del canvas in pixel
+          canvas.width = rect.width * dpr;
+          canvas.height = rect.height * dpr;
+
+          // sistema di coordinate "normale"
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+        const particleCount = 10;
+
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: 0.1 + Math.random() * 0.8,  // evito da subito i bordi
+            y: 0.1 + Math.random() * 0.8,
+            r: 2 + Math.random() * 3,
+            speedX: (Math.random() - 0.5) * 0.003,
+            speedY: (Math.random() - 0.5) * 0.003,
+            alpha: 0.25 + Math.random() * 0.08
+          });
+        }
+
+        function draw() {
+          const w = canvas.width / dpr;
+          const h = canvas.height / dpr;
+
+          // pulisco TUTTA l'area del canvas
+          ctx.clearRect(0, 0, w, h);
+
+          // sfondo pieno (nessun "buco" ai bordi)
+          const gradient = ctx.createLinearGradient(0, 0, w, h);
+          gradient.addColorStop(0, "#021526");
+          gradient.addColorStop(0.4, "#043467");
+          gradient.addColorStop(1, "#020712");
+          ctx.fillStyle = gradient;
+          ctx.fillRect(0, 0, w, h);
+
+          // onde leggere
+          ctx.globalAlpha = 0.12;
+          ctx.beginPath();
+          for (let x = 0; x <= w; x += 4) {
+            const y = h / 2 + Math.sin(x * 0.01 + Date.now() * 0.001) * 10;
+            ctx.lineTo(x, y);
+          }
+          ctx.lineWidth = 60;
+          const waveGrad = ctx.createLinearGradient(0, h / 2 - 30, 0, h / 2 + 30);
+          waveGrad.addColorStop(0, "rgba(0,194,255,0.1)");
+          waveGrad.addColorStop(0.5, "rgba(13,110,253,0.4)");
+          waveGrad.addColorStop(1, "rgba(0,194,255,0.1)");
+          ctx.strokeStyle = waveGrad;
+          ctx.stroke();
+          ctx.globalAlpha = 1;
+
+          // particelle con margine interno consistente per evitare contatto visivo coi bordi
+          const margin = 0.08; // 8% di margine su tutti i lati
+
+          particles.forEach(p => {
+            p.x += p.speedX;
+            p.y += p.speedY;
+
+            // rimbalzo con margine
+            if (p.x < margin) {
+              p.x = margin;
+              p.speedX *= -1;
+            }
+            if (p.x > 1 - margin) {
+              p.x = 1 - margin;
+              p.speedX *= -1;
+            }
+            if (p.y < margin) {
+              p.y = margin;
+              p.speedY *= -1;
+            }
+            if (p.y > 1 - margin) {
+              p.y = 1 - margin;
+              p.speedY *= -1;
+            }
+
+            const px = p.x * w;
+            const py = p.y * h;
+
+            // glow più contenuto per non "sbordare"
+            const radius = p.r * 3;
+            const radGrad = ctx.createRadialGradient(px, py, 0, px, py, radius);
+            radGrad.addColorStop(0, "rgba(255,255,255," + p.alpha + ")");
+            radGrad.addColorStop(1, "rgba(255,255,255,0)");
+            ctx.fillStyle = radGrad;
+            ctx.beginPath();
+            ctx.arc(px, py, radius, 0, Math.PI * 2);
+            ctx.fill();
+          });
+
+          // testo centrale
+          const textMain = "Consorzio stabile Filalma";
+          const textSub = "· Facility Management · Pulizie · Manutenzioni · Aree Verdi · Logistica Integrata";
+
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+
+          // glow esterno
+          ctx.font = "700 26px system-ui";
+          ctx.shadowColor = "rgba(0, 194, 255, 0.9)";
+          ctx.shadowBlur = 22;
+          ctx.fillStyle = "#e5f4ff";
+          ctx.fillText(textMain, w / 2, h / 2 - 10);
+
+          // testo principale senza ombra
+          ctx.shadowBlur = 0;
+          const mainGrad = ctx.createLinearGradient(w / 2 - 150, h / 2 - 20, w / 2 + 150, h / 2 + 10);
+          mainGrad.addColorStop(0, "#00c2ff");
+          mainGrad.addColorStop(0.5, "#7dd3fc");
+          mainGrad.addColorStop(1, "#60a5fa");
+          ctx.fillStyle = mainGrad;
+          ctx.fillText(textMain, w / 2, h / 2 - 10);
+
+          // sottotitolo
+          ctx.font = "400 12px system-ui";
+          ctx.fillStyle = "rgba(226,232,240,0.85)";
+          ctx.fillText(textSub, w / 2, h / 2 + 20);
+
+          requestAnimationFrame(draw);
+        }
+
+        draw();
+      })();
+
+      
+  (function(){
+    const section = document.querySelector('.green-section');
+    const counterEl = document.getElementById('co2Counter');
+    if(!section || !counterEl) return;
+
+    const target = parseInt(counterEl.dataset.target || "2900", 10);
+    let started = false;
+
+    function animateCounter(){
+  const duration = 2800;
+  const start = 0;
+  const startTime = performance.now();
+
+  function tick(now){
+    const elapsed = now - startTime;
+    const t = Math.min(elapsed / duration, 1);
+
+    const eased = 1 - Math.pow(1 - t, 4);
+
+    const value = Math.round(start + (target - start) * eased);
+
+    counterEl.textContent = value.toLocaleString('it-IT');
+
+    if(t < 1){
+      requestAnimationFrame(tick);
+    } else {
+      // attiva pulse glow finale
+      counterEl.classList.add("co2-pulse");
+
+      // rimuove classe dopo animazione
+      setTimeout(()=>{
+        counterEl.classList.remove("co2-pulse");
+      }, 1200);
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting && !started){
+          started = true;
+          animateCounter();
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.35 });
+
+    obs.observe(section);
+  })();
+
+    </script>
+</body>
+
+</html>

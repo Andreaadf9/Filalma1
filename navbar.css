@@ -1,0 +1,218 @@
+:root {
+  --filalma-blue-dark: #031426;
+  --filalma-blue: #0d6efd;
+  --filalma-turquoise: #00c2ff;
+  --filalma-text: #f8f9fa;
+  --filalma-muted: #a6b0c3;
+}
+
+/* NAVBAR PRINCIPALE */
+.filalma-navbar {
+  background: rgba(239, 231, 218, 0.8);
+backdrop-filter: blur(12px) saturate(120%);
+border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  z-index: 1030;
+}
+
+.filalma-navbar .navbar-brand img {
+  height: 42px;
+  object-fit: contain;
+}
+
+.filalma-navbar .navbar-brand {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.filalma-navbar .navbar-nav .nav-link {
+  color: #031426;
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding-inline: 0.8rem;
+}
+
+.filalma-navbar .navbar-nav .nav-link:hover,
+.filalma-navbar .navbar-nav .nav-link:focus,
+.filalma-navbar .navbar-nav .nav-link.active {
+  color: var(--filalma-turquoise);
+}
+
+.filalma-navbar .dropdown-menu {
+  background: #020814;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0,194,255,0.3);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+  padding-block: 0.4rem;
+  min-width: 220px;
+}
+
+.filalma-navbar .dropdown-item {
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  padding-block: 0.45rem;
+}
+
+.filalma-navbar .dropdown-item:hover {
+  background: rgba(13,110,253,0.15);
+  color: #ffffff;
+}
+
+/* Toggler (hamburger) */
+.filalma-navbar .navbar-toggler {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 10px;
+}
+
+.filalma-navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.12rem rgba(0, 194, 255, 0.55);
+}
+
+.filalma-navbar .navbar-toggler-icon-custom {
+  font-size: 1.2rem;
+  color: #031426;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bottoni azione */
+.filalma-btn-nav {
+  border-radius: 999px;
+  padding-inline: 1.1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.filalma-btn-home {
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #ffffff;
+  background: transparent;
+}
+
+.filalma-btn-home:hover {
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+}
+
+.filalma-btn-consorziate {
+  background: linear-gradient(135deg, var(--filalma-blue), var(--filalma-turquoise));
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 194, 255, 0.4);
+}
+
+.filalma-btn-consorziate:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 8px 24px rgba(0, 194, 255, 0.55);
+  color: #ffffff;
+}
+
+.filalma-btn-area {
+  border: 1px solid rgba(0,194,255,0.7);
+  color: var(--filalma-turquoise);
+  background: rgba(3,20,38,0.8);
+}
+
+.filalma-btn-area:hover {
+  background: rgba(0,194,255,0.15);
+  color: #ffffff;
+}
+
+/* OFFCANVAS MOBILE */
+.filalma-offcanvas {
+  background: radial-gradient(circle at top, #031426, #020712);
+  color: #e5e7eb;
+}
+
+.filalma-offcanvas .offcanvas-header {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.filalma-offcanvas .offcanvas-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9ca3af;
+  padding-right: 1rem;
+}
+
+.filalma-offcanvas-logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+.filalma-offcanvas .btn-close {
+  filter: invert(1);
+}
+
+/* Link offcanvas */
+.filalma-offcanvas .nav-link {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  padding-left: 0;
+}
+
+.filalma-offcanvas .nav-link:hover {
+  color: var(--filalma-turquoise);
+}
+
+.filalma-offcanvas-section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--filalma-muted);
+  margin-top: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.filalma-offcanvas .filalma-offcanvas-btn {
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Layout desktop vs mobile */
+@media (max-width: 991.98px) {
+  .filalma-navbar .navbar-collapse {
+    display: none !important; /* usiamo solo offcanvas su mobile */
+  }
+}
+
+@media (min-width: 992px) {
+  /* Nascondi offcanvas su desktop (esiste, ma non visibile) */
+  .filalma-offcanvas {
+    visibility: hidden;
+  }
+}
+/* THEME TOGGLE BUTTON (non cambia i colori della navbar) */
+.filalma-theme-toggle{
+width: 40px;
+height: 40px;
+border-radius: 999px;
+border: 1px solid rgba(255,255,255,0.28);
+background: rgba(255,255,255,0.06);
+color: #031426;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 0;
+}
+
+.filalma-theme-toggle:hover{
+background: rgba(0,194,255,0.14);
+border-color: rgba(0,194,255,0.55);
+color: #ffffff;
+}
+
+.filalma-theme-toggle:focus{
+box-shadow: 0 0 0 0.12rem rgba(0, 194, 255, 0.45);
+}

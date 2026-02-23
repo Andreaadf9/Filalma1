@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Consorziate · Consorzio stabile Filalma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Navbar globale -->
+  <link rel="stylesheet" href="navbar.css">
+
+  <style>
+    :root {
+      --filalma-blue-dark: #031426;
+      --filalma-blue: #0d6efd;
+      --filalma-turquoise: #00c2ff;
+      --filalma-text: #f8f9fa;
+      --filalma-muted: #a6b0c3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #020712;
+      color: var(--filalma-text);
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    main {
+      padding-top: 90px; /* spazio per la navbar fixed */
+    }
+
+    /* HERO CONSORZIATE */
+    .consorziate-hero {
+      position: relative;
+      padding-block: 40px 30px;
+      background: radial-gradient(circle at top left, #073b7a, #020712 60%, #000000);
+      overflow: hidden;
+    }
+
+    .consorziate-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 0, rgba(0,194,255,0.18), transparent 55%),
+        radial-gradient(circle at 80% 20%, rgba(13,110,253,0.22), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .consorziate-hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .consorziate-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      background: rgba(0, 0, 0, 0.45);
+      color: var(--filalma-turquoise);
+      border: 1px solid rgba(0,194,255,0.5);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .consorziate-title {
+      font-size: clamp(2rem, 3vw + 1rem, 2.7rem);
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .consorziate-title span.accent {
+      background: linear-gradient(135deg, #00c2ff, #60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .consorziate-subtitle {
+      max-width: 700px;
+      font-size: 0.96rem;
+      color: var(--filalma-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .consorziate-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--filalma-muted);
+    }
+
+    .consorziate-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* SEZIONE CARDS CONSORZIATE */
+    .consorziate-section {
+      padding-block: 40px 60px;
+      background: #020712;
+    }
+
+    .consorziate-section-header {
+      text-align: center;
+      margin-bottom: 2.2rem;
+    }
+
+    .consorziate-section-kicker {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--filalma-turquoise);
+      margin-bottom: 0.3rem;
+    }
+
+    .consorziate-section-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .consorziate-section-subtitle {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 0.94rem;
+      color: var(--filalma-muted);
+    }
+
+    /* CARD PARTNER */
+    .partner-card {
+      background: radial-gradient(circle at top, rgba(0,194,255,0.15), #020814 65%, #000000 100%);
+      border-radius: 1.4rem;
+      border: 1px solid rgba(0,194,255,0.4);
+      padding: 1.6rem 1.7rem;
+      box-shadow: 0 26px 70px rgba(0,0,0,0.9);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1.8rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .partner-card::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background: radial-gradient(circle at 0 0, rgba(0,194,255,0.25), transparent 60%);
+      opacity: 0.7;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0,194,255,0.75);
+      box-shadow: 0 28px 80px rgba(0,0,0,1);
+    }
+
+    .partner-logo-wrap {
+      position: relative;
+      z-index: 1;
+      padding: 1.1rem;
+      border-radius: 1.2rem;
+      background: radial-gradient(circle at top, rgba(15,23,42,0.95), #020712);
+      border: 1px solid rgba(148,163,184,0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .partner-logo {
+      max-width: 190px;
+      max-height: 80px;
+      object-fit: contain;
+      margin-bottom: 0.9rem;
+      filter: drop-shadow(0 0 12px rgba(15,23,42,0.9));
+    }
+
+    .partner-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(0,194,255,0.6);
+      font-size: 0.75rem;
+      color: var(--filalma-turquoise);
+    }
+
+    .partner-pill i {
+      font-size: 0.7rem;
+    }
+
+    .partner-body {
+      position: relative;
+      z-index: 1;
+    }
+
+    .partner-name {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .partner-tagline {
+      font-size: 0.9rem;
+      color: var(--filalma-muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .partner-description {
+      font-size: 0.92rem;
+      color: #d1d5db;
+      margin-bottom: 0.9rem;
+    }
+
+    .partner-points {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 1rem;
+      font-size: 0.88rem;
+      color: var(--filalma-muted);
+    }
+
+    .partner-points li {
+      display: flex;
+      gap: 0.45rem;
+      align-items: flex-start;
+      margin-bottom: 0.4rem;
+    }
+
+    .partner-points i {
+      font-size: 0.7rem;
+      color: var(--filalma-turquoise);
+      margin-top: 0.2rem;
+    }
+
+    .partner-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.1rem;
+      font-size: 0.8rem;
+      color: var(--filalma-muted);
+      align-items: center;
+    }
+
+    .partner-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .partner-actions {
+      margin-top: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .btn-partner-main {
+      border-radius: 999px;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      border: none;
+      background: linear-gradient(135deg, var(--filalma-blue), var(--filalma-turquoise));
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 194, 255, 0.4);
+    }
+
+    .btn-partner-main:hover {
+      filter: brightness(1.06);
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(0, 194, 255, 0.6);
+    }
+
+    .btn-partner-secondary {
+      border-radius: 999px;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.86rem;
+      font-weight: 500;
+      border: 1px dashed rgba(148,163,184,0.7);
+      color: var(--filalma-muted);
+      background: transparent;
+    }
+
+    .btn-partner-secondary:hover {
+      border-style: solid;
+      color: var(--filalma-turquoise);
+      border-color: rgba(0,194,255,0.7);
+    }
+
+    /* FOOTER COERENTE CON INDEX */
+    footer {
+      padding-block: 18px;
+      background: #02030a;
+      font-size: 0.8rem;
+      color: var(--filalma-muted);
+      border-top: 1px solid rgba(15,23,42,0.9);
+    }
+
+    @media (max-width: 991.98px) {
+      .partner-card {
+        padding: 1.4rem 1.3rem;
+      }
+      .partner-logo-wrap {
+        margin-bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .consorziate-hero {
+        padding-top: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar dinamica -->
+<div id="navbar-container"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="consorziate-hero">
+    <div class="container consorziate-hero-inner">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="consorziate-kicker">
+            <i class="fa-solid fa-users-gear"></i>
+            CONSORZIATE FILALMA
+          </div>
+          <h1 class="consorziate-title">
+            Le aziende <span class="accent">consorziate</span> che danno forza a Filalma.
+          </h1>
+          <p class="consorziate-subtitle">
+            Realtà con esperienza pluridecennale nei traslochi, nella logistica, nei servizi di pulizia
+            e nel facility management. Un network coordinato dal consorzio per offrire servizi integrati
+            a clienti pubblici e privati.
+          </p>
+          <div class="consorziate-meta">
+            <div class="consorziate-meta-item">
+              <i class="fa-solid fa-building"></i> Struttura consortile stabile
+            </div>
+            <div class="consorziate-meta-item">
+              <i class="fa-solid fa-layer-group"></i> Competenze complementari
+            </div>
+            <div class="consorziate-meta-item">
+              <i class="fa-solid fa-location-dot"></i> Presenza su più territori
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTA CONSORZIATE -->
+  <section class="consorziate-section">
+    <div class="container">
+      <div class="consorziate-section-header">
+        <div class="consorziate-section-kicker">Network</div>
+        <h2 class="consorziate-section-title">Le consorziate Filalma</h2>
+        <p class="consorziate-section-subtitle">
+          Di seguito una panoramica delle aziende attualmente consorziate, con i loro punti di forza
+          e le aree operative principali.
+        </p>
+      </div>
+
+      <!-- SAI SERVICE SRL -->
+      <article class="partner-card">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-4">
+            <div class="partner-logo-wrap">
+              <!-- Sostituisci con il logo reale -->
+              <img src="img/sai.png"
+                   alt="Sai Service S.R.L. Logo"
+                   class="partner-logo">
+              <span class="partner-pill">
+                <i class="fa-solid fa-briefcase"></i>
+                Traslochi · Logistica · Facility
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="partner-body">
+              <h3 class="partner-name">Sai Service S.R.L.</h3>
+              <p class="partner-tagline">
+                Partner operativo per traslochi, logistica integrata, pulizie e servizi di facility management.
+              </p>
+              <p class="partner-description">
+                Sai Service S.R.L. è una realtà con consolidata esperienza nella gestione di traslochi complessi,
+                movimentazione di archivi e attrezzature, servizi di pulizia civile e industriale, con un approccio
+                organizzato e orientato alla qualità del servizio.
+              </p>
+              <ul class="partner-points">
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Squadre operative formate per interventi in contesti direzionali, logistici e di pregio.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Pianificazione delle attività con attenzione a tempi, continuità del servizio e sicurezza.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Capacità di gestione di servizi coordinati: trasloco, facchinaggio e pulizie in un unico progetto.</span>
+                </li>
+              </ul>
+              <div class="partner-meta">
+                <div class="partner-meta-item">
+                  <i class="fa-solid fa-award"></i> Esperienza pluriennale sul campo
+                </div>
+                <div class="partner-meta-item">
+                  <i class="fa-solid fa-people-group"></i> Team dedicati per commesse strutturate
+                </div>
+              </div>
+              <div class="partner-actions">
+                <!-- Sostituisci href con il sito reale se disponibile -->
+                <a href="#" class="btn-partner-main">
+                  <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>
+                  Visita il sito
+                </a>
+                <button type="button" class="btn-partner-secondary">
+                  <i class="fa-solid fa-circle-info me-1"></i>
+                  Richiedi maggiori dettagli tramite il consorzio
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ALMA PARTENOPE SRL -->
+      <article class="partner-card">
+        <div class="row g-4 align-items-center flex-lg-row-reverse">
+          <div class="col-lg-4">
+            <div class="partner-logo-wrap">
+              <!-- Sostituisci con il logo reale -->
+              <img src="https://via.placeholder.com/240x80?text=Alma+Partenope+Logo"
+                   alt="Alma Partenope S.R.L. Logo"
+                   class="partner-logo">
+              <span class="partner-pill">
+                <i class="fa-solid fa-broom"></i>
+                Pulizie · Manutenzioni · Aree verdi
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="partner-body">
+              <h3 class="partner-name">Alma Partenope S.R.L.</h3>
+              <p class="partner-tagline">
+                Specializzata in servizi di pulizia, manutenzione e cura degli spazi, per ambienti sempre funzionali e curati.
+              </p>
+              <p class="partner-description">
+                Alma Partenope S.R.L. opera nel settore delle pulizie civili e industriali, delle manutenzioni
+                e dei servizi di giardinaggio, con attenzione alla continuità del servizio, all’immagine degli
+                ambienti e al rispetto delle procedure di sicurezza.
+              </p>
+              <ul class="partner-points">
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Programmi di pulizia calibrati su uffici, spazi pubblici, siti produttivi e aree espositive.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Manutenzioni ordinarie e straordinarie per mantenere gli ambienti sempre operativi.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Gestione di aree verdi e giardini con interventi di cura, riassetto e valorizzazione estetica.</span>
+                </li>
+              </ul>
+              <div class="partner-meta">
+                <div class="partner-meta-item">
+                  <i class="fa-solid fa-leaf"></i> Focus su qualità degli ambienti e immagine
+                </div>
+                <div class="partner-meta-item">
+                  <i class="fa-solid fa-handshake-angle"></i> Integrazione con gli altri servizi del consorzio
+                </div>
+              </div>
+              <div class="partner-actions">
+                <!-- Sostituisci href con il sito reale se disponibile -->
+                <a href="#" class="btn-partner-main">
+                  <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>
+                  Visita il sito
+                </a>
+                <button type="button" class="btn-partner-secondary">
+                  <i class="fa-solid fa-circle-info me-1"></i>
+                  Approfondisci tramite il consorzio
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="partner-card">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-4">
+            <div class="partner-logo-wrap">
+              <!-- Sostituisci con il logo reale -->
+              <img src="img/sai.png"
+                   alt="Sai Service S.R.L. Logo"
+                   class="partner-logo">
+              <span class="partner-pill">
+                <i class="fa-solid fa-briefcase"></i>
+                Traslochi · Logistica · Facility
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="partner-body">
+              <h3 class="partner-name">Giapeto SRL</h3>
+              <p class="partner-tagline">
+                Partner operativo per traslochi, logistica integrata, pulizie e servizi di facility management.
+              </p>
+              <p class="partner-description">
+                Sai Service S.R.L. è una realtà con consolidata esperienza nella gestione di traslochi complessi,
+                movimentazione di archivi e attrezzature, servizi di pulizia civile e industriale, con un approccio
+                organizzato e orientato alla qualità del servizio.
+              </p>
+              <ul class="partner-points">
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Squadre operative formate per interventi in contesti direzionali, logistici e di pregio.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Pianificazione delle attività con attenzione a tempi, continuità del servizio e sicurezza.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Capacità di gestione di servizi coordinati: trasloco, facchinaggio e pulizie in un unico progetto.</span>
+                </li>
+              </ul>
+              <div class="partner-meta">
+                <div class="partner-meta-item">
+                  <i class="fa-solid fa-award"></i> Esperienza pluriennale sul campo
+                </div>
+                <div class="partner-meta-item">
+                  <i class="fa-solid fa-people-group"></i> Team dedicati per commesse strutturate
+                </div>
+              </div>
+              <div class="partner-actions">
+                <!-- Sostituisci href con il sito reale se disponibile -->
+                <a href="#" class="btn-partner-main">
+                  <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>
+                  Visita il sito
+                </a>
+                <button type="button" class="btn-partner-secondary">
+                  <i class="fa-solid fa-circle-info me-1"></i>
+                  Richiedi maggiori dettagli tramite il consorzio
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <span>© <span id="year"></span> Consorzio stabile Filalma · Tutti i diritti riservati</span>
+    <span style="opacity:0.8;">
+      Sede operativa: Via del Babbuino 21, Roma · Sede legale: Via degli Olmetti 5, Formello (RM)
+    </span>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="navbar.js"></script>
+<script>
+  // Anno dinamico footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

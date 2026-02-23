@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Diventa Consorziata · Filalma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Navbar globale (già fatta da te) -->
+  <link rel="stylesheet" href="navbar.css">
+
+  <!-- Pagina dedicata -->
+  <link id="theme-dark" rel="stylesheet" href="form.css">
+  <link id="theme-light" rel="stylesheet" href="form.light.css">
+  <style>
+    /* ===== TOP SLIDER ===== */
+.top-slider{
+  margin-top: 10px;
+  padding: 10px 0 0;
+}
+
+.top-carousel{
+  border-radius: 1.4rem;
+  overflow: hidden;
+  border: 1px solid rgba(0,194,255,0.30);
+  box-shadow: 0 26px 70px rgba(0,0,0,0.85);
+  background: #020814;
+  position: relative;
+}
+
+.top-carousel .carousel-inner{
+  border-radius: 1.4rem;
+}
+
+.top-carousel img{
+  object-fit: cover;
+}
+
+.carousel-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(0,194,255,0.18), transparent 55%),
+    radial-gradient(circle at 80% 25%, rgba(13,110,253,0.18), transparent 60%),
+    linear-gradient(to top, rgba(0,0,0,0.70), rgba(0,0,0,0.05));
+  pointer-events:none;
+}
+
+.top-carousel .carousel-caption{
+  left: 6%;
+  right: 6%;
+  bottom: 10%;
+  text-shadow: 0 10px 35px rgba(0,0,0,0.75);
+}
+
+.cap-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  border-radius:999px;
+  padding:4px 12px;
+  font-size:.75rem;
+  background: rgba(0,0,0,.45);
+  color: var(--filalma-turquoise);
+  border: 1px solid rgba(0,194,255,.5);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  margin-bottom: .6rem;
+}
+
+.cap-title{
+  font-size: clamp(1.25rem, 2vw + .9rem, 2rem);
+  font-weight: 800;
+  margin-bottom: .35rem;
+}
+
+.cap-text{
+  color: rgba(226,232,240,0.85);
+  font-size: 1rem;
+  max-width: 720px;
+  margin: 0;
+}
+
+/* controlli più “premium” */
+ .top-carousel .carousel-control-prev,
+.top-carousel .carousel-control-next{
+  width: 12%;
+}
+
+.top-carousel .carousel-control-prev-icon,
+.top-carousel .carousel-control-next-icon{
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.75));
+} 
+
+/* indicatori più discreti */
+ .top-carousel .carousel-indicators [data-bs-target]{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,194,255,0.55);
+  background: rgba(2,8,20,0.6);
+  opacity: 1;
+}
+
+.top-carousel .carousel-indicators .active{
+  background: var(--filalma-turquoise);
+} */
+
+/* /* spacing: lo slider “stacca” dalla hero  */
+.join-hero{
+   padding-top: 36px; /* prima era 44px  */
+}
+
+@media (max-width: 575.98px){
+  .top-slider{
+    margin-top: 6px;
+    padding-top: 6px;
+  }
+
+  .top-carousel{
+    border-radius: 1.1rem;
+  }
+
+  .top-carousel .carousel-caption{
+    bottom: 8%;
+  }
+
+  .cap-text{
+    font-size: .95rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar dinamica -->
+  <div id="navbar-container"></div>
+
+  <main class="page-wrap">
+
+    <!-- SLIDER (sopra la hero) -->
+<section class="top-slider" aria-label="Filalma highlights">
+    <div class="container">
+      <div id="filalmaTopCarousel" class="carousel slide carousel-fade top-carousel" data-bs-ride="carousel" data-bs-interval="6500">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#filalmaTopCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#filalmaTopCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+  
+        <div class="carousel-inner ratio ratio-16x9">
+          <!-- SLIDE 1 -->
+          <div class="carousel-item active">
+            
+            <img src="img/firma.jpeg" class="d-block w-100" alt="Filalma - Slide 1">
+  
+            <div class="carousel-overlay"></div>
+  
+            <div class="carousel-caption text-start">
+              <div class="cap-kicker">
+                <i class="fa-solid fa-globe"></i>
+                Global Services
+              </div>
+              <h2 class="cap-title">Un unico consorzio, molte competenze</h2>
+              <p class="cap-text d-none d-md-block">
+                Traslochi, facility management, pulizie, manutenzioni e servizi integrati con regia unica.
+              </p>
+            </div>
+          </div>
+  
+          <!-- SLIDE 2 -->
+          <div class="carousel-item">
+            <img src="img/fromImg2.png" class="d-block w-100" alt="Filalma - Slide 2">
+  
+            <div class="carousel-overlay"></div>
+  
+            <div class="carousel-caption text-start">
+              <div class="cap-kicker">
+                <i class="fa-solid fa-handshake-angle"></i>
+                Network operativo
+              </div>
+              <h2 class="cap-title">Cresci nel network Filalma</h2>
+              <p class="cap-text d-none d-md-block">
+                Candidati per entrare nel consorzio e accedere a commesse strutturate e sinergie tra aziende.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <button class="carousel-control-prev" type="button" data-bs-target="#filalmaTopCarousel" data-bs-slide="prev" aria-label="Slide precedente">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#filalmaTopCarousel" data-bs-slide="next" aria-label="Slide successiva">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+    <!-- HERO -->
+    <header class="join-hero">
+      <div class="join-hero-bg"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="join-kicker">
+              <i class="fa-solid fa-network-wired"></i>
+              Network · Global Services · Operatività
+            </div>
+
+            <h1 class="join-hero-title">
+              Diventa parte del <span class="accent">Consorzio stabile Filalma</span>
+            </h1>
+
+            <p class="join-hero-subtitle">
+              Se la tua azienda lavora in <strong>traslochi</strong>, <strong>facchinaggio</strong>,
+              <strong>pulizie civili/industriali</strong>, <strong>facility management</strong>,
+              <strong>manutenzioni</strong> o <strong>verde</strong>, qui puoi candidarti in modo rapido e tracciabile.
+            </p>
+
+            <div class="join-hero-bullets">
+              <div class="bullet"><i class="fa-solid fa-shield-halved"></i> Valutazione riservata</div>
+              <div class="bullet"><i class="fa-solid fa-layer-group"></i> Processo strutturato</div>
+              <div class="bullet"><i class="fa-solid fa-handshake-angle"></i> Unico interlocutore</div>
+            </div>
+
+            <div class="join-hero-cta">
+              <a href="#contatto" class="btn btn-accent btn-lg">
+                <i class="fa-solid fa-pen-to-square me-2"></i> Compila la candidatura
+              </a>
+              <span class="microcopy">
+                <i class="fa-regular fa-clock me-1"></i> Tempo medio di compilazione: 2–3 minuti
+              </span>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-card">
+              <div class="hero-card-badge">
+                <i class="fa-solid fa-circle-check"></i> Cosa succede dopo l’invio
+              </div>
+
+              <ul class="hero-card-list">
+                <li><i class="fa-solid fa-check"></i> Ricevi conferma automatica della richiesta</li>
+                <li><i class="fa-solid fa-check"></i> Analisi dei requisiti e del posizionamento</li>
+                <li><i class="fa-solid fa-check"></i> Contatto da parte del team Filalma</li>
+                <li><i class="fa-solid fa-check"></i> Eventuale onboarding e inserimento in network</li>
+              </ul>
+
+              <div class="hero-card-footer">
+                <i class="fa-solid fa-lock me-1"></i>
+                I dati sono usati solo per valutazione e ricontatto.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION FORM -->
+    <section id="contatto" class="section-join">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- LEFT INFO -->
+          <div class="col-lg-5">
+            <h2 class="section-title">Richiesta di adesione</h2>
+            <p class="section-subtitle">
+              Raccontaci chi sei e come operi: ci aiuta a valutare velocemente la compatibilità con gli standard del consorzio.
+              <span class="d-block mt-2">Più informazioni inserisci, più rapida sarà la valutazione.</span>
+            </p>
+
+            <div class="card-elevated p-3 mt-3">
+              <div class="d-flex gap-3">
+                <div class="ico">
+                  <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <div class="tiny">
+                  <div class="fw-bold text-light">Nota</div>
+                  Inviando il form accetti l’utilizzo dei dati per finalità di contatto commerciale e valutazione
+                  di ammissibilità al consorzio.
+                </div>
+              </div>
+            </div>
+
+            <div class="join-highlights mt-3">
+              <div class="hl"><i class="fa-solid fa-award"></i><span>Preferenza per aziende con esperienza consolidata</span></div>
+              <div class="hl"><i class="fa-solid fa-helmet-safety"></i><span>Focus su qualità, sicurezza e continuità operativa</span></div>
+              <div class="hl"><i class="fa-solid fa-map-location-dot"></i><span>Copertura territoriale e capacità di scala</span></div>
+            </div>
+            
+            <a href="pdf/MODULO ADESIONE SOCI FILALMA-3.pdf"class="btn btn-outline-soft w-100 mt-3" download  style="color: white;">
+              <i class="fa-solid fa-file-arrow-down me-2"></i>
+                  Scarica il Pdf 
+             </a>
+             
+          </div>
+
+          <!-- RIGHT FORM -->
+          <div class="col-lg-7">
+            <div class="card-elevated p-4 join-form-card">
+
+              <form id="leadForm"
+                    action="https://usebasin.com/f/71c689d89335"
+                    method="POST"
+                    novalidate>
+
+                <!-- UseBasin: anti-spam honeypot -->
+                <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off">
+                <input type="hidden" name="_subject" value="Nuova richiesta adesione Filalma">
+
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label required">Ragione sociale</label>
+                    <input class="form-control" name="ragione_sociale" required placeholder="Es. Rossi Trasporti Srl">
+                    <div class="invalid-feedback">Inserisci la ragione sociale.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Partita IVA</label>
+                    <input class="form-control" name="partita_iva" required inputmode="numeric" maxlength="11"
+                           placeholder="Es. 01234567890">
+                    <div class="invalid-feedback">Inserisci una Partita IVA valida (11 cifre).</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Settore di appartenenza</label>
+                    <input class="form-control" name="settore" required placeholder="Es. Traslochi, Pulizie, Facility...">
+                    <div class="invalid-feedback">Inserisci il settore.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Email</label>
+                    <input class="form-control" type="email" name="email" required placeholder="nome@azienda.it">
+                    <div class="invalid-feedback">Inserisci un’email valida.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Telefono</label>
+                    <input class="form-control" type="tel" name="telefono" required inputmode="tel" placeholder="Il tuo numero">
+                    <div class="invalid-feedback">Inserisci un numero di telefono.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label required">Indirizzo</label>
+                    <input class="form-control" name="indirizzo" required placeholder="Via/Piazza e numero civico" style="color: white;">
+                    <div class="invalid-feedback">Inserisci l’indirizzo.</div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label required">Provincia</label>
+                    <input class="form-control text-uppercase" name="provincia" required maxlength="2" placeholder="Es. RM">
+                    <div class="invalid-feedback">Inserisci la provincia (2 lettere).</div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label required">CAP</label>
+                    <input class="form-control" name="cap" required inputmode="numeric" maxlength="5" placeholder="Es. 00100">
+                    <div class="invalid-feedback">Inserisci un CAP valido (5 cifre).</div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label required">CCIAA di iscrizione</label>
+                    <input class="form-control" name="cciaa_iscrizione" required placeholder="Es. Roma">
+                    <div class="invalid-feedback">Inserisci la CCIAA.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Numero CCIAA</label>
+                    <input class="form-control" name="numero_cciaa" required placeholder="Es. REA / Numero iscrizione">
+                    <div class="invalid-feedback">Inserisci il numero CCIAA.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Numero addetti</label>
+                    <input class="form-control" name="numero_addetti" required inputmode="numeric" placeholder="Es. 12">
+                    <div class="invalid-feedback">Inserisci il numero addetti.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label required">Descrivi brevemente la tua attività</label>
+                    <textarea class="form-control" name="descrizione_attivita" required rows="4"
+                      placeholder="Attività principale, clienti, aree geografiche, obiettivi..."></textarea>
+                    <div class="invalid-feedback">Inserisci una breve descrizione.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label required">Come ci hai trovato?</label>
+                    <div class="d-flex flex-wrap gap-3 mt-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="canali[]" id="canale_web" value="Web">
+                        <label class="form-check-label" for="canale_web">Web</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="canali[]" id="canale_passaparola" value="Passaparola">
+                        <label class="form-check-label" for="canale_passaparola">Passaparola</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="canali[]" id="canale_eventi" value="Eventi formativi">
+                        <label class="form-check-label" for="canale_eventi">Eventi formativi</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="canali[]" id="canale_altro" value="Altro">
+                        <label class="form-check-label" for="canale_altro">Altro</label>
+                      </div>
+                    </div>
+
+                    <div class="tiny mt-2"></div>
+                    <div class="invalid-feedback d-block mt-2" id="canaliError" style="display:none;">
+                      
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check mt-1">
+                      <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
+                      <label class="form-check-label required" for="privacy">
+                        Confermo di aver letto l’informativa e acconsento al trattamento dei dati per essere ricontattato.
+                      </label>
+                      <div class="invalid-feedback">Campo obbligatorio.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 d-flex flex-wrap gap-2 align-items-center mt-2">
+                    <button id="submitBtn" class="btn btn-accent btn-lg" type="submit">
+                      <span class="me-2"><i class="fa-solid fa-paper-plane"></i></span>
+                      Invia richiesta
+                    </button>
+
+                    <span class="tiny ms-auto" id="statusText" aria-live="polite"></span>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="tiny mt-3 opacity-75">
+              * Campi obbligatori. Suggerimento: inserisci la Partita IVA senza spazi.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>© <span id="year"></span> Consorzio stabile Filalma · Tutti i diritti riservati</span>
+        <span style="opacity:0.8;">
+          Sede operativa: Via del Babbuino 21, Roma · Sede legale: Via degli Olmetti 5, Formello (RM)
+        </span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Bootstrap bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Navbar dinamica (già fatta da te) -->
+  <script src="navbar.js"></script>
+
+  <!-- Pagina dedicata -->
+  <script src="form.js"></script>
+</body>
+</html>

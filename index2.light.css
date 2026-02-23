@@ -1,0 +1,607 @@
+/* ==========================================================
+   FILALMA — INDEX2 LIGHT THEME (PREMIUM)
+   SOLO COLORI / FINITURE (no layout changes)
+   Canvas può restare scuro: non lo tocchiamo.
+   ========================================================== */
+
+
+   :root{
+    --filalma-blue-dark: #031426;
+    --filalma-blue: #0d6efd;
+    --filalma-turquoise: #00c2ff;
+  
+    /* livelli chiari */
+    --filalma-bg: #f6f9ff;     /* base */
+    --filalma-bg-2: #ffffff;   /* superfici */
+    --filalma-bg-3: #d7eaff;   /* alternate */
+  
+    --filalma-text: #0b1b2b;
+    --filalma-muted: #516479;
+  
+    --filalma-border: rgba(3, 20, 38, 0.14);
+    --filalma-border-soft: rgba(3, 20, 38, 0.10);
+  
+    /* glass */
+    --filalma-glass: rgba(255,255,255,0.78);
+    --filalma-glass-2: rgba(255,255,255,0.92);
+  
+    /* ombre eleganti */
+    --filalma-shadow: 0 18px 45px rgba(3, 20, 38, 0.10);
+    --filalma-shadow-2: 0 28px 70px rgba(3, 20, 38, 0.12);
+    --filalma-shadow-soft: 0 14px 34px rgba(3, 20, 38, 0.08);
+  
+    /* highlight */
+    --filalma-ring: 0 0 0 .18rem rgba(0, 194, 255, 0.20);
+  }
+  
+  /* ----------------------------------------------------------
+     Base + texture molto leggera (non cambia layout)
+  ---------------------------------------------------------- */
+  body{
+    background-color: var(--filalma-bg) !important;
+    color: var(--filalma-text) !important;
+  
+    /* “grain” leggerissimo */
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(0,194,255,0.07), transparent 35%),
+      radial-gradient(circle at 85% 15%, rgba(13,110,253,0.06), transparent 40%),
+      radial-gradient(circle at 45% 90%, rgba(0,194,255,0.05), transparent 45%);
+    background-attachment: fixed;
+  }
+  
+  /* link */
+  a{ color: inherit; }
+  
+  /* ----------------------------------------------------------
+     HERO — più “white layered” con accenti turchesi
+  ---------------------------------------------------------- */
+  .hero{
+    background:
+      radial-gradient(circle at top left, rgba(0,194,255,0.12), transparent 48%),
+      radial-gradient(circle at 70% 10%, rgba(13,110,253,0.10), transparent 55%),
+      linear-gradient(180deg, #ffffff 0%, var(--filalma-bg) 62%, var(--filalma-bg-3) 100%) !important;
+  }
+  
+  .hero-overlay-blur{
+    background:
+      radial-gradient(circle at 20% 0, rgba(0,194,255,0.14), transparent 55%),
+      radial-gradient(circle at 80% 20%, rgba(13,110,253,0.13), transparent 60%) !important;
+  }
+  h1.hero-title{
+    color: #073b7a !important; 
+  }
+  .cap-title1{
+    color: #073b7a;
+  }
+  
+  /* pill kicker */
+  .hero-kicker{
+    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.72)) !important;
+    color: var(--filalma-blue) !important;
+    border: 1px solid rgba(13,110,253,0.18) !important;
+    box-shadow: 0 14px 34px rgba(3,20,38,0.08);
+    backdrop-filter: blur(10px);
+  }
+  .hero-kicker span{ color: rgba(11,27,43,0.70) !important; }
+  
+  .hero-subtitle{ color: var(--filalma-muted) !important; }
+  
+  /* badges */
+  .hero-badge{
+    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.72)) !important;
+    color: rgba(11,27,43,0.88) !important;
+    border: 1px solid rgba(3,20,38,0.10) !important;
+    box-shadow: 0 12px 30px rgba(3,20,38,0.06);
+    backdrop-filter: blur(10px);
+  }
+  .hero-badge i{
+    color: rgba(13,110,253,0.85);
+  }
+  
+  /* link secondario */
+  .hero-secondary-link{ color: rgba(11,27,43,0.70) !important; }
+  .hero-secondary-link:hover{ color: rgba(11,27,43,0.92) !important; }
+  
+  /* meta */
+  .hero-meta{ color: rgba(11,27,43,0.62) !important; }
+  .hero-meta-dot{ background: rgba(3,20,38,0.24) !important; }
+  
+  /* Hero right card — vetro + bordo turchese soft */
+  .hero-right-card{
+    background:
+      radial-gradient(circle at top, rgba(0,194,255,0.10), transparent 40%),
+      linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.86)) !important;
+    border: 1px solid rgba(0,194,255,0.22) !important;
+    box-shadow: var(--filalma-shadow-2) !important;
+    backdrop-filter: blur(12px);
+  }
+  .hero-right-card::before{
+    opacity: 0.22 !important;
+    mix-blend-mode: normal !important;
+  }
+  .hero-right-label{ color: rgba(11,27,43,0.58) !important; }
+  .hero-right-title{ color: rgba(11,27,43,0.92) !important; }
+  
+  .hero-right-pill{
+    background: rgba(255,255,255,0.92) !important;
+    color: var(--filalma-blue) !important;
+    border: 1px solid rgba(13,110,253,0.18) !important;
+    box-shadow: 0 10px 22px rgba(3,20,38,0.06);
+  }
+  
+  .hero-right-list{ color: rgba(11,27,43,0.80) !important; }
+  .hero-right-list i{ color: var(--filalma-blue) !important; }
+  
+  .hero-right-footer{
+    color: rgba(11,27,43,0.60) !important;
+    border-top: 1px dashed rgba(3,20,38,0.22) !important;
+  }
+  
+  /* ----------------------------------------------------------
+     TOP SLIDER — “card” più premium
+  ---------------------------------------------------------- */
+  .top-carousel{
+    background: var(--filalma-bg-2) !important;
+    border: 1px solid rgba(13,110,253,0.16) !important;
+    box-shadow: var(--filalma-shadow-2) !important;
+  }
+  
+  /* overlay sulle immagini (leggibilità caption) */
+  .carousel-overlay{
+    background:
+      radial-gradient(circle at 20% 15%, rgba(0,194,255,0.12), transparent 55%),
+      radial-gradient(circle at 80% 25%, rgba(13,110,253,0.12), transparent 60%),
+      linear-gradient(to top, rgba(3,20,38,0.52), rgba(3,20,38,0.02)) !important;
+  }
+  
+  .cap-kicker{
+    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.72)) !important;
+    color: var(--filalma-blue) !important;
+    border: 1px solid rgba(13,110,253,0.18) !important;
+    box-shadow: 0 12px 26px rgba(3,20,38,0.10);
+    backdrop-filter: blur(10px);
+  }
+  
+  .cap-text{
+    color: rgba(255,255,255,0.92) !important;
+  }
+  
+  /* indicatori più “gioiello” */
+  .top-carousel .carousel-indicators [data-bs-target]{
+    border: 1px solid rgba(0,194,255,0.55) !important;
+    background: rgba(255,255,255,0.72) !important;
+  }
+  .top-carousel .carousel-indicators .active{
+    background: linear-gradient(135deg, var(--filalma-blue), var(--filalma-turquoise)) !important;
+  }
+  
+  /* ----------------------------------------------------------
+     Canvas section — neutra e pulita (canvas resta scuro)
+  ---------------------------------------------------------- */
+  .canvas-section{
+    background:
+      radial-gradient(circle at 18% 0, rgba(0,194,255,0.08), transparent 55%),
+      linear-gradient(180deg, var(--filalma-bg-3), var(--filalma-bg)) !important;
+    border-top: 1px solid var(--filalma-border-soft) !important;
+    border-bottom: 1px solid var(--filalma-border-soft) !important;
+  }
+  
+  .canvas-caption{
+    color: rgba(11,27,43,0.62) !important;
+  }
+  
+  /* ----------------------------------------------------------
+     Sezioni generiche
+  ---------------------------------------------------------- */
+  .section{
+   
+    background: linear-gradient(to right, #fff1eb 0%, rgba(0,194,255,0.4) 100%) !important;
+  }
+  
+  .section-alt{
+    background: linear-gradient(180deg, #ffffff 0%, var(--filalma-bg-3) 100%) !important;
+  }
+  
+  .section-kicker{
+    color: var(--filalma-blue) !important;
+    text-shadow: 0 10px 25px rgba(0,194,255,0.10);
+  }
+  
+  .section-subtitle{
+    color: var(--filalma-muted) !important;
+  }
+  .section-title{
+    color: #073b7a;
+  }
+  /* ----------------------------------------------------------
+     Cards servizi — glass + hover più “pro”
+  ---------------------------------------------------------- */
+  .service-card{
+    background:
+      radial-gradient(circle at top, rgba(0,194,255,0.09), transparent 45%),
+      linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.80)) !important;
+    border: 1px solid rgba(3,20,38,0.10) !important;
+    box-shadow: var(--filalma-shadow-soft);
+    backdrop-filter: blur(12px);
+  }
+  
+  .service-card:hover{
+    border-color: rgba(0,194,255,0.28) !important;
+    box-shadow: var(--filalma-shadow-2) !important;
+    background:
+      radial-gradient(circle at top, rgba(0,194,255,0.12), transparent 45%),
+      linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.86)) !important;
+  }
+  .service-title{
+    color: #00c2ff;
+  }
+  .service-icon{
+    background: rgba(255,255,255,0.95) !important;
+    border: 1px solid rgba(0,194,255,0.22) !important;
+    color: var(--filalma-blue) !important;
+    box-shadow: 0 10px 22px rgba(3,20,38,0.06);
+  }
+  
+  .service-text{ color: var(--filalma-muted) !important; }
+  .service-tag{ color: rgba(11,27,43,0.78) !important; }
+  .service-tag i{ color: var(--filalma-blue) !important; }
+  
+  /* ----------------------------------------------------------
+     Biennale — elegante e istituzionale
+  ---------------------------------------------------------- */
+  .biennale-card{
+    background:
+      radial-gradient(circle at top left, rgba(13,110,253,0.12), transparent 50%),
+      linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.84)) !important;
+    border: 1px solid rgba(13,110,253,0.18) !important;
+    box-shadow: var(--filalma-shadow-2) !important;
+    backdrop-filter: blur(12px);
+  }
+  
+  .biennale-badge{
+    background: rgba(255,255,255,0.94) !important;
+    border: 1px solid rgba(0,194,255,0.22) !important;
+    color: var(--filalma-blue) !important;
+    box-shadow: 0 10px 22px rgba(3,20,38,0.06);
+  }
+  
+  .biennale-text{ color: rgba(11,27,43,0.78) !important; }
+  .biennale-title{
+    color: #00c2ff;
+  }
+  
+  .biennale-tag{
+    background: rgba(255,255,255,0.92) !important;
+    color: var(--filalma-muted) !important;
+    border: 1px solid rgba(3,20,38,0.10) !important;
+  }
+  
+  .biennale-meta{ color: rgba(11,27,43,0.62) !important; }
+  
+  /* ----------------------------------------------------------
+     Vantaggi soci
+  ---------------------------------------------------------- */
+  .benefit-icon{
+    background: rgba(255,255,255,0.95) !important;
+    border: 1px solid rgba(0,194,255,0.22) !important;
+    color: var(--filalma-blue) !important;
+    box-shadow: 0 10px 22px rgba(3,20,38,0.06);
+  }
+  .benefit-text{ color: var(--filalma-muted) !important; }
+
+  .benefit-title{
+    color: #0b1b2b;
+  }
+  
+  /* ----------------------------------------------------------
+     CTA finale 
+  ---------------------------------------------------------- */
+  .cta-section{
+    background:
+      radial-gradient(circle at 20% 30%, rgba(0,194,255,0.10), transparent 55%),
+      radial-gradient(circle at 80% 40%, rgba(13,110,253,0.08), transparent 60%),
+      linear-gradient(180deg, var(--filalma-bg-3), var(--filalma-bg)) !important;
+    border-top: 1px solid var(--filalma-border-soft) !important;
+  }
+  
+  .cta-card{
+    background:
+      radial-gradient(circle at top, rgba(0,194,255,0.12), transparent 42%),
+      linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.86)) !important;
+    border: 1px solid rgba(0,194,255,0.22) !important;
+    box-shadow: var(--filalma-shadow-2) !important;
+    backdrop-filter: blur(12px);
+  }
+  .cta-text{ color: var(--filalma-muted) !important; }
+  .cta-title{
+    color: #073b7a;
+  }
+  
+  /* ----------------------------------------------------------
+     Footer
+  ---------------------------------------------------------- */
+  footer{
+    background: linear-gradient(180deg, #ffffff, var(--filalma-bg)) !important;
+    color: rgba(11,27,43,0.62) !important;
+    border-top: 1px solid var(--filalma-border-soft) !important;
+  }
+  
+  /* ----------------------------------------------------------
+     Certificazioni 
+  ---------------------------------------------------------- */
+  .cert-section{
+    color: var(--filalma-text) !important;
+    background: linear-gradient(to left, #fff1eb 0%, #ace0f9 100%) !important;
+  }
+  
+  .cert-section .text-primary{
+    color: var(--filalma-blue) !important;
+  }
+  
+  .cert-card{
+    background:
+      radial-gradient(circle at 15% 10%, rgba(0,194,255,0.10), transparent 40%),
+      linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.86)) !important;
+    border: 1px solid rgba(13,110,253,0.16) !important;
+    box-shadow: var(--filalma-shadow) !important;
+    backdrop-filter: blur(12px);
+  }
+  
+  .cert-card h4{
+    color: rgba(11,27,43,0.92) !important;
+  }
+  
+  .cert-card p{
+    color: rgba(11,27,43,0.72) !important;
+  }
+  
+  .cert-badge{
+    color: var(--filalma-blue) !important;
+    filter: drop-shadow(0 10px 18px rgba(13,110,253,0.12));
+  }
+  
+  /* ----------------------------------------------------------
+     Fix per inline “white”
+  ---------------------------------------------------------- */
+  [style*="color: rgb(255, 255, 255)"]{
+    color: var(--filalma-text) !important;
+  }
+  
+  /* ----------------------------------------------------------
+     Micro-ritocchi: focus states coerenti (solo colori)
+  ---------------------------------------------------------- */
+  :focus-visible{
+    outline: none;
+    box-shadow: var(--filalma-ring);
+  }
+  
+  /* ----------------------------------------------------------
+     (opzionale) rendiamo i bottoni bootstrap più coerenti sul light:
+     NON tocchiamo navbar.
+  ---------------------------------------------------------- */
+  .btn-primary{
+    box-shadow: 0 10px 22px rgba(13,110,253,0.18);
+  }
+  .btn-primary:hover{
+    box-shadow: 0 14px 30px rgba(13,110,253,0.22);
+  }
+  /* ===========================
+   GREEN SECTION
+=========================== */
+
+.green-section{
+  padding: 70px 0;
+  position: relative;
+  background: linear-gradient(110deg,
+    #dff4ff 0%,
+    #eefcff 32%,
+    #eaf8f1 55%,
+    #0f6a3b 100%
+  );
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* micro “glow” soft per legare con identità Filalma */
+.green-section::before{
+  content:"";
+  position:absolute;
+  inset:-30%;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(0,194,255,0.18), transparent 55%),
+    radial-gradient(circle at 80% 40%, rgba(34,197,94,0.18), transparent 55%);
+  pointer-events:none;
+}
+
+.green-section .container{ position:relative; z-index:1; }
+
+.green-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  padding:5px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.92);
+  color:#0f6a3b;
+  border:1px solid rgba(15,106,59,0.25);
+  margin-bottom:1rem;
+  backdrop-filter: blur(10px);
+}
+
+.green-title{
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
+  font-weight:700;
+  line-height:1.2;
+  margin-bottom:1rem;
+  color:#0b1b2b; /* coerente con LIGHT Filalma */
+}
+
+.green-title span{
+  background: linear-gradient(135deg, #16a34a, #059669);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.green-text{
+  font-size:.95rem;
+  color:#1f3347;
+  margin-bottom:.9rem;
+  max-width:560px;
+}
+
+/* Bottone “foglia allungata” */
+.btn-leaf{
+  display:inline-flex;
+  align-items:center;
+  font-weight:700;
+  padding:.7rem 1.45rem;
+  border-radius: 999px 64px 999px 64px;
+  background: linear-gradient(135deg, #22c55e, #0f6a3b);
+  color:#ffffff;
+  border:none;
+  box-shadow:0 10px 26px rgba(15,106,59,0.22);
+  transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+
+.btn-leaf:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 34px rgba(15,106,59,0.32);
+  filter: brightness(1.03);
+  color:#fff;
+}
+
+.green-cta{ margin-top: 1.1rem; }
+
+/* ===== METRIC COUNTER ===== */
+.green-metric{
+  margin-top: 1.1rem;
+  margin-bottom: 1.05rem;
+  display:flex;
+  gap: .9rem;
+  align-items:flex-start;
+  padding: 1rem 1.05rem;
+  border-radius: 1.2rem;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(11,27,43,0.10);
+  box-shadow: 0 18px 45px rgba(11,27,43,0.10);
+  backdrop-filter: blur(10px);
+}
+
+.metric-ico{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(13,110,253,0.10);
+  border: 1px solid rgba(13,110,253,0.18);
+  color: #0d6efd;
+  flex-shrink:0;
+}
+
+.metric-body{ min-width: 0; }
+
+.metric-value{
+  display:flex;
+  align-items:baseline;
+  gap: .4rem;
+  font-weight: 850;
+  line-height: 1;
+  color: #0b1b2b;
+  font-size: clamp(2rem, 1.6vw + 1.2rem, 2.5rem);
+}
+
+.metric-unit{
+  font-size: .95rem;
+  font-weight: 800;
+  color: #0f6a3b;
+  letter-spacing: .02em;
+}
+
+.metric-label{
+  margin-top: .25rem;
+  font-weight: 700;
+  color: #1f3347;
+}
+
+.metric-note{
+  margin-top: .15rem;
+  font-size: .85rem;
+  color: rgba(31,51,71,0.75);
+}
+
+/* MEDIA GRID */
+.green-media-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:1rem;
+}
+
+.green-media{
+  border-radius:1.3rem;
+  overflow:hidden;
+  box-shadow:0 18px 45px rgba(0,0,0,0.12);
+  position:relative;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.green-media img{
+  width:100%;
+  height:100%;
+  min-height: 210px;
+  object-fit:cover;
+  display:block;
+  transition:transform .35s ease;
+}
+.green-badges{
+  margin-top: 1rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem;
+}
+
+/* badge base light */
+.green-packaging-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:600;
+
+  background: rgba(15,106,59,0.08);
+  border: 1px solid rgba(15,106,59,0.25);
+  color: #0f6a3b;
+
+  box-shadow: 0 6px 16px rgba(11,27,43,0.06);
+  transition: all .25s ease;
+}
+
+/* hover leggero premium */
+.green-packaging-badge:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(11,27,43,0.10);
+}
+
+/* CAM badge differenziato ma coerente */
+.green-cam-badge{
+  background: rgba(0,194,255,0.08);
+  border: 1px solid rgba(0,194,255,0.35);
+  color: #0d6efd;
+}
+
+@media (hover:hover){
+  .green-media:hover img{ transform:scale(1.05); }
+}
+
+@media(max-width:991.98px){
+  .green-media-grid{ grid-template-columns:1fr; }
+  .green-media img{ min-height: 190px; }
+}

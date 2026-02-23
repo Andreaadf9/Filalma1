@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servizi di Giardinaggio · Filalma Global Services</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Navbar globale (già tua, iniettata) -->
+  <link rel="stylesheet" href="navbar.css">
+
+  <!-- Page styles -->
+  <link id="theme-dark" rel="stylesheet" href="serviziDiGiardinaggio.css">
+  <link id="theme-light" rel="stylesheet" href="serviziDiGiardinaggio.light.css">
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+
+  <main class="page-wrap">
+
+    <!-- HERO -->
+    <header class="hero" id="top">
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="kicker">
+              <i class="fa-solid fa-leaf"></i>
+              Green Services · Filalma
+            </div>
+
+            <h1 class="hero-title">
+              Servizi di <span class="accent">giardinaggio</span>, manutenzioni e gestione aree verdi
+              <br class="d-none d-lg-block" />
+              per spazi sempre curati.
+            </h1>
+
+            <p class="hero-subtitle">
+              Interventi ordinari e straordinari per aziende, enti e strutture complesse:
+              manutenzione del verde, potature, irrigazione, pulizia aree esterne, piccoli lavori manutentivi e
+              programmi stagionali. Un unico referente, standard operativi chiari, squadre specializzate.
+            </p>
+
+            <div class="badges">
+              <span class="pill"><i class="fa-solid fa-calendar-check"></i> Programmi stagionali</span>
+              <span class="pill"><i class="fa-solid fa-shield-halved"></i> Sicurezza & procedure</span>
+              <span class="pill"><i class="fa-solid fa-people-group"></i> Squadre operative</span>
+              <span class="pill"><i class="fa-solid fa-location-dot"></i> Interventi su richiesta</span>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn btn-accent btn-lg" href="#giardinaggio">
+                <i class="fa-solid fa-seedling me-2"></i> Scopri i servizi
+              </a>
+              <a class="btn btn-ghost btn-lg" href="#contatti">
+                <i class="fa-solid fa-paper-plane me-2"></i> Richiedi informazioni
+              </a>
+            </div>
+
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-circle-check"></i> Unico interlocutore</div>
+              <span class="dot" aria-hidden="true"></span>
+              <div class="meta-item"><i class="fa-solid fa-circle-check"></i> Coordinamento multi-servizio</div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-card">
+              <div class="hero-card-badge">
+                <i class="fa-solid fa-star"></i> Focus operativo
+              </div>
+
+              <h3 class="hero-card-title">Approccio “cabina di regia”</h3>
+              <p class="hero-card-text">
+                Dalla manutenzione del verde alla gestione esterna complessiva:
+                pianifichiamo, interveniamo e rendicontiamo con continuità.
+              </p>
+
+              <div class="mini-grid">
+                <div class="mini">
+                  <i class="fa-solid fa-tree"></i>
+                  <div>
+                    <div class="mini-title">Aree verdi</div>
+                    <div class="mini-sub">cura e valorizzazione</div>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <i class="fa-solid fa-wrench"></i>
+                  <div>
+                    <div class="mini-title">Manutenzioni</div>
+                    <div class="mini-sub">interventi programmati</div>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <i class="fa-solid fa-droplet"></i>
+                  <div>
+                    <div class="mini-title">Irrigazione</div>
+                    <div class="mini-sub">controllo & ottimizzazione</div>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <i class="fa-solid fa-broom"></i>
+                  <div>
+                    <div class="mini-title">Aree esterne</div>
+                    <div class="mini-sub">pulizia e decoro</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-card-footer">
+                <i class="fa-solid fa-leaf me-1"></i> Qualità · Continuità · Immagine
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION: GIARDINAGGIO -->
+    <section id="giardinaggio" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Servizi</div>
+          <h2 class="section-title">Servizi di giardinaggio</h2>
+          <p class="section-subtitle">
+            Interventi puntuali e piani di manutenzione per mantenere giardini e spazi esterni ordinati,
+            funzionali e coerenti con l’immagine della tua struttura.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7">
+            <div class="feature-card h-100">
+              <div class="feature-head">
+                <span class="chip"><i class="fa-solid fa-seedling"></i> Giardinaggio</span>
+                <span class="tiny muted-hint">Ordine, estetica, continuità</span>
+              </div>
+
+              <div class="row g-3 mt-1">
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-scissors"></i></div>
+                    <div>
+                      <div class="service-title">Potature e sagomature</div>
+                      <div class="service-text">Interventi su siepi, arbusti e alberature con criteri tecnici.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Sicurezza & DPI</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-water"></i></div>
+                    <div>
+                      <div class="service-title">Irrigazione</div>
+                      <div class="service-text">Controllo impianti, regolazioni, ottimizzazione consumi.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Monitoraggio periodico</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-mountain-sun"></i></div>
+                    <div>
+                      <div class="service-title">Cura stagionale</div>
+                      <div class="service-text">Trattamenti, risemine, concimazioni e rinnovo aree verdi.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Piani su misura</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-trash-can"></i></div>
+                    <div>
+                      <div class="service-title">Pulizia e smaltimento</div>
+                      <div class="service-text">Raccolta sfalci e gestione residui secondo procedure.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Decoro garantito</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-foot">
+                <div class="tiny">
+                  <i class="fa-solid fa-circle-info me-1"></i>
+                  Ideale per sedi aziendali, complessi residenziali, enti pubblici e strutture ricettive.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="media-grid h-100">
+
+              <!-- Foto servizio -->
+              <div class="media-box">
+                <img src="img/giardinaggio.jpeg" alt="" class="media-img">
+                <div class="media-overlay">
+                  <div class="media-label"><i class="fa-solid fa-image"></i> Foto servizio</div>
+                  <div class="media-sub">Potature · siepi · aiuole</div>
+                </div>
+              </div>
+
+              <!-- Grafica / Report -->
+              <div class="media-box">
+                <img src="img/giardinaggio.jpeg" alt="" class="media-img">
+                <div class="media-overlay">
+                  <div class="media-label"><i class="fa-solid fa-chart-line"></i> Grafica/Report</div>
+                  <div class="media-sub">Piano stagionale · interventi</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: MANUTENZIONI -->
+    <section id="manutenzioni" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Supporto</div>
+          <h2 class="section-title">Manutenzioni</h2>
+          <p class="section-subtitle">
+            Piccoli e medi interventi manutentivi a supporto dell’operatività quotidiana:
+            efficienza, ordine e continuità del servizio.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5 order-lg-2">
+            <div class="media-grid h-100">
+
+              <!-- Foto intervento -->
+              <div class="media-box">
+                <img src="img/manutenzioni.jpeg" alt="" class="media-img">
+                <div class="media-overlay">
+                  <div class="media-label"><i class="fa-solid fa-image"></i> Foto intervento</div>
+                  <div class="media-sub">Ripristini · sistemazioni</div>
+                </div>
+              </div>
+
+              <!-- Checklist -->
+              <div class="media-box">
+                <img src="img/.jpeg" alt="" class="media-img">
+                <div class="media-overlay">
+                  <div class="media-label"><i class="fa-solid fa-clipboard-list"></i> Checklist</div>
+                  <div class="media-sub">Programmazione · controlli</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7 order-lg-1">
+            <div class="feature-card h-100">
+              <div class="feature-head">
+                <span class="chip"><i class="fa-solid fa-wrench"></i> Manutenzioni</span>
+                <span class="tiny muted-hint">Interventi rapidi e programmati</span>
+              </div>
+
+              <div class="row g-3 mt-1">
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <div>
+                      <div class="service-title">Ripristini e piccole opere</div>
+                      <div class="service-text">Sistemazioni, riparazioni, interventi di manutenzione ordinaria.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Pianificazione e tracciabilità</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-bolt"></i></div>
+                    <div>
+                      <div class="service-title">Supporto tecnico</div>
+                      <div class="service-text">Interventi coordinati con tempi e priorità operative condivise.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Continuità di servizio</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div>
+                      <div class="service-title">Gestione urgenze</div>
+                      <div class="service-text">Attivazione rapida su richieste urgenti e criticità.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> SLA condivisibili</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <div>
+                      <div class="service-title">Manutenzione programmata</div>
+                      <div class="service-text">Cicli di controllo e intervento per prevenire guasti e degrado.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Reporting periodico</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-foot">
+                <div class="tiny">
+                  <i class="fa-solid fa-circle-info me-1"></i>
+                  Integrazione possibile con pulizie, facchinaggio e traslochi in logica global services.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: AREE VERDI -->
+    <section id="aree-verdi" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Gestione</div>
+          <h2 class="section-title">Gestione aree verdi</h2>
+          <p class="section-subtitle">
+            Gestione completa di spazi esterni: manutenzione, decoro, pulizia, controllo e valorizzazione.
+            Un servizio pensato per strutture complesse e grandi aree.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7">
+            <div class="feature-card h-100">
+              <div class="feature-head">
+                <span class="chip"><i class="fa-solid fa-tree"></i> Aree verdi</span>
+                <span class="tiny muted-hint">Valorizzazione e decoro costante</span>
+              </div>
+
+              <div class="row g-3 mt-1">
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-route"></i></div>
+                    <div>
+                      <div class="service-title">Percorsi e spazi esterni</div>
+                      <div class="service-text">Pulizia, raccolta foglie, gestione aree di passaggio e accessi.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Immagine sempre curata</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-bug-slash"></i></div>
+                    <div>
+                      <div class="service-title">Prevenzione e controllo</div>
+                      <div class="service-text">Azioni preventive e controllo condizioni del verde (su richiesta).</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Interventi mirati</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-recycle"></i></div>
+                    <div>
+                      <div class="service-title">Gestione residui</div>
+                      <div class="service-text">Raccolta e gestione residui verdi secondo modalità concordate.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Processi ordinati</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-layer-group"></i></div>
+                    <div>
+                      <div class="service-title">Piani multi-sede</div>
+                      <div class="service-text">Programmi su più sedi e coordinamento operativo centralizzato.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Cabina di regia</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-foot">
+                <div class="tiny">
+                  <i class="fa-solid fa-circle-info me-1"></i>
+                  Perfetto per campus, poli logistici, musei, aree eventi, sedi istituzionali.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="media-grid h-100">
+
+              <!-- Foto area verde -->
+              <div class="media-box">
+                <img src="img/giardinaggio1.jpeg" alt="" class="media-img">
+                <div class="media-overlay">
+                  <div class="media-label"><i class="fa-solid fa-image"></i> Foto area verde</div>
+                  <div class="media-sub">Parchi · campus · grandi aree</div>
+                </div>
+              </div>
+
+              <!-- Planimetria / KPI -->
+              <div class="media-box">
+                <img src="img/kpiArea.png" alt="" class="media-img">
+                <div class="media-overlay">
+                  <div class="media-label"><i class="fa-solid fa-map"></i> Planimetria / KPI</div>
+                  <div class="media-sub">Zone · frequenze · standard</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h2 class="cta-title">Vuoi un piano operativo per i tuoi spazi esterni?</h2>
+              <p class="cta-text">
+                Raccontaci la tua esigenza: frequenza, ampiezza delle aree, tipologia di interventi.
+                Ti proponiamo un servizio scalabile, con continuità e standard chiari.
+              </p>
+              <div class="cta-pills">
+                <span class="pill"><i class="fa-solid fa-check"></i> Programmazione stagionale</span>
+                <span class="pill"><i class="fa-solid fa-check"></i> Interventi su chiamata</span>
+                <span class="pill"><i class="fa-solid fa-check"></i> Coordinamento multi-servizio</span>
+              </div>
+            </div>
+
+            <div class="col-lg-4 text-lg-end text-center">
+              <a href="diventaConsorziata.html" class="btn btn-accent btn-lg w-100 w-lg-auto">
+                <i class="fa-solid fa-paper-plane me-2"></i> Contattaci
+              </a>
+              <p class="tiny mt-2 mb-0">Inserirai qui un form o un contatto dedicato, se vuoi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>© <span id="year"></span> Consorzio stabile Filalma · Tutti i diritti riservati</span>
+        <span style="opacity:0.8;">
+          Sede operativa: Via del Babbuino 21, Roma · Sede legale: Via degli Olmetti 5, Formello (RM)
+        </span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="navbar.js"></script>
+  <script src="serviziDiGiardinaggio.js"></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

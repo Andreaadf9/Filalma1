@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Deposito & Magazzino · Filalma Global Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Navbar globale (già tua) -->
+  <link rel="stylesheet" href="navbar.css">
+
+  <!-- Page styles -->
+  <link id="theme-dark" rel="stylesheet" href="deposito.css">
+  <link id="theme-light" rel="stylesheet" href="deposito.light.css">
+</head>
+
+<body>
+  <!-- Navbar dinamica -->
+  <div id="navbar-container"></div>
+
+  <main class="page-wrap">
+    <!-- HERO -->
+    <header class="hero" id="top">
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="kicker">
+              <i class="fa-solid fa-warehouse"></i>
+              Deposito & Magazzino · Global Services
+            </div>
+
+            <h1 class="hero-title">
+              Spazio, sicurezza e <span class="accent">gestione logistica</span> in un unico servizio.
+            </h1>
+
+            <p class="hero-subtitle">
+              Soluzioni di deposito per breve o lungo periodo, con possibilità di integrazione a servizi
+              di trasloco, facchinaggio e movimentazione. Seleziona il magazzino, indica i metri cubi e la durata:
+              ti ricontattiamo con una proposta chiara e operativa.
+            </p>
+
+            <div class="badges">
+              <span class="pill"><i class="fa-solid fa-shield-halved"></i> Sicurezza & controllo</span>
+              <span class="pill"><i class="fa-solid fa-cube"></i> Stoccaggio modulare</span>
+              <span class="pill"><i class="fa-solid fa-truck-fast"></i> Movimentazione su richiesta</span>
+              <span class="pill"><i class="fa-solid fa-calendar-check"></i> Periodi flessibili</span>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn btn-accent btn-lg" href="#preventivo">
+                <i class="fa-solid fa-clipboard-check me-2"></i> Richiedi preventivo deposito
+              </a>
+              <a class="btn btn-ghost btn-lg" href="#vantaggi">
+                <i class="fa-solid fa-circle-info me-2"></i> Come funziona
+              </a>
+            </div>
+
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-circle-check"></i> Unico interlocutore</div>
+              <span class="dot"></span>
+              <div class="meta-item"><i class="fa-solid fa-circle-check"></i> Supporto logistica integrata</div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-card">
+              <div class="hero-card-badge">
+                <i class="fa-solid fa-star"></i> Consigliato
+              </div>
+              <h3 class="hero-card-title">Deposito + servizi integrati</h3>
+              <p class="hero-card-text">
+                Se hai bisogno di deposito, spesso serve anche movimentazione, facchinaggio o trasporto.
+                Filalma coordina il servizio end-to-end con un piano operativo unico.
+              </p>
+
+              <div class="mini-grid">
+                <div class="mini">
+                  <i class="fa-solid fa-boxes-stacked"></i>
+                  <div>
+                    <div class="mini-title">Gestione volumi</div>
+                    <div class="mini-sub">m³ dichiarati e ottimizzazione</div>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <div class="mini-title">Sedi disponibili</div>
+                    <div class="mini-sub">Roma · Napoli · Venezia · Reggio Emilia</div>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <i class="fa-solid fa-clock"></i>
+                  <div>
+                    <div class="mini-title">Durata</div>
+                    <div class="mini-sub">da breve a lungo periodo</div>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <i class="fa-solid fa-handshake"></i>
+                  <div>
+                    <div class="mini-title">Affidabilità</div>
+                    <div class="mini-sub">aziende consorziate con esperienza</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-card-footer">
+                <i class="fa-solid fa-lock me-1"></i> Organizzazione · Tracciabilità · Continuità
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- VANTAGGI -->
+    <section id="vantaggi" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Deposito</div>
+          <h2 class="section-title">Perché scegliere un deposito Filalma</h2>
+          <p class="section-subtitle">
+            Un servizio di deposito efficace non è solo “spazio”: è organizzazione, accessi, gestione e tempi certi.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card-elevated">
+              <div class="ico"><i class="fa-solid fa-shield-halved"></i></div>
+              <h3 class="card-title">Sicurezza e controllo</h3>
+              <p class="card-text">Gestione accessi e procedure per proteggere materiali e beni stoccati.</p>
+              <div class="tag"><i class="fa-solid fa-check"></i> Approccio “safety-first”</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card-elevated">
+              <div class="ico"><i class="fa-solid fa-diagram-project"></i></div>
+              <h3 class="card-title">Organizzazione</h3>
+              <p class="card-text">Ottimizzazione volumi, gestione movimentazioni e programmazione ritiri/consegne.</p>
+              <div class="tag"><i class="fa-solid fa-check"></i> Piani operativi chiari</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card-elevated">
+              <div class="ico"><i class="fa-solid fa-truck-fast"></i></div>
+              <h3 class="card-title">Logistica integrata</h3>
+              <p class="card-text">Deposito abbinabile a trasloco, facchinaggio, pulizie e manutenzioni.</p>
+              <div class="tag"><i class="fa-solid fa-check"></i> Unico referente</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREVENTIVO (UseBasin) -->
+    <section id="preventivo" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Preventivo</div>
+          <h2 class="section-title">Richiedi un preventivo deposito</h2>
+          <p class="section-subtitle">
+            Seleziona la sede, indica volume (m³) e durata. Ti ricontattiamo per confermare dettagli e costi.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-start">
+          <!-- info -->
+          <div class="col-lg-5">
+            <div class="side-stack">
+              <!-- INFO CARD (la tua) -->
+              <div class="info-card">
+                <div class="info-kicker">
+                  <i class="fa-solid fa-circle-info"></i> Suggerimento
+                </div>
+                <ul class="info-list">
+                  <li><i class="fa-solid fa-check"></i> Indica i m³ con una stima realistica (aiuta il dimensionamento).</li>
+                  <li><i class="fa-solid fa-check"></i> La durata può essere aggiornata dopo una prima valutazione.</li>
+                  <li><i class="fa-solid fa-check"></i> Possiamo gestire ritiro/consegna e movimentazioni.</li>
+                </ul>
+                <div class="info-note">
+                  <div class="note-ico"><i class="fa-solid fa-shield-halved"></i></div>
+                  <div class="tiny">
+                    <strong class="text-white">Privacy:</strong> inviando il form acconsenti a essere ricontattato.
+                  </div>
+                </div>
+              </div>
+          
+              <!-- SLIDER MAGAZZINI (nuovo) -->
+              <div class="slider-card">
+                <div class="info-kicker">
+                  <i class="fa-solid fa-images"></i> I nostri magazzini
+                </div>
+          
+                <div id="warehousesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+                  <div class="carousel-inner">
+                    <!-- ROMA -->
+                    <div class="carousel-item active">
+                      <div class="ratio ratio-16x9 slider-media">
+                        <img src="img/magazzinonapoli.jpg" class="d-block w-100" alt="Magazzino Roma">
+                      </div>
+                      <div class="slider-caption">
+                        <div class="slider-title"><i class="fa-solid fa-location-dot"></i> Roma</div>
+                        <div class="slider-sub">Hub logistico · Accesso rapido</div>
+                      </div>
+                    </div>
+          
+                    <!-- REGGIO EMILIA -->
+                    <div class="carousel-item">
+                      <div class="ratio ratio-16x9 slider-media">
+                        <img src="img/magazzinoReggio.jpeg" class="d-block w-100" alt="Magazzino Reggio Emilia">
+                      </div>
+                      <div class="slider-caption">
+                        <div class="slider-title"><i class="fa-solid fa-location-dot"></i> Reggio Emilia</div>
+                        <div class="slider-sub">Nord Italia · Efficienza operativa</div>
+                      </div>
+                    </div>
+          
+                    <!-- NAPOLI -->
+                    <div class="carousel-item">
+                      <div class="ratio ratio-16x9 slider-media">
+                        <img src="img/deposito.jpeg" class="d-block w-100" alt="Magazzino Napoli">
+                      </div>
+                      <div class="slider-caption">
+                        <div class="slider-title"><i class="fa-solid fa-location-dot"></i> Napoli</div>
+                        <div class="slider-sub">Sud Italia · Logistica integrata</div>
+                      </div>
+                    </div>
+          
+                    <!-- VENEZIA -->
+                    <div class="carousel-item">
+                      <div class="ratio ratio-16x9 slider-media">
+                        <img src="img/magazzinoVenezia.jpeg" class="d-block w-100" alt="Magazzino Venezia">
+                      </div>
+                      <div class="slider-caption">
+                        <div class="slider-title"><i class="fa-solid fa-location-dot"></i> Venezia</div>
+                        <div class="slider-sub">Supporto eventi · Operatività dedicata</div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#warehousesCarousel" data-bs-slide="prev" aria-label="Immagine precedente">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#warehousesCarousel" data-bs-slide="next" aria-label="Immagine successiva">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+          
+                  <!-- Indicators -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#warehousesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Roma"></button>
+                    <button type="button" data-bs-target="#warehousesCarousel" data-bs-slide-to="1" aria-label="Reggio Emilia"></button>
+                    <button type="button" data-bs-target="#warehousesCarousel" data-bs-slide-to="2" aria-label="Napoli"></button>
+                    <button type="button" data-bs-target="#warehousesCarousel" data-bs-slide-to="3" aria-label="Venezia"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- form -->
+          <div class="col-lg-7">
+            <div class="form-card">
+              <form action="https://usebasin.com/f/YOUR_USEBASIN_ENDPOINT" method="POST" id="depositForm" novalidate>
+                <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off">
+
+                <div class="row g-3">
+                  <div class="col-12">
+                    <div class="group-title">
+                      <span class="chip"><i class="fa-solid fa-user"></i> Dati di contatto</span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Nome</label>
+                    <input class="form-control" name="nome" required placeholder="Es. Mario">
+                    <div class="invalid-feedback">Inserisci il nome.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Cognome</label>
+                    <input class="form-control" name="cognome" required placeholder="Es. Rossi">
+                    <div class="invalid-feedback">Inserisci il cognome.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Email</label>
+                    <input class="form-control" type="email" name="email" required placeholder="nome@email.it">
+                    <div class="invalid-feedback">Inserisci un’email valida.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Telefono</label>
+                    <input class="form-control" type="tel" name="telefono" required inputmode="tel" placeholder="Numero a cui ricontattarti">
+                    <div class="invalid-feedback">Inserisci un numero di telefono.</div>
+                  </div>
+
+                  <div class="col-12"><hr class="divider-soft"></div>
+
+                  <div class="col-12">
+                    <div class="group-title d-flex align-items-center justify-content-between gap-2">
+                      <span class="chip"><i class="fa-solid fa-warehouse"></i> Dati deposito</span>
+                      <span class="tiny muted-hint">Volume + durata + sede</span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Sede magazzino</label>
+                    <select class="form-select" name="sede_magazzino" required>
+                      <option value="" selected disabled>Seleziona sede</option>
+                      <option value="roma">Roma</option>
+                      <option value="reggio_emilia">Reggio Emilia</option>
+                      <option value="napoli">Napoli</option>
+                      <option value="venezia">Venezia</option>
+                    </select>
+                    <div class="invalid-feedback">Seleziona una sede.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label required">Metri cubi (m³)</label>
+                    <input class="form-control" name="metri_cubi" type="number" min="1" max="20000" step="1"
+                           inputmode="numeric" required placeholder="Es. 12">
+                    <div class="invalid-feedback">Inserisci un valore valido (min 1).</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label required">Per quanto tempo?</label>
+                    <div class="duration-grid">
+                      <div class="duration-field">
+                        <input class="form-control" name="durata_valore" type="number" min="1" max="120" step="1"
+                               inputmode="numeric" required placeholder="Es. 3">
+                        <div class="invalid-feedback">Inserisci una durata valida.</div>
+                      </div>
+                      <div class="duration-unit">
+                        <select class="form-select" name="durata_unita" required>
+                          <option value="settimane">Settimane</option>
+                          <option value="mesi" selected>Mesi</option>
+                          <option value="anni">Anni</option>
+                        </select>
+                        <div class="invalid-feedback">Seleziona l’unità.</div>
+                      </div>
+                    </div>
+                    <div class="tiny muted-hint mt-2">
+                      Suggerimento: se non sei sicuro, indica una stima (es. 3 mesi).
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check mt-1">
+                      <input class="form-check-input" type="checkbox" id="privacyDeposit" required>
+                      <label class="form-check-label required" for="privacyDeposit">
+                        Confermo di aver letto l’informativa e acconsento al trattamento dei dati per essere ricontattato.
+                      </label>
+                      <div class="invalid-feedback">Campo obbligatorio.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 d-flex flex-wrap gap-2 align-items-center mt-2">
+                    <button class="btn btn-accent btn-lg" type="submit" id="depositSubmit">
+                      <i class="fa-solid fa-paper-plane me-2"></i> Invia richiesta
+                    </button>
+                    <span class="tiny ms-auto" id="depositStatus"></span>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>© <span id="year"></span> Consorzio stabile Filalma · Tutti i diritti riservati</span>
+        <span style="opacity:0.8;">
+          Sede operativa: Via del Babbuino 21, Roma · Sede legale: Via degli Olmetti 5, Formello (RM)
+        </span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Navbar dinamica -->
+  <script src="navbar.js"></script>
+
+  <script src="deposito.js"></script>
+</body>
+</html>

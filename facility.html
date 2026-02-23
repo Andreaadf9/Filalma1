@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Facility Management · Filalma Global Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Navbar globale (già tua, iniettata) -->
+  <link rel="stylesheet" href="navbar.css">
+
+  <!-- Page styles -->
+  <link id="theme-dark" rel="stylesheet" href="facility.css">
+  <link id="theme-light" rel="stylesheet" href="facility.light.css">
+</head>
+
+<body>
+  <!-- Navbar dinamica -->
+  <div id="navbar-container"></div>
+
+  <main class="page-wrap">
+    <!-- HERO -->
+    <header class="hero" id="top">
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="kicker">
+              <i class="fa-solid fa-building-circle-check"></i>
+              Facility Management · Filalma
+            </div>
+
+            <h1 class="hero-title">
+              Un unico partner per la gestione <span class="accent">integrata</span> dei tuoi spazi.
+            </h1>
+
+            <p class="hero-subtitle">
+              Il consorzio Filalma coordina aziende specializzate per offrire un servizio di
+              <strong>facility management</strong> strutturato: manutenzioni, pulizie, servizi esterni,
+              logistica e supporti operativi. Un approccio “cabina di regia” che semplifica la gestione
+              e migliora continuità, qualità e controllo dei costi.
+            </p>
+
+            <div class="badges">
+              <span class="pill"><i class="fa-solid fa-layer-group"></i> Multi-servizio</span>
+              <span class="pill"><i class="fa-solid fa-shield-halved"></i> Procedure & sicurezza</span>
+              <span class="pill"><i class="fa-solid fa-clipboard-check"></i> KPI & rendicontazione</span>
+              <span class="pill"><i class="fa-solid fa-people-group"></i> Squadre coordinate</span>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn btn-accent btn-lg" href="#offerta">
+                <i class="fa-solid fa-sparkles me-2"></i> Cosa possiamo gestire
+              </a>
+              <a class="btn btn-ghost btn-lg" href="#contatto">
+                <i class="fa-solid fa-paper-plane me-2"></i> Contatta Filalma
+              </a>
+            </div>
+
+            <div class="meta">
+              <div class="meta-item"><i class="fa-solid fa-circle-check"></i> Unico interlocutore</div>
+              <span class="dot"></span>
+              <div class="meta-item"><i class="fa-solid fa-circle-check"></i> Interventi programmati & on-demand</div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-card">
+              <div class="hero-card-badge">
+                <i class="fa-solid fa-star"></i> Valore per il cliente
+              </div>
+
+              <h3 class="hero-card-title">Meno complessità, più controllo</h3>
+              <p class="hero-card-text">
+                Pianificazione, gestione operativa e supervisione con reportistica: riduci fornitori,
+                uniformi gli standard e ottieni un servizio affidabile.
+              </p>
+
+              <div class="mini-grid">
+                <div class="mini">
+                  <i class="fa-solid fa-people-arrows"></i>
+                  <div>
+                    <div class="mini-title">Coordinamento</div>
+                    <div class="mini-sub">un’unica regia operativa</div>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <i class="fa-solid fa-clock"></i>
+                  <div>
+                    <div class="mini-title">SLA & tempi</div>
+                    <div class="mini-sub">priorità e urgenze gestite</div>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <div>
+                    <div class="mini-title">KPI & report</div>
+                    <div class="mini-sub">misurazione e miglioramento</div>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <i class="fa-solid fa-broom-ball"></i>
+                  <div>
+                    <div class="mini-title">Qualità</div>
+                    <div class="mini-sub">standard costanti</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-card-footer">
+                <i class="fa-solid fa-globe me-1"></i> Global services · Strutture complesse · Eventi
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- OFFERTA / WHAT WE MANAGE -->
+    <section id="offerta" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Servizio</div>
+          <h2 class="section-title">Cosa gestiamo nel Facility Management</h2>
+          <p class="section-subtitle">
+            Servizi integrati per immobili, strutture e organizzazioni: dalla manutenzione ordinaria ai servizi
+            operativi quotidiani. Il valore sta nella gestione coordinata.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7">
+            <div class="feature-card h-100">
+              <div class="feature-head">
+                <span class="chip"><i class="fa-solid fa-sitemap"></i> Ambiti gestiti</span>
+                <span class="tiny muted-hint">Un servizio scalabile</span>
+              </div>
+
+              <div class="row g-3 mt-1">
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <div>
+                      <div class="service-title">Manutenzioni</div>
+                      <div class="service-text">Ordinaria e programmata, piccole opere, ripristini e urgenze.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Pianificazione + SLA</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+                    <div>
+                      <div class="service-title">Pulizie civili e industriali</div>
+                      <div class="service-text">Standard costanti, procedure e controlli qualità.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Checklist & auditing</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-warehouse"></i></div>
+                    <div>
+                      <div class="service-title">Logistica e supporto operativo</div>
+                      <div class="service-text">Facchinaggio, movimentazioni, allestimenti e servizi integrati.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Squadre dedicate</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="service-card">
+                    <div class="service-ico"><i class="fa-solid fa-tree"></i></div>
+                    <div>
+                      <div class="service-title">Aree esterne e verde</div>
+                      <div class="service-text">Decoro esterno, gestione aree verdi, giardinaggio e stagionalità.</div>
+                      <div class="service-tag"><i class="fa-solid fa-check"></i> Continuità estetica</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-foot">
+                <div class="tiny">
+                  <i class="fa-solid fa-circle-info me-1"></i>
+                  Scegli Filalma se cerchi un partner capace di “reggere” complessità, tempi stretti e standard elevati.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Riquadri immagini/grafiche -->
+          <div class="col-lg-5">
+            <div class="media-grid h-100">
+              <div class="media-box">
+                <div class="media-overlay">
+                  <div class="media-label"><i class="fa-solid fa-image"></i> Foto struttura</div>
+                  <div class="media-sub">immobili · sedi · campus</div>
+                </div>
+                <div class="media-placeholder">16:9</div>
+              </div>
+
+              <div class="media-box">
+                <div class="media-overlay">
+                  <div class="media-label"><i class="fa-solid fa-chart-simple"></i> Grafica KPI / Report</div>
+                  <div class="media-sub">SLA · tempi · qualità</div>
+                </div>
+                <div class="media-placeholder">16:9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- “Perché conviene” (mini cards) -->
+        <div class="row g-4 mt-2">
+          <div class="col-md-6 col-lg-3">
+            <div class="value-card">
+              <div class="value-ico"><i class="fa-solid fa-user-tie"></i></div>
+              <div class="value-title">Un solo referente</div>
+              <div class="value-text">Riduci l’attrito nella gestione di fornitori e attività diverse.</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="value-card">
+              <div class="value-ico"><i class="fa-solid fa-arrows-spin"></i></div>
+              <div class="value-title">Continuità</div>
+              <div class="value-text">Processi e squadre coordinate garantiscono stabilità nel tempo.</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="value-card">
+              <div class="value-ico"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+              <div class="value-title">Controllo</div>
+              <div class="value-text">Report e KPI per misurare qualità, tempi e miglioramenti.</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="value-card">
+              <div class="value-ico"><i class="fa-solid fa-bolt"></i></div>
+              <div class="value-title">Reattività</div>
+              <div class="value-text">Urgenze gestite con priorità, SLA e tempi definiti.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PORTIERATO / RECEPTION -->
+<section id="portierato" class="spc-section">
+  <div class="container">
+    <div class="spc-wrap">
+      <div class="row g-4 align-items-center">
+        <!-- LEFT: content -->
+        <div class="col-lg-7">
+          <div class="spc-kicker">
+            <i class="fa-solid fa-door-open"></i> Portierato & Reception
+          </div>
+
+          <h2 class="spc-title">
+            Presidio <span class="spc-accent">affidabile</span> per accessi, accoglienza e continuità.
+          </h2>
+
+          <p class="spc-text">
+            Filalma coordina servizi di <strong>portierato</strong> e <strong>reception</strong> per sedi, uffici,
+            strutture complesse ed eventi: gestione flussi, registrazioni, controllo accessi e supporto operativo,
+            con personale formato e procedure chiare.
+          </p>
+
+          <div class="spc-tags">
+            <span class="spc-tag"><i class="fa-solid fa-id-badge"></i> Registrazione visitatori</span>
+            <span class="spc-tag"><i class="fa-solid fa-shield-halved"></i> Controllo accessi</span>
+            <span class="spc-tag"><i class="fa-solid fa-headset"></i> Front desk & assistenza</span>
+            <span class="spc-tag"><i class="fa-solid fa-clipboard-check"></i> Report turni / presidi</span>
+          </div>
+
+          <div class="spc-cta">
+            <a class="btn btn-accent btn-lg" href="#contatto">
+              <i class="fa-solid fa-paper-plane me-2"></i> Richiedi info portierato
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#offerta">
+              <i class="fa-solid fa-layer-group me-2"></i> Rivedi l’offerta
+            </a>
+          </div>
+
+          <div class="spc-note">
+            <i class="fa-solid fa-circle-info me-1"></i>
+            Presidi programmati o on-demand, integrabili con logistica di supporto e gestione eventi.
+          </div>
+        </div>
+
+        <!-- RIGHT: card -->
+        <div class="col-lg-5">
+          <div class="spc-card">
+            <div class="spc-card-badge">
+              <i class="fa-solid fa-star"></i> Punti di forza
+            </div>
+
+            <h3 class="spc-card-title">Standard, immagine e sicurezza</h3>
+            <p class="spc-card-text">
+              Un servizio “di facciata” è anche un servizio “di sostanza”:
+              presenza, cortesia, procedure e tracciabilità.
+            </p>
+
+            <div class="spc-mini-grid">
+              <div class="spc-mini">
+                <i class="fa-solid fa-user-check"></i>
+                <div>
+                  <div class="spc-mini-title">Accoglienza</div>
+                  <div class="spc-mini-sub">gestione visitatori e flussi</div>
+                </div>
+              </div>
+              <div class="spc-mini">
+                <i class="fa-solid fa-key"></i>
+                <div>
+                  <div class="spc-mini-title">Accessi</div>
+                  <div class="spc-mini-sub">badge, autorizzazioni, log</div>
+                </div>
+              </div>
+              <div class="spc-mini">
+                <i class="fa-solid fa-phone-volume"></i>
+                <div>
+                  <div class="spc-mini-title">Front desk</div>
+                  <div class="spc-mini-sub">supporto operativo</div>
+                </div>
+              </div>
+              <div class="spc-mini">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <div>
+                  <div class="spc-mini-title">Report</div>
+                  <div class="spc-mini-sub">turni, presidi, note</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="spc-card-footer">
+              <i class="fa-solid fa-lock me-1"></i> Procedure · Presidio · Continuità
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVIZI MUSEALI -->
+<section id="servizi-museali" class="spc-section spc-section-alt">
+  <div class="container">
+    <div class="spc-wrap">
+      <div class="row g-4 align-items-center">
+        <!-- LEFT: content -->
+        <div class="col-lg-7">
+          <div class="spc-kicker">
+            <i class="fa-solid fa-landmark-dome"></i> Servizi museali
+          </div>
+
+          <h2 class="spc-title">
+            Operatività <span class="spc-accent-2">discreta</span> in contesti culturali ed eventi.
+          </h2>
+
+          <p class="spc-text">
+            Per musei, sedi istituzionali e spazi espositivi coordiniamo servizi di
+            <strong>accoglienza</strong>, <strong>guardiania</strong>, supporto all’apertura/chiusura,
+            micro-logistica e assistenza operativa durante allestimenti e flussi di pubblico.
+          </p>
+
+          <div class="spc-tags">
+            <span class="spc-tag"><i class="fa-solid fa-people-group"></i> Accoglienza & infopoint</span>
+            <span class="spc-tag"><i class="fa-solid fa-shield"></i> Guardiania & presidio sale</span>
+            <span class="spc-tag"><i class="fa-solid fa-clipboard-check"></i> Procedure e check</span>
+            <span class="spc-tag"><i class="fa-solid fa-box"></i> Supporto allestimenti leggeri</span>
+          </div>
+
+          <div class="spc-cta">
+            <a class="btn btn-accent btn-lg" href="#contatto">
+              <i class="fa-solid fa-paper-plane me-2"></i> Richiedi info museali
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#metodo">
+              <i class="fa-solid fa-diagram-project me-2"></i> Vedi come lavoriamo
+            </a>
+          </div>
+
+          <div class="spc-note">
+            <i class="fa-solid fa-circle-info me-1"></i>
+            Ideale per flussi variabili: presidio sale, gestione pubblico, supporto operativo e continuità.
+          </div>
+        </div>
+
+        <!-- RIGHT: card -->
+        <div class="col-lg-5">
+          <div class="spc-card spc-card-museum">
+            <div class="spc-card-badge">
+              <i class="fa-solid fa-star"></i> Contesti sensibili
+            </div>
+
+            <h3 class="spc-card-title">Cultura, eventi, istituzioni</h3>
+            <p class="spc-card-text">
+              Team abituati a lavorare con vincoli: opere, allestimenti, orari, percorsi pubblico
+              e necessità di discrezione.
+            </p>
+
+            <div class="spc-mini-grid">
+              <div class="spc-mini">
+                <i class="fa-solid fa-route"></i>
+                <div>
+                  <div class="spc-mini-title">Percorsi</div>
+                  <div class="spc-mini-sub">flussi e gestione sale</div>
+                </div>
+              </div>
+              <div class="spc-mini">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <div class="spc-mini-title">Procedure</div>
+                  <div class="spc-mini-sub">apertura/chiusura e check</div>
+                </div>
+              </div>
+              <div class="spc-mini">
+                <i class="fa-solid fa-box-archive"></i>
+                <div>
+                  <div class="spc-mini-title">Supporto</div>
+                  <div class="spc-mini-sub">micro-logistica operativa</div>
+                </div>
+              </div>
+              <div class="spc-mini">
+                <i class="fa-solid fa-user-shield"></i>
+                <div>
+                  <div class="spc-mini-title">Presidio</div>
+                  <div class="spc-mini-sub">guardiania e attenzione</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="spc-card-footer">
+              <i class="fa-solid fa-lock me-1"></i> Discrezione · Sicurezza · Continuità
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- METODO / HOW -->
+    <section id="metodo" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Metodo</div>
+          <h2 class="section-title">Come lavoriamo</h2>
+          <p class="section-subtitle">
+            Un processo semplice e chiaro: analisi, progettazione del servizio, avvio operativo e
+            monitoraggio continuo con reportistica.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7">
+            <div class="timeline-card h-100">
+              <div class="step">
+                <div class="step-ico"><i class="fa-solid fa-clipboard-list"></i></div>
+                <div>
+                  <div class="step-title">1) Analisi e sopralluogo</div>
+                  <div class="step-text">Raccogliamo esigenze, vincoli, flussi e standard richiesti.</div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-ico"><i class="fa-solid fa-diagram-project"></i></div>
+                <div>
+                  <div class="step-title">2) Piano operativo & SLA</div>
+                  <div class="step-text">Definiamo frequenze, priorità, risorse e livelli di servizio.</div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-ico"><i class="fa-solid fa-play"></i></div>
+                <div>
+                  <div class="step-title">3) Avvio e coordinamento</div>
+                  <div class="step-text">Cabina di regia, squadre, procedure e comunicazione con referente.</div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-ico"><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="step-title">4) Monitoraggio & miglioramento</div>
+                  <div class="step-text">Controlli, reportistica e azioni correttive per migliorare nel tempo.</div>
+                </div>
+              </div>
+
+              <div class="timeline-foot">
+                <i class="fa-solid fa-circle-info me-1"></i>
+                Il risultato: un servizio prevedibile, misurabile e coerente con l’immagine della tua organizzazione.
+              </div>
+            </div>
+          </div>
+
+          <!-- Riquadro immagine/grafica singola -->
+          <div class="col-lg-5">
+            <div class="single-media">
+              <div class="media-overlay">
+                <div class="media-label"><i class="fa-solid fa-image"></i> Foto / grafica</div>
+                <div class="media-sub">workflow · processi · team</div>
+              </div>
+              <div class="media-placeholder">16:9</div>
+            </div>
+
+            <div class="quote-card mt-3">
+              <div class="quote-ico"><i class="fa-solid fa-quote-left"></i></div>
+              <div class="quote-text">
+                “Quando la struttura funziona, il business scorre. Il facility management non è un costo:
+                è il modo più efficace per proteggere continuità, qualità e reputazione.”
+              </div>
+              <div class="quote-author">Team Filalma · Global Services</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTATTO -->
+    <section id="contatto" class="cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h2 class="cta-title">Vuoi un facility management affidabile e misurabile?</h2>
+              <p class="cta-text">
+                Contatta Filalma per una valutazione: ti aiutiamo a definire un piano operativo con
+                livelli di servizio chiari e un coordinamento unico. Ideale per sedi multi-ufficio,
+                poli logistici, strutture complesse e grandi eventi.
+              </p>
+
+              <div class="cta-pills">
+                <span class="pill"><i class="fa-solid fa-check"></i> Sopralluogo / analisi</span>
+                <span class="pill"><i class="fa-solid fa-check"></i> SLA & KPI</span>
+                <span class="pill"><i class="fa-solid fa-check"></i> Coordinamento unico</span>
+              </div>
+            </div>
+
+            <div class="col-lg-4 text-lg-end text-center">
+              <!-- puoi puntare qui al tuo form contatti o pagina contatti -->
+              <a href="diventaConsorziata.html#contatto" class="btn btn-accent btn-lg w-100 w-lg-auto">
+                <i class="fa-solid fa-paper-plane me-2"></i> Richiedi informazioni
+              </a>
+              <p class="tiny mt-2 mb-0">Risposta rapida con proposta operativa dedicata.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>© <span id="year"></span> Consorzio stabile Filalma · Tutti i diritti riservati</span>
+        <span style="opacity:0.8;">
+          Sede operativa: Via del Babbuino 21, Roma · Sede legale: Via degli Olmetti 5, Formello (RM)
+        </span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="navbar.js"></script>
+  <script src="facility.js"></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Governance · Consorzio stabile Filalma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Navbar globale (già tua, iniettata) -->
+    <link rel="stylesheet" href="navbar.css">
+
+    <!-- Page styles -->
+    <link id="theme-dark" rel="stylesheet" href="governance.css">
+    <link id="theme-light" rel="stylesheet" href="governance.light.css">
+</head>
+
+<body>
+    <!-- Navbar dinamica -->
+    <div id="navbar-container"></div>
+
+    <main class="page-wrap" id="top">
+        <!-- HERO istituzionale -->
+        <header class="hero">
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="container hero-content">
+                <div class="row align-items-end g-4">
+                    <div class="col-lg-8">
+                        <div class="kicker">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            Governance · Consorzio stabile Filalma
+                        </div>
+
+                        <h1 class="hero-title">Trasparenza, controllo e responsabilità</h1>
+
+                        <p class="hero-subtitle">
+                            La governance di Filalma è orientata alla qualità del servizio e alla tutela degli
+                            stakeholder:
+                            clienti, aziende consorziate e partner. Processi, ruoli e controlli sono definiti per
+                            garantire
+                            continuità operativa e affidabilità nelle commesse.
+                        </p>
+
+                        <div class="hero-meta">
+                            <span class="meta-chip"><i class="fa-solid fa-check"></i> Ruoli e responsabilità</span>
+                            <span class="meta-chip"><i class="fa-solid fa-check"></i> Presidio qualità</span>
+                            <span class="meta-chip"><i class="fa-solid fa-check"></i> Monitoraggio e reporting</span>
+                            <span class="meta-chip"><i class="fa-solid fa-check"></i> Compliance</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="hero-card">
+                            <div class="hero-card-head">
+                                <div class="hero-card-title">Sintesi</div>
+                                <div class="hero-card-badge"><i class="fa-solid fa-shield-halved"></i> Assetto
+                                    istituzionale</div>
+                            </div>
+
+                            <ul class="hero-list">
+                                <li><i class="fa-solid fa-circle-check"></i> Modello di presidio su più servizi</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Coordinamento operativo centralizzato</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Standard e procedure condivise</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Tracciabilità di attività e interventi</li>
+                            </ul>
+
+                            <div class="hero-card-foot">
+                                <a class="btn btn-outline-soft w-100" href="#organigramma">
+                                    <i class="fa-solid fa-diagram-project me-2"></i> Vai alla struttura
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- PRINCIPI -->
+        <section class="section" id="principi">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-kicker">Principi</div>
+                    <h2 class="section-title">Linee guida della governance</h2>
+                    <p class="section-subtitle">
+                        Un’impostazione chiara e misurabile: qualità, sicurezza e continuità come criteri di gestione.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="policy-card">
+                            <div class="policy-ico"><i class="fa-solid fa-user-tie"></i></div>
+                            <div class="policy-title">Responsabilità</div>
+                            <div class="policy-text">
+                                Ruoli definiti e accountability sui processi chiave: pianificazione, esecuzione,
+                                controllo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="policy-card">
+                            <div class="policy-ico"><i class="fa-solid fa-clipboard-check"></i></div>
+                            <div class="policy-title">Qualità</div>
+                            <div class="policy-text">
+                                Standard condivisi tra consorziate, verifiche e miglioramento continuo orientato ai KPI.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="policy-card">
+                            <div class="policy-ico"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="policy-title">Sicurezza</div>
+                            <div class="policy-text">
+                                Procedure operative e presidi di sicurezza coerenti con i contesti e i vincoli di
+                                commessa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="policy-card">
+                            <div class="policy-ico"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <div class="policy-title">Trasparenza</div>
+                            <div class="policy-text">
+                                Tracciabilità delle attività, reporting e comunicazione con il committente.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ORGANIGRAMMA / STRUTTURA -->
+        <section class="section section-alt" id="organigramma">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-kicker">Struttura</div>
+                    <h2 class="section-title">Assetto organizzativo</h2>
+                    <p class="section-subtitle">
+                        Schema di riferimento (personalizzabile): ruoli, presidi e funzioni a supporto delle commesse.
+                    </p>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <div class="org-card h-100">
+                            <div class="org-head">
+                                <div class="org-chip"><i class="fa-solid fa-sitemap"></i> Organigramma</div>
+                                <div class="tiny muted">Aggiornabile con nominativi e deleghe</div>
+                            </div>
+
+                            <div class="org-flow">
+                                <div class="org-node main">
+                                    <div class="node-title">Assemblea Consorziate</div>
+                                    <div class="node-sub">indirizzo strategico · linee guida · approvazioni</div>
+                                </div>
+
+                                <div class="org-row">
+                                    <div class="org-node">
+                                        <div class="node-title">Organo di Amministrazione</div>
+                                        <div class="node-sub">governo · deliberazioni · controllo</div>
+                                    </div>
+
+                                    <div class="org-node">
+                                        <div class="node-title">Direzione Operativa</div>
+                                        <div class="node-sub">cabina di regia · pianificazione · coordinamento</div>
+                                    </div>
+                                </div>
+
+                                <div class="org-row">
+                                    <div class="org-node">
+                                        <div class="node-title">Qualità & Compliance</div>
+                                        <div class="node-sub">standard · audit · procedure · documentazione</div>
+                                    </div>
+
+                                    <div class="org-node">
+                                        <div class="node-title">HSE / Sicurezza</div>
+                                        <div class="node-sub">risk assessment · formazione · sicurezza operativa</div>
+                                    </div>
+
+                                    <div class="org-node">
+                                        <div class="node-title">Project & Site Coordination</div>
+                                        <div class="node-sub">SLA · gestione interventi · tracciabilità</div>
+                                    </div>
+                                </div>
+
+                                <div class="org-node foot">
+                                    <div class="node-title">Aziende Consorziate</div>
+                                    <div class="node-sub">esecuzione servizi · mezzi · competenze specialistiche</div>
+                                </div>
+                            </div>
+
+                            <div class="org-foot">
+                                <i class="fa-solid fa-circle-info me-1"></i>
+                                Schema con card nominative scaricabile nell'area riservata
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="doc-card">
+                            <div class="doc-kicker">
+                                <i class="fa-solid fa-folder-open"></i> Documentazione
+                            </div>
+
+                            <div class="doc-item">
+                                <div class="doc-ico"><i class="fa-solid fa-file-signature"></i></div>
+                                <div>
+                                    <div class="doc-title">regolamenti e codice etico</div>
+                                    <div class="doc-text">Assetto istituzionale, ruoli e principi operativi del
+                                        consorzio.</div>
+                                </div>
+                            </div>
+
+                            <div class="doc-item">
+                                <div class="doc-ico"><i class="fa-solid fa-file-circle-check"></i></div>
+                                <div>
+                                    <div class="doc-title">Procedure e standard</div>
+                                    <div class="doc-text">Qualità, sicurezza, gestione interventi, check-list e
+                                        controlli.</div>
+                                </div>
+                            </div>
+
+                            <div class="doc-item">
+                                <div class="doc-ico"><i class="fa-solid fa-chart-line"></i></div>
+                                <div>
+                                    <div class="doc-title">Reporting e KPI</div>
+                                    <div class="doc-text">Indicatori di performance, SLA e rendicontazione verso il
+                                        cliente.</div>
+                                </div>
+                            </div>
+
+                            <div class="doc-note">
+                                <div class="note-ico"><i class="fa-solid fa-lock"></i></div>
+                                <div class="tiny">
+                                    <strong class="text-white">Nota:</strong> alcuni documenti possono essere
+                                    disponibili in area riservata.
+                                </div>
+                            </div>
+
+                            <a class="btn btn-accent w-100 mt-3" href="areaRiservata.html">
+                                <i class="fa-solid fa-right-to-bracket me-2"></i> Accedi all’area riservata
+                            </a>
+                        </div>
+                        <a href="docs/statuto-filalma.pdf"class="btn btn-outline-soft w-100 mt-3" download>
+                         <i class="fa-solid fa-file-arrow-down me-2"></i>
+                             Scarica lo Statuto del Consorzio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESSI -->
+        <section class="section" id="processi">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-kicker">Processi</div>
+                    <h2 class="section-title">Gestione operativa delle commesse</h2>
+                    <p class="section-subtitle">
+                        Dalla presa in carico alla chiusura: un ciclo di lavoro chiaro e verificabile.
+                    </p>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-8">
+                        <div class="process-card h-100">
+                            <div class="process-step">
+                                <div class="step-ico"><i class="fa-solid fa-clipboard-list"></i></div>
+                                <div>
+                                    <div class="step-title">1) Analisi e pianificazione</div>
+                                    <div class="step-text">Requisiti, vincoli, modalità operative, risorse, SLA e
+                                        indicatori.</div>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-ico"><i class="fa-solid fa-play"></i></div>
+                                <div>
+                                    <div class="step-title">2) Avvio operativo</div>
+                                    <div class="step-text">Coordinamento, procedure, briefing e allineamento con il
+                                        committente.</div>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-ico"><i class="fa-solid fa-list-check"></i></div>
+                                <div>
+                                    <div class="step-title">3) Esecuzione e controllo</div>
+                                    <div class="step-text">Tracciabilità, check-list, verifiche qualità e gestione
+                                        urgenze.</div>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-ico"><i class="fa-solid fa-chart-line"></i></div>
+                                <div>
+                                    <div class="step-title">4) Reporting e miglioramento</div>
+                                    <div class="step-text">Report periodici, KPI, azioni correttive e ottimizzazione.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-foot">
+                                <i class="fa-solid fa-circle-info me-1"></i>
+                                Il modello è progettato per ridurre complessità e garantire continuità su più servizi.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="side-card h-100">
+                            <div class="side-title">Impegno verso il committente</div>
+                            <ul class="side-list">
+                                <li><i class="fa-solid fa-check"></i> Reperibilità e gestione urgenze</li>
+                                <li><i class="fa-solid fa-check"></i> Standard condivisi e verifiche</li>
+                                <li><i class="fa-solid fa-check"></i> Tracciabilità e rendicontazione</li>
+                                <li><i class="fa-solid fa-check"></i> Coordinamento multi-servizio</li>
+                            </ul>
+                            <div class="tiny">
+                                <strong class="text-white"> Filalma </strong> Consorzio Stabile
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHISTLEBLOWING -->
+<section class="section section-alt" id="whistleblowing">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Whistleblowing</div>
+        <h2 class="section-title">Segnalazioni riservate e tutelate</h2>
+        <p class="section-subtitle">
+          Filalma mette a disposizione un canale dedicato per segnalazioni relative a comportamenti,
+          pratiche o situazioni non conformi. Le segnalazioni sono trattate con riservatezza.
+        </p>
+      </div>
+  
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="wb-card">
+            <div class="wb-head">
+              <div class="wb-icon">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <div>
+                <div class="wb-title">Invia una segnalazione</div>
+                <div class="wb-sub">
+                  Il canale può essere utilizzato anche in forma anonima.
+                </div>
+              </div>
+            </div>
+  
+            <!-- FORM USEBASIN -->
+            <form action="https://usebasin.com/f/XXXXXXXXXXXX"
+                  method="POST"
+                  class="wb-form">
+  
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Nome (facoltativo)</label>
+                  <input type="text" class="form-control" name="nome">
+                </div>
+  
+                <div class="col-md-6">
+                  <label class="form-label">Email (facoltativa)</label>
+                  <input type="email" class="form-control" name="email">
+                </div>
+  
+                <div class="col-12">
+                  <label class="form-label required">Oggetto della segnalazione</label>
+                  <input type="text" class="form-control" name="oggetto" required>
+                </div>
+  
+                <div class="col-12">
+                  <label class="form-label required">Descrizione dettagliata</label>
+                  <textarea class="form-control"
+                            name="messaggio"
+                            rows="5"
+                            required
+                            placeholder="Descrivi i fatti in modo chiaro e dettagliato..."></textarea>
+                </div>
+  
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" required id="privacyWb">
+                    <label class="form-check-label required" for="privacyWb">
+                      Confermo di aver letto l’informativa e acconsento al trattamento dei dati
+                      ai fini della gestione della segnalazione.
+                    </label>
+                  </div>
+                </div>
+  
+                <div class="col-12 d-flex align-items-center gap-3">
+                  <button type="submit" class="btn btn-accent">
+                    <i class="fa-solid fa-paper-plane me-2"></i>
+                    Invia segnalazione
+                  </button>
+                  <span class="tiny">
+                    <i class="fa-solid fa-lock me-1"></i>
+                    Canale riservato e protetto
+                  </span>
+                </div>
+              </div>
+            </form>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        <!-- CTA istituzionale -->
+        <section class="cta-section" id="contatto">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-8">
+                            <h2 class="cta-title">Richiedi informazioni sulla governance e sul modello operativo</h2>
+                            <p class="cta-text">
+                                Se rappresenti un ente o una stazione appaltante, possiamo condividere una presentazione
+                                del modello
+                                di governance, processi e standard qualitativi (in base alle disponibilità documentali).
+                            </p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end text-center">
+                            <a href="diventaConsorziata.html#contatto" class="btn btn-accent btn-lg w-100 w-lg-auto">
+                                <i class="fa-solid fa-paper-plane me-2"></i> Contatta Filalma
+                            </a>
+                            <p class="tiny mt-2 mb-0">Risposta rapida con materiale informativo disponibile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <span>© <span id="year"></span> Consorzio stabile Filalma · Tutti i diritti riservati</span>
+                <span style="opacity:0.8;">
+                    Sede operativa: Via del Babbuino 21, Roma · Sede legale: Via degli Olmetti 5, Formello (RM)
+                </span>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="navbar.js"></script>
+    <script src="governance.js"></script>
+</body>
+
+</html>

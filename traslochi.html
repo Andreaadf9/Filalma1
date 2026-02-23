@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Trasloco · Filalma Global Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Navbar globale (già tua) -->
+  <link rel="stylesheet" href="navbar.css">
+
+  <!-- Page styles -->
+  <link id="theme-dark" rel="stylesheet" href="trasloco.css">
+  <link id="theme-light" rel="stylesheet" href="trasloco.light.css">
+</head>
+
+<body>
+  <!-- Navbar dinamica -->
+  <div id="navbar-container"></div>
+  
+
+  <main class="page-wrap">
+    <section class="logi-section" id="logistica">
+      <div class="container">
+        <div class="logi-wrap">
+          <div class="row g-4 align-items-center">
+            <!-- LEFT: testo -->
+            <div class="col-lg-7">
+              <div class="logi-kicker">
+                <i class="fa-solid fa-arrows-rotate"></i> Logistica integrata
+              </div>
+    
+              <h2 class="logi-h2">
+                Logistica <span class="logi-accent">integrata</span> con regia Filalma
+              </h2>
+    
+              <p class="logi-lead">
+                Un unico coordinamento per <strong>ritiro</strong>, <strong>deposito temporaneo</strong>,
+                <strong>gestione giacenze</strong> e <strong>consegna programmata</strong>.
+                Riduciamo attriti operativi, tempi morti e rischi, garantendo tracciabilità e continuità.
+              </p>
+    
+              <div class="logi-points">
+                <div class="logi-point">
+                  <div class="logi-point-ico"><i class="fa-solid fa-warehouse"></i></div>
+                  <div>
+                    <div class="logi-point-title">Deposito & stoccaggio</div>
+                    <div class="logi-point-text">Gestione colli, giacenze e riconsegne per fasi e priorità.</div>
+                  </div>
+                </div>
+    
+                <div class="logi-point">
+                  <div class="logi-point-ico"><i class="fa-solid fa-barcode"></i></div>
+                  <div>
+                    <div class="logi-point-title">Etichettatura & tracciabilità</div>
+                    <div class="logi-point-text">Catalogazione ordinata per reparti, asset o aree operative.</div>
+                  </div>
+                </div>
+    
+                <div class="logi-point">
+                  <div class="logi-point-ico"><i class="fa-solid fa-route"></i></div>
+                  <div>
+                    <div class="logi-point-title">Consegne su finestre</div>
+                    <div class="logi-point-text">Pianificazione su ZTL, accessi, piani e fasce orarie.</div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="logi-cta">
+                <a class="btn btn-accent btn-lg" href="#preventivo">
+                  <i class="fa-solid fa-clipboard-check me-2"></i> Richiedi preventivo
+                </a>
+                <a class="btn btn-ghost btn-lg" href="#inclusi">
+                  <i class="fa-solid fa-layer-group me-2"></i> Vedi cosa include
+                </a>
+              </div>
+    
+              <div class="logi-meta">
+                <span class="logi-chip"><i class="fa-solid fa-circle-check"></i> Unico interlocutore</span>
+                <span class="logi-chip"><i class="fa-solid fa-circle-check"></i> Squadre coordinate</span>
+                <span class="logi-chip"><i class="fa-solid fa-circle-check"></i> Procedure & sicurezza</span>
+              </div>
+            </div>
+    
+            <!-- RIGHT: card riepilogo -->
+            <div class="col-lg-5">
+              <div class="logi-card">
+                <div class="logi-card-badge">
+                  <i class="fa-solid fa-star"></i> Focus operativo
+                </div>
+    
+                <h3 class="logi-card-title">Flussi ordinati, meno interruzioni</h3>
+                <p class="logi-card-text">
+                  Ideale per uffici, enti, eventi e magazzini: movimentazioni controllate, priorità definite,
+                  consegne per step e riallestimento progressivo.
+                </p>
+    
+                <div class="logi-card-grid">
+                  <div class="logi-mini">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <div>
+                      <div class="logi-mini-title">Giacenze</div>
+                      <div class="logi-mini-sub">inventario & gestione temporanea</div>
+                    </div>
+                  </div>
+    
+                  <div class="logi-mini">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <div>
+                      <div class="logi-mini-title">Priorità</div>
+                      <div class="logi-mini-sub">consegne per aree/asset critici</div>
+                    </div>
+                  </div>
+    
+                  <div class="logi-mini">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                      <div class="logi-mini-title">Controlli</div>
+                      <div class="logi-mini-sub">procedure e punti qualità</div>
+                    </div>
+                  </div>
+    
+                  <div class="logi-mini">
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <div>
+                      <div class="logi-mini-title">Finestre</div>
+                      <div class="logi-mini-sub">orari, accessi e vincoli</div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="logi-card-footer">
+                  <i class="fa-solid fa-lock me-1"></i> Tracciabilità · Pianificazione · Continuità operativa
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- HERO -->
+    <header class="move-hero" id="top">
+      <div class="move-hero-bg"></div>
+
+      <div class="container position-relative">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="kicker">
+              <i class="fa-solid fa-truck-fast"></i>
+              Servizio Trasloco · Logistica · Facchinaggio
+            </div>
+
+            <h1 class="hero-title">
+              Traslochi <span class="accent">professionali</span> con regia unica.
+            </h1>
+
+            <p class="hero-subtitle">
+              Filalma coordina aziende consorziate con esperienza decennale per gestire traslochi
+              <strong>aziendali</strong>, <strong>istituzionali</strong> ed <strong>eventi complessi</strong>:
+              pianificazione, movimentazioni delicate, tempi certi, sicurezza e continuità operativa.
+            </p>
+
+            <div class="hero-badges">
+              <span class="badge-pill"><i class="fa-solid fa-route"></i> Pianificazione e crono-programma</span>
+              <span class="badge-pill"><i class="fa-solid fa-boxes-stacked"></i> Imballo & protezioni</span>
+              <span class="badge-pill"><i class="fa-solid fa-shield-halved"></i> Procedure e sicurezza</span>
+              <span class="badge-pill"><i class="fa-solid fa-clock"></i> Finestre operative</span>
+            </div>
+
+            <div class="hero-cta">
+                <a class="btn btn-accent btn-lg" href="#preventivo">
+                    <i class="fa-solid fa-clipboard-check me-2"></i> Richiedi preventivo
+                </a>
+              <a class="btn btn-ghost btn-lg" href="#metodo">
+                <i class="fa-solid fa-diagram-project me-2"></i> Il nostro metodo
+              </a>
+            </div>
+
+            <div class="hero-meta">
+              <div class="meta-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Unico interlocutore, più squadre operative</span>
+              </div>
+              <span class="dot"></span>
+              <div class="meta-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Copertura nazionale e capacità di scala</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-card">
+              <div class="hero-card-badge">
+                <i class="fa-solid fa-star"></i> Focus operativo
+              </div>
+
+              <h3 class="hero-card-title">Movimentazioni delicate & spazi sensibili</h3>
+              <p class="hero-card-text">
+                Gestione di archivi, arredi, apparati IT, allestimenti e materiali in contesti dove
+                serve precisione: musei, uffici direzionali, sedi pubbliche, eventi.
+              </p>
+
+              <div class="hero-card-grid">
+                <div class="mini">
+                  <i class="fa-solid fa-laptop-file"></i>
+                  <div>
+                    <div class="mini-title">IT & Uffici</div>
+                    <div class="mini-sub">disconnessione, trasporto, riallestimento</div>
+                  </div>
+                </div>
+                <div class="mini">
+                  <i class="fa-solid fa-folder-open"></i>
+                  <div>
+                    <div class="mini-title">Archivi</div>
+                    <div class="mini-sub">catalogazione, etichettatura, posizionamento</div>
+                  </div>
+                </div>
+                <div class="mini">
+                  <i class="fa-solid fa-people-carry-box"></i>
+                  <div>
+                    <div class="mini-title">Facchinaggio</div>
+                    <div class="mini-sub">squadre dedicate e tempi certi</div>
+                  </div>
+                </div>
+                <div class="mini">
+                  <i class="fa-solid fa-warehouse"></i>
+                  <div>
+                    <div class="mini-title">Deposito</div>
+                    <div class="mini-sub">stoccaggio temporaneo e gestione giacenze</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-card-footer">
+                <i class="fa-solid fa-lock me-1"></i> Operatività coordinata · Procedure · Tracciabilità
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- METODO -->
+    <section id="metodo" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Metodo</div>
+          <h2 class="section-title">Come rendiamo un trasloco “senza sorprese”</h2>
+          <p class="section-subtitle">
+            Un processo chiaro, ripetibile e misurabile. Ti diciamo cosa facciamo, quando lo facciamo e con quali responsabilità.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="step-card">
+              <div class="step-num">01</div>
+              <div class="step-ico"><i class="fa-solid fa-magnifying-glass-location"></i></div>
+              <h3 class="step-title">Sopralluogo & analisi</h3>
+              <p class="step-text">Mappiamo volumi, accessi, vincoli, tempistiche e priorità operative.</p>
+              <div class="step-foot"><i class="fa-solid fa-check"></i> Check-list tecnica</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="step-card">
+              <div class="step-num">02</div>
+              <div class="step-ico"><i class="fa-solid fa-diagram-project"></i></div>
+              <h3 class="step-title">Piano di lavoro</h3>
+              <p class="step-text">Cronoprogramma, squadre, mezzi, responsabilità e gestione delle finestre.</p>
+              <div class="step-foot"><i class="fa-solid fa-check"></i> Tempi e ruoli chiari</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="step-card">
+              <div class="step-num">03</div>
+              <div class="step-ico"><i class="fa-solid fa-box-archive"></i></div>
+              <h3 class="step-title">Imballo & protezioni</h3>
+              <p class="step-text">Materiali idonei, etichettatura, protezione di superfici e beni delicati.</p>
+              <div class="step-foot"><i class="fa-solid fa-check"></i> Materiali professionali</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="step-card">
+              <div class="step-num">04</div>
+              <div class="step-ico"><i class="fa-solid fa-truck-ramp-box"></i></div>
+              <h3 class="step-title">Movimentazione & setup</h3>
+              <p class="step-text">Carico/scarico, trasporto, posizionamento e riallestimento a destinazione.</p>
+              <div class="step-foot"><i class="fa-solid fa-check"></i> Chiusura attività</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIZI INCLUSI -->
+    <section class="section section-alt" id="inclusi">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Incluso</div>
+          <h2 class="section-title">Cosa possiamo includere nel servizio</h2>
+          <p class="section-subtitle">
+            Componiamo il pacchetto in base a contesto, budget e tempi. Sempre con regia Filalma.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-boxes-packing"></i></div>
+              <h3 class="service-title">Imballo & materiali</h3>
+              <p class="service-text">Scatole, protezioni, etichette, film, imbottiture e gestione fragili.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Standard professionali</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-elevator"></i></div>
+              <h3 class="service-title">Accessi complessi</h3>
+              <p class="service-text">Scale, ascensori, passaggi ridotti, piani alti e vincoli di carico/scarico.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Squadre esperte</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-laptop"></i></div>
+              <h3 class="service-title">IT & postazioni</h3>
+              <p class="service-text">Movimentazione e riallestimento postazioni, archiviazione e cablaggi su richiesta.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Operatività ordinata</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-warehouse"></i></div>
+              <h3 class="service-title">Deposito temporaneo</h3>
+              <p class="service-text">Stoccaggio, tracciabilità colli e riconsegna programmata.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Gestione giacenze</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-broom"></i></div>
+              <h3 class="service-title">Pulizia post-trasloco</h3>
+              <p class="service-text">Pulizia di fine lavori e ripristino ambienti (civile/industriale).</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Consegna in ordine</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <h3 class="service-title">Smontaggio & rimontaggio</h3>
+              <p class="service-text">Arredi, scaffalature, strutture leggere e riallestimenti.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Cura del dettaglio</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETTORI -->
+    <section class="section" id="settori">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Settori</div>
+          <h2 class="section-title">Dove operiamo più spesso</h2>
+          <p class="section-subtitle">
+            Soluzioni su misura per contesti dove contano timing, discrezione e gestione dei rischi.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="sector-card">
+              <i class="fa-solid fa-building"></i>
+              <h3>Uffici & Direzionali</h3>
+              <p>Trasferimenti sede, riorganizzazioni, postazioni e archivi.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="sector-card">
+              <i class="fa-solid fa-landmark"></i>
+              <h3>Enti & Istituzioni</h3>
+              <p>Vincoli e procedure, finestre operative, accessi regolati.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="sector-card">
+              <i class="fa-solid fa-warehouse"></i>
+              <h3>Logistica & Magazzini</h3>
+              <p>Movimentazioni, stoccaggio, scaffalature e flussi.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="sector-card">
+              <i class="fa-solid fa-palette"></i>
+              <h3>Eventi & Cultura</h3>
+              <p>Allestimenti, materiali delicati, coordinamento operativo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREVENTIVO -->
+<section id="preventivo" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Preventivo</div>
+        <h2 class="section-title">Richiedi il tuo preventivo</h2>
+        <p class="section-subtitle">
+          Compila i dati essenziali: ti ricontattiamo rapidamente con una valutazione operativa.
+        </p>
+      </div>
+  
+      <div class="row g-4 align-items-start">
+        <!-- Colonna info -->
+        <div class="col-lg-5">
+          <div class="info-card">
+            <div class="info-kicker">
+              <i class="fa-solid fa-circle-info"></i> Come funziona
+            </div>
+  
+            <ul class="info-list">
+              <li><i class="fa-solid fa-check"></i> Dati chiari = preventivo più accurato</li>
+              <li><i class="fa-solid fa-check"></i> Possiamo includere imballo, facchinaggio, deposito e pulizie</li>
+              <li><i class="fa-solid fa-check"></i> Pianificazione su finestre operative (ZTl / accessi / piani)</li>
+            </ul>
+  
+            <div class="info-note">
+              <div class="note-ico"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="tiny">
+                <strong class="text-white">Nota privacy:</strong><br>
+                Inviando il form accetti l’uso dei dati per essere ricontattato.
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Colonna form -->
+        <div class="col-lg-7">
+          <div class="form-card">
+            <form action="https://usebasin.com/f/YOUR_USEBASIN_ENDPOINT" method="POST" id="quoteForm" novalidate>
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off">
+  
+              <!-- opzionale: redirect dopo invio -->
+              <!-- <input type="hidden" name="_redirect" value="https://tuosito.it/grazie.html"> -->
+  
+              <div class="row g-3">
+                <!-- DATI CONTATTO -->
+                <div class="col-12">
+                  <div class="group-title">
+                    <span class="chip"><i class="fa-solid fa-user"></i> Dati di contatto</span>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <label class="form-label required">Nome</label>
+                  <input class="form-control" name="nome" required placeholder="Es. Mario">
+                  <div class="invalid-feedback">Inserisci il nome.</div>
+                </div>
+  
+                <div class="col-md-6">
+                  <label class="form-label required">Cognome</label>
+                  <input class="form-control" name="cognome" required placeholder="Es. Rossi">
+                  <div class="invalid-feedback">Inserisci il cognome.</div>
+                </div>
+  
+                <div class="col-md-6">
+                  <label class="form-label required">Email</label>
+                  <input class="form-control" type="email" name="email" required placeholder="nome@email.it">
+                  <div class="invalid-feedback">Inserisci un’email valida.</div>
+                </div>
+  
+                <div class="col-md-6">
+                  <label class="form-label required">Telefono</label>
+                  <input class="form-control" type="tel" name="telefono" required inputmode="tel" placeholder="Il numero a cui ricontattarti">
+                  <div class="invalid-feedback">Inserisci un numero di telefono.</div>
+                </div>
+  
+                <!-- DIVISORE VISIVO -->
+                <div class="col-12">
+                  <hr class="divider-soft">
+                </div>
+  
+                <!-- PUNTO DI PARTENZA -->
+                <div class="col-12">
+                  <div class="group-title d-flex align-items-center justify-content-between gap-2">
+                    <span class="chip"><i class="fa-solid fa-location-dot"></i> Punto di partenza</span>
+                    <span class="tiny muted-hint">Indica indirizzo, zona e piano</span>
+                  </div>
+                </div>
+  
+                <div class="col-12">
+                  <label class="form-label required">Indirizzo completo di partenza</label>
+                  <input class="form-control" name="partenza_indirizzo" required placeholder="Via/Piazza, numero civico, città">
+                  <div class="invalid-feedback">Inserisci l’indirizzo di partenza.</div>
+                </div>
+  
+                <div class="col-md-6">
+                  <label class="form-label required">Zona di partenza</label>
+                  <select class="form-select" name="partenza_zona" required>
+                    <option value="" selected disabled>Seleziona zona</option>
+                    <option value="centro_ztl">Centro ZTL</option>
+                    <option value="centro_citta">Centro città</option>
+                    <option value="periferia">Periferia</option>
+                  </select>
+                  <div class="invalid-feedback">Seleziona la zona di partenza.</div>
+                </div>
+  
+                <div class="col-md-6">
+                  <label class="form-label required">Piano di partenza</label>
+                  <input class="form-control" name="partenza_piano" required inputmode="numeric" pattern="^[0-9]{1,2}$" maxlength="2"
+                         placeholder="Es. 0, 1, 2...">
+                  <div class="invalid-feedback">Inserisci il piano di partenza (numero).</div>
+                </div>
+  
+                <div class="col-12">
+                  <label class="form-label required">
+                    Metri cubi da trasportare (circa) <span class="tiny text-muted">(max 1000)</span>
+                  </label>
+                  <input class="form-control" name="metri_cubi" required type="number" min="1" max="1000" step="1"
+                         inputmode="numeric" placeholder="Es. 25">
+                  <div class="invalid-feedback">Inserisci un valore tra 1 e 1000.</div>
+                </div>
+  
+                <!-- SEPARATORE CON ETICHETTA -->
+                <div class="col-12">
+                  <div class="split-label">
+                    <span>Arrivo</span>
+                  </div>
+                </div>
+  
+                <!-- PUNTO DI ARRIVO -->
+                <div class="col-12">
+                  <div class="group-title d-flex align-items-center justify-content-between gap-2">
+                    <span class="chip"><i class="fa-solid fa-flag-checkered"></i> Punto di arrivo</span>
+                    <span class="tiny muted-hint">Indica indirizzo, zona e piano</span>
+                  </div>
+                </div>
+  
+                <div class="col-12">
+                  <label class="form-label required">Indirizzo completo di arrivo</label>
+                  <input class="form-control" name="arrivo_indirizzo" required placeholder="Via/Piazza, numero civico, città">
+                  <div class="invalid-feedback">Inserisci l’indirizzo di arrivo.</div>
+                </div>
+  
+                <div class="col-md-6">
+                  <label class="form-label required">Zona di arrivo</label>
+                  <select class="form-select" name="arrivo_zona" required>
+                    <option value="" selected disabled>Seleziona zona</option>
+                    <option value="centro_ztl">Centro ZTL</option>
+                    <option value="centro_citta">Centro città</option>
+                    <option value="periferia">Periferia</option>
+                  </select>
+                  <div class="invalid-feedback">Seleziona la zona di arrivo.</div>
+                </div>
+  
+                <div class="col-md-6">
+                  <label class="form-label required">Piano di arrivo</label>
+                  <input class="form-control" name="arrivo_piano" required inputmode="numeric" pattern="^[0-9]{1,2}$" maxlength="2"
+                         placeholder="Es. 0, 1, 2...">
+                  <div class="invalid-feedback">Inserisci il piano di arrivo (numero).</div>
+                </div>
+  
+                <!-- CONSENSO -->
+                <div class="col-12">
+                  <div class="form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="privacyQuote" required>
+                    <label class="form-check-label required" for="privacyQuote">
+                      Confermo di aver letto l’informativa e acconsento al trattamento dei dati per essere ricontattato.
+                    </label>
+                    <div class="invalid-feedback">Campo obbligatorio.</div>
+                  </div>
+                </div>
+  
+                <!-- CTA -->
+                <div class="col-12 d-flex flex-wrap gap-2 align-items-center mt-2">
+                  <button class="btn btn-accent btn-lg" type="submit" id="quoteSubmit">
+                    <i class="fa-solid fa-paper-plane me-2"></i> Invia richiesta
+                  </button>
+                  <span class="tiny ms-auto" id="quoteStatus"></span>
+                </div>
+  
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- MINI CAROUSEL: FAQ / TESTIMONIANZE -->
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">FAQ</div>
+          <h2 class="section-title">Domande frequenti</h2>
+          <p class="section-subtitle">Risposte rapide, in stile “operativo”.</p>
+        </div>
+
+        <div id="faqCarousel" class="carousel slide carousel-fade faq-carousel" data-bs-ride="carousel" data-bs-interval="8000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="faq-card">
+                <h3>Quanto tempo serve per organizzare un trasloco aziendale?</h3>
+                <p>
+                  Dipende da volumi e vincoli. In genere, dopo sopralluogo e mappatura, definiamo un piano con
+                  finestre operative e step per minimizzare fermi attività.
+                </p>
+                <div class="faq-foot"><i class="fa-solid fa-check"></i> Pianificazione + cronoprogramma</div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="faq-card">
+                <h3>Gestite anche imballo e beni delicati?</h3>
+                <p>
+                  Sì. Usiamo materiali professionali e protocolli di protezione per archivi, apparati IT,
+                  arredi e materiali sensibili. Etichettatura e tracciabilità inclusi.
+                </p>
+                <div class="faq-foot"><i class="fa-solid fa-check"></i> Punti di controllo qualità</div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="faq-card">
+                <h3>È possibile includere pulizie e ripristino ambienti?</h3>
+                <p>
+                  Certo. Possiamo integrare pulizie post-trasloco e ripristino: un’unica regia,
+                  un unico referente, tempi più rapidi.
+                </p>
+                <div class="faq-foot"><i class="fa-solid fa-check"></i> Servizio integrato</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#faqCarousel" data-bs-slide="prev" aria-label="FAQ precedente">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#faqCarousel" data-bs-slide="next" aria-label="FAQ successiva">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RICHIESTA SOPRALLUOGO (CTA) -->
+    <section class="cta-section" id="richiesta">
+      <div class="container">
+        <div class="cta-card">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h2 class="cta-title">Richiedi un sopralluogo o una valutazione operativa</h2>
+              <p class="cta-text">
+                Raccontaci contesto, tempistiche e vincoli. Ti rispondiamo con una proposta strutturata e un piano operativo.
+              </p>
+
+              <div class="cta-pills">
+                <span class="pill"><i class="fa-solid fa-location-dot"></i> Italia · Roma ·Venezia </span>
+                <span class="pill"><i class="fa-solid fa-people-group"></i> Squadre coordinate</span>
+                <span class="pill"><i class="fa-solid fa-file-signature"></i> Offerta chiara</span>
+              </div>
+            </div>
+
+            <div class="col-lg-4 text-lg-end text-center">
+              <a href="diventa-consorziata.html#contatto" class="btn btn-accent btn-lg w-100">
+                <i class="fa-solid fa-paper-plane me-2"></i> Contattaci
+              </a>
+              <div class="tiny mt-2">
+                Oppure vai alla sezione contatti dell’index per i riferimenti.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>© <span id="year"></span> Consorzio stabile Filalma · Tutti i diritti riservati</span>
+        <span style="opacity:0.8;">
+          Sede operativa: Via del Babbuino 21, Roma · Sede legale: Via degli Olmetti 5, Formello (RM)
+        </span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="navbar.js"></script>
+
+  
+  <script src="trasloco.js"></script>
+</body>
+</html>

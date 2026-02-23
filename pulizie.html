@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pulizie · Filalma Global Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Navbar globale (già tua) -->
+  <link rel="stylesheet" href="navbar.css">
+
+  <!-- Page styles -->
+  <link id="theme-dark" rel="stylesheet" href="pulizie.css">
+  <link id="theme-light" rel="stylesheet" href="pulizie.light.css">
+</head>
+
+<body>
+  <!-- Navbar dinamica -->
+  <div id="navbar-container"></div>
+
+  <main class="page-wrap">
+    <!-- HERO (sfondo fluido animato) -->
+    <header class="clean-hero" id="top">
+      <canvas id="liquidHero" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="kicker">
+              <i class="fa-solid fa-spray-can-sparkles"></i>
+              Pulizie civili & industriali · Global Services
+            </div>
+
+            <h1 class="hero-title">
+              Pulizie <span class="accent">professionali</span> con standard misurabili.
+            </h1>
+
+            <p class="hero-subtitle">
+              Filalma coordina aziende consorziate con esperienza decennale per garantire pulizie
+              <strong>civili</strong> e <strong>industriali</strong> con procedure, check-list e controllo qualità.
+              Un unico interlocutore per ambienti sempre sicuri, ordinati e presentabili.
+            </p>
+
+            <div class="hero-badges">
+              <span class="badge-pill"><i class="fa-solid fa-clipboard-check"></i> Piani e checklist</span>
+              <span class="badge-pill"><i class="fa-solid fa-shield-halved"></i> Sicurezza & procedure</span>
+              <span class="badge-pill"><i class="fa-solid fa-leaf"></i> Prodotti selezionati</span>
+              <span class="badge-pill"><i class="fa-solid fa-stopwatch"></i> Fasce orarie flessibili</span>
+            </div>
+
+            <div class="hero-cta">
+              <a class="btn btn-accent btn-lg" href="#civili">
+                <i class="fa-solid fa-building me-2"></i> Pulizie civili
+              </a>
+              <a class="btn btn-ghost btn-lg" href="#industriali">
+                <i class="fa-solid fa-industry me-2"></i> Pulizie industriali
+              </a>
+            </div>
+
+            <div class="hero-meta">
+              <div class="meta-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Operatività discreta e continuativa</span>
+              </div>
+              <span class="dot"></span>
+              <div class="meta-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Standard e controlli qualità</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-card">
+              <div class="hero-card-badge">
+                <i class="fa-solid fa-star"></i> In evidenza
+              </div>
+              <h3 class="hero-card-title">Servizio integrato “Global Services”</h3>
+              <p class="hero-card-text">
+                La pulizia non è solo “ordine”: è immagine, sicurezza e continuità.
+                Possiamo integrare facchinaggio, traslochi, manutenzioni e gestione aree esterne.
+              </p>
+
+              <div class="hero-card-grid">
+                <div class="mini">
+                  <i class="fa-solid fa-calendar-check"></i>
+                  <div>
+                    <div class="mini-title">Programmazione</div>
+                    <div class="mini-sub">giornaliera, settimanale o su evento</div>
+                  </div>
+                </div>
+                <div class="mini">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <div>
+                    <div class="mini-title">Controlli</div>
+                    <div class="mini-sub">checklist e ispezioni periodiche</div>
+                  </div>
+                </div>
+                <div class="mini">
+                  <i class="fa-solid fa-truck-fast"></i>
+                  <div>
+                    <div class="mini-title">Rapidità</div>
+                    <div class="mini-sub">squadre pronte e coordinamento</div>
+                  </div>
+                </div>
+                <div class="mini">
+                  <i class="fa-solid fa-handshake"></i>
+                  <div>
+                    <div class="mini-title">Unico referente</div>
+                    <div class="mini-sub">per più servizi e sedi</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-card-footer">
+                <i class="fa-solid fa-lock me-1"></i> Procedure · DPI · Sicurezza · Continuità
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- PULIZIE CIVILI -->
+    <section id="civili" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Pulizie civili</div>
+          <h2 class="section-title">AmbientI accoglienti, immagine sempre curata</h2>
+          <p class="section-subtitle">
+            Interventi ordinari e straordinari per uffici, condomini, spazi pubblici e privati.
+            Lavoriamo con discrezione, orari flessibili e standard costanti.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-building"></i></div>
+              <h3 class="service-title">Uffici e sedi operative</h3>
+              <p class="service-text">Pulizia postazioni, sale riunioni, aree comuni, servizi igienici e ingressi.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Fasce orarie su richiesta</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-stairs"></i></div>
+              <h3 class="service-title">Condomini e scale</h3>
+              <p class="service-text">Scale, pianerottoli, ascensori, vetri e spazi comuni con calendario dedicato.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Programmazione costante</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-glass-water"></i></div>
+              <h3 class="service-title">Vetri e superfici</h3>
+              <p class="service-text">Vetrate, superfici delicate, materiali sensibili: strumenti e prodotti idonei.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Cura del dettaglio</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-broom"></i></div>
+              <h3 class="service-title">Pulizie straordinarie</h3>
+              <p class="service-text">Interventi intensivi su richiesta: ripristini, fine lavori, eventi e urgenze.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Squadre pronte</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-biohazard"></i></div>
+              <h3 class="service-title">Sanificazione</h3>
+              <p class="service-text">Trattamenti e protocolli in ambienti ad alta frequentazione, su piano concordato.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Procedure controllate</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-recycle"></i></div>
+              <h3 class="service-title">Gestione consumabili</h3>
+              <p class="service-text">Rifornimento carta, saponi e materiali igienici (se richiesto) con tracciamento.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Continuità garantita</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quality-strip mt-4">
+          <div class="qs-item">
+            <i class="fa-solid fa-list-check"></i>
+            <div>
+              <div class="qs-title">Checklist</div>
+              <div class="qs-sub">attività tracciate e replicabili</div>
+            </div>
+          </div>
+          <div class="qs-item">
+            <i class="fa-solid fa-user-shield"></i>
+            <div>
+              <div class="qs-title">DPI & sicurezza</div>
+              <div class="qs-sub">standard operativi e accessi</div>
+            </div>
+          </div>
+          <div class="qs-item">
+            <i class="fa-solid fa-star"></i>
+            <div>
+              <div class="qs-title">Qualità percepita</div>
+              <div class="qs-sub">immagine curata per clienti e utenti</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PULIZIE INDUSTRIALI -->
+    <section id="industriali" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Pulizie industriali</div>
+          <h2 class="section-title">Sicurezza, continuità e rispetto delle procedure</h2>
+          <p class="section-subtitle">
+            Interventi in contesti produttivi e logistici: capannoni, magazzini, reparti, aree tecniche.
+            Operiamo riducendo al minimo l’impatto sui flussi.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-warehouse"></i></div>
+              <h3 class="service-title">Magazzini e logistica</h3>
+              <p class="service-text">Corsie, baie di carico, aree picking, spazi di stoccaggio e zone operative.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Lavoro su finestre</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-industry"></i></div>
+              <h3 class="service-title">Aree produttive</h3>
+              <p class="service-text">Reparti e superfici con protocolli, compatibilità materiali e attenzione ai rischi.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Procedure concordate</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-road"></i></div>
+              <h3 class="service-title">Pavimentazioni tecniche</h3>
+              <p class="service-text">Lavaggi meccanizzati, trattamenti e manutenzione superfici in ambito industriale.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Macchinari dedicati</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-fan"></i></div>
+              <h3 class="service-title">Aree tecniche</h3>
+              <p class="service-text">Locali tecnici, aree impiantistiche e spazi a rischio controllato.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Accessi regolati</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <h3 class="service-title">Interventi straordinari</h3>
+              <p class="service-text">Ripristino e pulizie speciali su necessità operative e urgenze concordate.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> Reattività</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-ico"><i class="fa-solid fa-clipboard-list"></i></div>
+              <h3 class="service-title">Report & controllo</h3>
+              <p class="service-text">Monitoraggio attività, checklist e ispezioni periodiche con responsabile di riferimento.</p>
+              <div class="service-tag"><i class="fa-solid fa-check"></i> KPI e continuità</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="risk-panel mt-4">
+          <div class="rp-left">
+            <div class="rp-title"><i class="fa-solid fa-shield-halved me-2"></i> Approccio “Safety-first”</div>
+            <div class="rp-text">
+              In ambienti industriali la pulizia deve rispettare flussi, DPI, procedure e sicurezza.
+              Operiamo con piani condivisi e riducendo l’impatto sulla produzione.
+            </div>
+          </div>
+          <div class="rp-right">
+            <div class="rp-pill"><i class="fa-solid fa-user-helmet-safety"></i> DPI & accessi</div>
+            <div class="rp-pill"><i class="fa-solid fa-route"></i> Percorsi operativi</div>
+            <div class="rp-pill"><i class="fa-solid fa-truck-fast"></i> Finestre di lavoro</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contatto">
+      <div class="container">
+        <div class="cta-card">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h2 class="cta-title">Vuoi un piano pulizie su misura?</h2>
+              <p class="cta-text">
+                Raccontaci contesto, frequenza e vincoli (orari, accessi, ZTL, aree sensibili).
+                Ti rispondiamo con una proposta chiara e operativa.
+              </p>
+              <div class="cta-pills">
+                <span class="pill"><i class="fa-solid fa-calendar-check"></i> Programmazione</span>
+                <span class="pill"><i class="fa-solid fa-list-check"></i> Checklist</span>
+                <span class="pill"><i class="fa-solid fa-star"></i> Qualità</span>
+              </div>
+            </div>
+            <div class="col-lg-4 text-lg-end text-center">
+              <a href="index.html#contatti" class="btn btn-accent btn-lg w-100">
+                <i class="fa-solid fa-paper-plane me-2"></i> Contattaci
+              </a>
+              <div class="tiny mt-2">Oppure usa i riferimenti nella sezione contatti.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>© <span id="year"></span> Consorzio stabile Filalma · Tutti i diritti riservati</span>
+        <span style="opacity:0.8;">
+          Sede operativa: Via del Babbuino 21, Roma · Sede legale: Via degli Olmetti 5, Formello (RM)
+        </span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Navbar dinamica -->
+  <script src="navbar.js"></script>
+
+  <!-- Page JS -->
+  <script src="pulizie.js"></script>
+</body>
+</html>
