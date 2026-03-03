@@ -1,13 +1,13 @@
 // navbar.js
 
 // ===== THEME SWITCH (2 CSS) =====
-const THEME_KEY = "filalma-theme"; // 'dark' | 'light'
+const THEME_KEY = "filalma-theme"; 
 
 function applyTheme(theme) {
   const darkLink = document.getElementById("theme-dark");
   const lightLink = document.getElementById("theme-light");
 
-  // Se i link non esistono, non rompiamo nulla
+  
   if (!darkLink || !lightLink) return;
 
   const t = theme === "light" ? "light" : "dark";
@@ -37,7 +37,7 @@ function updateThemeButtons(theme) {
     btn.setAttribute("aria-pressed", String(isLight));
     btn.setAttribute("title", isLight ? "Passa a tema scuro" : "Passa a tema chiaro");
 
-    // UX: in light mostro "luna" (torna dark), in dark mostro "sole" (vai light)
+    // in light mostro "luna" (torna dark), in dark mostro "sole" (vai light)
     btn.innerHTML = isLight
       ? `<i class="fa-solid fa-moon"></i>`
       : `<i class="fa-solid fa-sun"></i>`;
@@ -49,7 +49,7 @@ function toggleTheme() {
   applyTheme(next);
 }
 
-// Applica tema il prima possibile (dopo che il DOM esiste)
+// Applica tema (dopo che il DOM esiste)
 document.addEventListener("DOMContentLoaded", function () {
   applyTheme(getSavedTheme());
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="container-fluid px-3 px-lg-4">
           <!-- BRAND -->
           <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-            <img src="img/filalma.png" alt="Filalma Logo">
+            <img src="img/filalma.webp" alt="Filalma Logo">
           </a>
 
           <!-- Toggler mobile -->
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </ul>
 
             <div class="d-flex gap-2 align-items-center">
-              <!-- ✅ THEME TOGGLER (DESKTOP) -->
+              <!-- THEME TOGGLER (DESKTOP) -->
               <button class="btn filalma-theme-toggle"
                       type="button"
                       data-theme-toggle
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
 
           <div class="d-flex align-items-center gap-2">
-            <!-- ✅ THEME TOGGLER (OFFCANVAS) -->
+            <!-- THEME TOGGLER (OFFCANVAS) -->
             <button class="btn filalma-theme-toggle"
                     type="button"
                     data-theme-toggle
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
 
-  // bind click toggle (per entrambi i bottoni creati)
+  // bind click toggle 
   container.querySelectorAll("[data-theme-toggle]").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -200,10 +200,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // sincronizza icone allo stato attuale
+  
   updateThemeButtons(getSavedTheme());
 
-  // ✅ Fix navigazione link offcanvas: chiudi e poi naviga
+  // Fix navigazione link offcanvas: chiudi e poi naviga
 const offcanvasEl = document.getElementById("filalmaOffcanvas");
 
 if (offcanvasEl) {
@@ -216,7 +216,7 @@ if (offcanvasEl) {
       // ignora link vuoti o #
       if (!href || href === "#") return;
 
-      // se è un link a un'altra pagina o con hash, gestiscilo noi
+      // se è un link a un'altra pagina o
       e.preventDefault();
 
       // chiudi offcanvas
