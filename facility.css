@@ -596,3 +596,85 @@ font-size: .86rem;
 .spc-wrap{ padding: 1.2rem 1rem; }
 .spc-mini-grid{ grid-template-columns: 1fr; }
 }
+/* ===========================
+   MEDIA (IMG) — DARK
+   sostituisce i placeholder 16:9
+=========================== */
+
+.media-box,
+.single-media{
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.4rem;
+  border: 1px solid rgba(0,194,255,0.30);
+  background: #020814;
+  box-shadow: 0 26px 70px rgba(0,0,0,0.85);
+}
+
+/* altezze coerenti e responsive */
+.media-grid .media-box{
+  min-height: 220px;
+}
+
+.single-media{
+  min-height: 260px;
+}
+
+/* img sempre dentro, senza deformazioni */
+.media-img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.01);
+  transition: transform .35s ease;
+}
+
+@media (hover:hover){
+  .media-box:hover .media-img,
+  .single-media:hover .media-img{
+    transform: scale(1.06);
+  }
+}
+
+/* overlay sopra immagine */
+.media-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: .25rem;
+  padding: 1rem;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(0,194,255,0.18), transparent 55%),
+    linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.08));
+}
+
+.media-label{
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(2,8,20,0.65);
+  border: 1px solid rgba(0,194,255,0.35);
+  color: #e5e7eb;
+  font-size: .78rem;
+  backdrop-filter: blur(10px);
+}
+
+.media-sub{
+  color: rgba(226,232,240,0.85);
+  font-size: .85rem;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* responsive fine-tuning */
+@media (max-width: 991.98px){
+  .media-grid .media-box{ min-height: 200px; }
+  .single-media{ min-height: 220px; }
+}
