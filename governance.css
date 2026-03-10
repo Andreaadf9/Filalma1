@@ -78,7 +78,6 @@ body{
 }
 .meta-chip i{ color: var(--filalma-turquoise); }
 
-/* HERO CARD istituzionale */
 .hero-card{
   background: linear-gradient(180deg, rgba(11,18,32,0.85), rgba(3,20,38,0.55));
   border: 1px solid rgba(0,194,255,0.18);
@@ -127,7 +126,6 @@ body{
   color:#fff;
 }
 
-/* SECTIONS */
 .section{ padding: 60px 0; }
 .section-alt{ background:#020814; border-top: 1px solid rgba(15,23,42,0.95); border-bottom: 1px solid rgba(15,23,42,0.95); }
 
@@ -142,7 +140,6 @@ body{
 .section-title{ font-weight: 900; font-size: 1.65rem; margin-bottom:.5rem; }
 .section-subtitle{ color: var(--filalma-muted); max-width: 900px; margin:0 auto; }
 
-/* PRINCIPI */
 .policy-card{
   background: rgba(11,18,32,0.55);
   border: 1px solid var(--line);

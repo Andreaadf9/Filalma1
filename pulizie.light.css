@@ -3,7 +3,6 @@
     --filalma-blue:#0d6efd;
     --filalma-turquoise:#00c2ff;
   
-    /* LIGHT system (coerente con index2) */
     --filalma-bg:#f6f9ff;
     --filalma-bg-2:#ffffff;
     --filalma-bg-3:#d7eaff;
@@ -11,7 +10,6 @@
     --filalma-text:#0b1b2b;
     --filalma-muted:#516479;
   
-    /* linee/ombre per light */
     --line-1: rgba(11,27,43,0.12);
     --line-2: rgba(11,27,43,0.18);
     --dash-1: rgba(11,27,43,0.22);

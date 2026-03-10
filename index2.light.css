@@ -137,16 +137,13 @@
     border-top: 1px dashed rgba(3,20,38,0.22) !important;
   }
   
-  /* ----------------------------------------------------------
-     TOP SLIDER — “card” più premium
-  ---------------------------------------------------------- */
   .top-carousel{
     background: var(--filalma-bg-2) !important;
     border: 1px solid rgba(13,110,253,0.16) !important;
     box-shadow: var(--filalma-shadow-2) !important;
   }
   
-  /* overlay sulle immagini (leggibilità caption) */
+  /* overlay sulle immagini  */
   .carousel-overlay{
     background:
       radial-gradient(circle at 20% 15%, rgba(0,194,255,0.12), transparent 55%),
@@ -165,8 +162,7 @@
   .cap-text{
     color: rgba(255,255,255,0.92) !important;
   }
-  
-  /* indicatori più “gioiello” */
+
   .top-carousel .carousel-indicators [data-bs-target]{
     border: 1px solid rgba(0,194,255,0.55) !important;
     background: rgba(255,255,255,0.72) !important;
@@ -175,9 +171,7 @@
     background: linear-gradient(135deg, var(--filalma-blue), var(--filalma-turquoise)) !important;
   }
   
-  /* ----------------------------------------------------------
-     Canvas section — neutra e pulita (canvas resta scuro)
-  ---------------------------------------------------------- */
+ 
   .canvas-section{
     background:
       radial-gradient(circle at 18% 0, rgba(0,194,255,0.08), transparent 55%),
@@ -190,9 +184,6 @@
     color: rgba(11,27,43,0.62) !important;
   }
   
-  /* ----------------------------------------------------------
-     Sezioni generiche
-  ---------------------------------------------------------- */
   .section{
    
     background: linear-gradient(to right, #fff1eb 0%, rgba(0,194,255,0.4) 100%) !important;
@@ -213,9 +204,7 @@
   .section-title{
     color: #073b7a;
   }
-  /* ----------------------------------------------------------
-     Cards servizi — glass + hover più “pro”
-  ---------------------------------------------------------- */
+  
   .service-card{
     background:
       radial-gradient(circle at top, rgba(0,194,255,0.09), transparent 45%),
@@ -245,10 +234,7 @@
   .service-text{ color: var(--filalma-muted) !important; }
   .service-tag{ color: rgba(11,27,43,0.78) !important; }
   .service-tag i{ color: var(--filalma-blue) !important; }
-  
-  /* ----------------------------------------------------------
-     Biennale — elegante e istituzionale
-  ---------------------------------------------------------- */
+ 
   .biennale-card{
     background:
       radial-gradient(circle at top left, rgba(13,110,253,0.12), transparent 50%),
@@ -278,9 +264,6 @@
   
   .biennale-meta{ color: rgba(11,27,43,0.62) !important; }
   
-  /* ----------------------------------------------------------
-     Vantaggi soci
-  ---------------------------------------------------------- */
   .benefit-icon{
     background: rgba(255,255,255,0.95) !important;
     border: 1px solid rgba(0,194,255,0.22) !important;
@@ -293,9 +276,6 @@
     color: #0b1b2b;
   }
   
-  /* ----------------------------------------------------------
-     CTA finale 
-  ---------------------------------------------------------- */
   .cta-section{
     background:
       radial-gradient(circle at 20% 30%, rgba(0,194,255,0.10), transparent 55%),
@@ -317,18 +297,12 @@
     color: #073b7a;
   }
   
-  /* ----------------------------------------------------------
-     Footer
-  ---------------------------------------------------------- */
   footer{
     background: linear-gradient(180deg, #ffffff, var(--filalma-bg)) !important;
     color: rgba(11,27,43,0.62) !important;
     border-top: 1px solid var(--filalma-border-soft) !important;
   }
   
-  /* ----------------------------------------------------------
-     Certificazioni 
-  ---------------------------------------------------------- */
   .cert-section{
     color: var(--filalma-text) !important;
     background: linear-gradient(to left, #fff1eb 0%, #ace0f9 100%) !important;
@@ -359,35 +333,23 @@
     color: var(--filalma-blue) !important;
     filter: drop-shadow(0 10px 18px rgba(13,110,253,0.12));
   }
-  
-  /* ----------------------------------------------------------
-     Fix per inline “white”
-  ---------------------------------------------------------- */
+ 
   [style*="color: rgb(255, 255, 255)"]{
     color: var(--filalma-text) !important;
   }
   
-  /* ----------------------------------------------------------
-     Micro-ritocchi: focus states coerenti (solo colori)
-  ---------------------------------------------------------- */
   :focus-visible{
     outline: none;
     box-shadow: var(--filalma-ring);
   }
   
-  /* ----------------------------------------------------------
-     (opzionale) rendiamo i bottoni bootstrap più coerenti sul light:
-     NON tocchiamo navbar.
-  ---------------------------------------------------------- */
   .btn-primary{
     box-shadow: 0 10px 22px rgba(13,110,253,0.18);
   }
   .btn-primary:hover{
     box-shadow: 0 14px 30px rgba(13,110,253,0.22);
   }
-  /* ===========================
-   GREEN SECTION
-=========================== */
+
 
 .green-section{
   padding: 70px 0;
@@ -403,7 +365,6 @@
   overflow: hidden;
 }
 
-/* micro “glow” soft per legare con identità Filalma */
 .green-section::before{
   content:"";
   position:absolute;
@@ -437,7 +398,7 @@
   font-weight:700;
   line-height:1.2;
   margin-bottom:1rem;
-  color:#0b1b2b; /* coerente con LIGHT Filalma */
+  color:#0b1b2b; 
 }
 
 .green-title span{
@@ -584,13 +545,11 @@
   transition: all .25s ease;
 }
 
-/* hover leggero premium */
 .green-packaging-badge:hover{
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(11,27,43,0.10);
 }
 
-/* CAM badge differenziato ma coerente */
 .green-cam-badge{
   background: rgba(0,194,255,0.08);
   border: 1px solid rgba(0,194,255,0.35);

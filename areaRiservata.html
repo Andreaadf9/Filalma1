@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <script type="text/javascript" src="https://embeds.iubenda.com/widgets/9367d524-dbd9-4b78-b87b-c67bb0701623.js"></script>
   <meta charset="UTF-8">
   <title>Area Riservata · Consorzio stabile Filalma</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,8 +38,6 @@
     <section class="auth-section">
       <div class="container">
         <div class="row auth-grid">
-
-          <!-- LEFT -->
           <div class="col-lg-6 auth-divider">
             <div class="auth-card">
               <div class="auth-card-inner">
@@ -86,8 +85,6 @@
               </div>
             </div>
           </div>
-
-          <!-- RIGHT -->
           <div class="col-lg-6">
             <div class="auth-card">
               <div class="auth-card-inner">
@@ -154,10 +151,7 @@
   <script src="navbar.js"></script>
 
   <script>
-    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Toggle password
     document.querySelectorAll('[data-toggle-pass]').forEach(btn => {
       btn.addEventListener('click', () => {
         const input = document.querySelector(btn.getAttribute('data-toggle-pass'));
@@ -173,8 +167,6 @@
         }
       });
     });
-
-    // Validazione email/password 
     function validazioneEmailPassword(formId){
       const form = document.getElementById(formId);
       if (!form) return;

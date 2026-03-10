@@ -37,8 +37,6 @@
   a{ text-decoration:none; }
   
   main{ padding-top:90px; }
-  
-  /* HERO */
   .auth-hero{
     position:relative;
     padding:44px 0 24px;
@@ -90,16 +88,12 @@
     font-size:.98rem;
     margin-bottom:0;
   }
-  
-  /* SECTION */
   .auth-section{
     padding:38px 0 62px;
     background:var(--filalma-bg);
   }
   
   .auth-grid{ gap:1.2rem; }
-  
-  /* CARD */
   .auth-card{
     position:relative;
     background: radial-gradient(circle at top, rgba(0,194,255,0.14), var(--filalma-bg-2) 65%, var(--filalma-bg) 100%);
@@ -181,8 +175,7 @@
     color:var(--filalma-blue);
     border-color: rgba(0,194,255,0.45);
   }
-  
-  /* CTA BUTTON */
+
   .btn-auth{
     border-radius:999px;
     padding:.6rem 1.15rem;
@@ -198,8 +191,7 @@
     box-shadow: 0 10px 26px rgba(0,194,255,0.28);
     color:#fff;
   }
-  
-  /* LINKS */
+
   .auth-links{
     display:flex;
     justify-content:space-between;
@@ -212,8 +204,7 @@
   }
   .auth-links a{ color:var(--filalma-muted); }
   .auth-links a:hover{ color:var(--filalma-blue); }
-  
-  /* DIVIDER */
+ 
   .auth-divider{ position:relative; }
   @media (min-width: 992px){
     .auth-divider::after{
@@ -226,8 +217,7 @@
       background: linear-gradient(to bottom, transparent, rgba(0,194,255,0.35), transparent);
     }
   }
-  
-  /* FOOTER */
+
   footer{
     padding-block:18px;
     background:var(--filalma-bg-2);

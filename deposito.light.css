@@ -2,16 +2,12 @@
     --filalma-blue-dark:#031426;
     --filalma-blue:#0d6efd;
     --filalma-turquoise:#00c2ff;
-  
-    /* LIGHT system (coerente con index2) */
     --filalma-bg:#f6f9ff;
     --filalma-bg-2:#ffffff;
     --filalma-bg-3:#d7eaff;
   
     --filalma-text:#0b1b2b;
     --filalma-muted:#516479;
-  
-    /* linee/ombre per light */
     --line-1: rgba(11,27,43,0.12);
     --line-2: rgba(11,27,43,0.18);
     --dash-1: rgba(11,27,43,0.22);
@@ -120,8 +116,6 @@
   .meta-item{ display:inline-flex; align-items:center; gap:.45rem; }
   .meta-item i{ color: var(--filalma-blue); }
   .dot{ width:4px; height:4px; border-radius:999px; background: rgba(11,27,43,0.25); }
-  
-  /* Hero card */
   .hero-card{
     background: radial-gradient(circle at top, rgba(0,194,255,0.14), var(--filalma-bg-2) 65%, var(--filalma-bg) 100%);
     border-radius: 1.4rem;
@@ -180,8 +174,6 @@
     color: var(--filalma-muted);
     font-size: .86rem;
   }
-  
-  /* Sections */
   .section{ padding: 60px 0; background:var(--filalma-bg); }
   .section-alt{ background:var(--filalma-bg-2); }
   
@@ -195,8 +187,6 @@
   }
   .section-title{ font-size: 1.6rem; font-weight: 800; margin-bottom:.5rem; color:#073b7a; }
   .section-subtitle{ max-width: 820px; margin:0 auto; color: var(--filalma-muted); font-size: .95rem; }
-  
-  /* Elevated cards */
   .card-elevated{
     background: radial-gradient(circle at top, rgba(0,194,255,0.12), var(--filalma-bg-2));
     border-radius: 1.2rem;
@@ -223,8 +213,6 @@
   .card-text{ color: var(--filalma-muted); font-size: .92rem; margin-bottom:.55rem; }
   .tag{ font-size: .82rem; color: var(--filalma-text); }
   .tag i{ color: var(--filalma-blue); margin-right:.35rem; }
-  
-  /* Preventivo block */
   .info-card{
     background: radial-gradient(circle at top, rgba(13,110,253,0.12), var(--filalma-bg-2));
     border-radius: 1.4rem;
@@ -359,14 +347,10 @@
     .hero{ padding: 44px 0 38px; }
     .mini-grid{ grid-template-columns: 1fr; }
   }
-  
-  /* Stack colonna sinistra: info-card + slider-card */
   .side-stack{
     display: grid;
     gap: 1rem;
   }
-  
-  /* Slider card coerente con info-card (stessa “presenza”) */
   .slider-card{
     background: radial-gradient(circle at top, rgba(13,110,253,0.12), var(--filalma-bg-2));
     border-radius: 1.4rem;
@@ -375,8 +359,6 @@
     box-shadow: var(--shadow-3);
     overflow: hidden;
   }
-  
-  /* area immagine con bordi morbidi + no “stacchi” */
   .slider-media{
     border-radius: 1.1rem;
     overflow: hidden;
@@ -387,7 +369,6 @@
   .slider-media img{
     object-fit: cover;
   }
-  
   /* Caption sotto immagine */
   .slider-caption{
     margin-top: .75rem;
@@ -414,8 +395,6 @@
     color: var(--filalma-muted);
     font-size: .9rem;
   }
-  
-  /* Rendiamo i controlli più "premium" e leggibili su dark */
   #warehousesCarousel .carousel-control-prev,
   #warehousesCarousel .carousel-control-next{
     width: 18%;

@@ -1,5 +1,5 @@
 (function () {
-  // Year
+  
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
@@ -21,10 +21,8 @@
     canvas.width = Math.floor(w * dpr);
     canvas.height = Math.floor(h * dpr);
 
-    // Important: reset transform in px, then scale
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    // Prevent edge artifacts: ensure clean draw
     ctx.imageSmoothingEnabled = true;
   }
 
@@ -37,7 +35,6 @@
     const dt = Math.min(0.033, (now - t0) / 1000);
     t0 = now;
 
-    // Base background
     const bg = ctx.createLinearGradient(0, 0, w, h);
     bg.addColorStop(0, '#021526');
     bg.addColorStop(0.45, '#043467');
@@ -45,15 +42,12 @@
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, w, h);
 
-    // Liquid layers (soft waves)
     const time = now * 0.00035;
 
-    // Reduce complexity on mobile
     const step = isSmall() ? 10 : 6;
     const amp1 = isSmall() ? 14 : 18;
     const amp2 = isSmall() ? 10 : 14;
 
-    // Layer 1
     ctx.globalAlpha = 0.22;
     ctx.beginPath();
     ctx.moveTo(0, h);
@@ -72,7 +66,6 @@
     ctx.fillStyle = g1;
     ctx.fill();
 
-    // Layer 2
     ctx.globalAlpha = 0.20;
     ctx.beginPath();
     ctx.moveTo(0, h);
@@ -91,7 +84,6 @@
     ctx.fillStyle = g2;
     ctx.fill();
 
-    // Soft highlights (no edge glow)
     ctx.globalAlpha = 0.12;
     for (let i = 0; i < (isSmall() ? 6 : 10); i++) {
       const px = (Math.sin(time * (1.2 + i * 0.09)) * 0.5 + 0.5) * w;

@@ -287,7 +287,7 @@ body{ background:#020712; color: var(--filalma-text); }
   .move-hero{ padding: 38px 0 34px; }
   .hero-card-grid{ grid-template-columns: 1fr; }
 }
-/* ===== PREVENTIVO (UseBasin) ===== */
+/* ===== (UseBasin) ===== */
 .form-card{
   background: radial-gradient(circle at top, rgba(0,194,255,0.14), #020814 65%, #000 100%);
   border-radius: 1.4rem;
@@ -441,9 +441,7 @@ body{ background:#020712; color: var(--filalma-text); }
 .form-select option{ color: #0b1220; } /* opzioni su dropdown */
 
 .invalid-feedback{ color: #ffb4b4; }
-/* ===========================
- LOGISTICA INTEGRATA (DARK)
-=========================== */
+
 
 .logi-section{
 padding: 60px 0;
@@ -578,7 +576,7 @@ font-size: .82rem;
 }
 .logi-chip i{ color: var(--filalma-turquoise); }
 
-/* RIGHT CARD */
+/* destra CARD */
 .logi-card{
 background: radial-gradient(circle at top, rgba(0,194,255,0.14), #020814 65%, #000 100%);
 border-radius: 1.4rem;

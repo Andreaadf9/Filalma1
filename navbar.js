@@ -1,6 +1,6 @@
 // navbar.js
 
-// ===== THEME SWITCH (2 CSS) =====
+// ===== THEME SWITCH  =====
 const THEME_KEY = "filalma-theme"; 
 
 function applyTheme(theme) {
@@ -37,7 +37,7 @@ function updateThemeButtons(theme) {
     btn.setAttribute("aria-pressed", String(isLight));
     btn.setAttribute("title", isLight ? "Passa a tema scuro" : "Passa a tema chiaro");
 
-    // in light mostro "luna" (torna dark), in dark mostro "sole" (vai light)
+    // in light mostro "luna" (dark), in dark mostro "sole" (light)
     btn.innerHTML = isLight
       ? `<i class="fa-solid fa-moon"></i>`
       : `<i class="fa-solid fa-sun"></i>`;

@@ -1,15 +1,10 @@
-/* ==========================================================
-   FILALMA — FORM ADESIONE LIGHT (1:1 con DARK)
-   SOLO COLORI / FINITURE (NO layout changes)
-   Coerente con INDEX2 light (white layers + blue/turquoise)
-   ========================================================== */
+
 
    :root{
     --filalma-blue-dark:#031426;
     --filalma-blue:#0d6efd;
     --filalma-turquoise:#00c2ff;
   
-    /* livelli chiari (index2) */
     --filalma-bg:#f6f9ff;
     --filalma-bg-2:#ffffff;
     --filalma-bg-3:#d7eaff;
@@ -20,20 +15,17 @@
     --line: rgba(3,20,38,0.14);
     --soft: rgba(3,20,38,0.06);
   
-    /* ombre (stessi numeri del dark, colore light) */
     --shadow-card: 0 26px 70px rgba(3,20,38,0.16);
     --shadow-soft: 0 18px 55px rgba(3,20,38,0.14);
     --shadow-btn:  0 6px 18px rgba(0,194,255,0.22);
   
     --ring: 0 0 0 .2rem rgba(0,194,255,0.18);
   }
-  
-  /* Base */
+
   body{
     background: var(--filalma-bg);
     color: var(--filalma-text);
   
-    /* “grain” leggero come index2 */
     background-image:
       radial-gradient(circle at 15% 10%, rgba(0,194,255,0.07), transparent 35%),
       radial-gradient(circle at 85% 15%, rgba(13,110,253,0.06), transparent 40%),
@@ -43,19 +35,13 @@
   
   .page-wrap{ padding-top: 90px; }
   
-  /* Fix per classi/inline usate nel dark */
   .page-wrap .text-white,
   .page-wrap .text-light{ color: var(--filalma-text) !important; }
   
-  /* Alcuni elementi hanno inline style="color:white" (es. link download) */
   .page-wrap [style*="color: white"],
   .page-wrap [style*="color:white"]{
     color: var(--filalma-text) !important;
   }
-  
-  /* ==========================================================
-     HERO (stessa struttura del dark, solo palette light)
-     ========================================================== */
   
   .join-hero{
     position:relative;
@@ -101,8 +87,7 @@
     margin-bottom: .8rem;
     color: #073b7a;
   }
-  
-  /* manteniamo lo stesso “accent” (testo in gradient) */
+
   .join-hero-title .accent{
     background: linear-gradient(135deg, var(--filalma-turquoise), #60a5fa);
     -webkit-background-clip:text;
@@ -153,8 +138,7 @@
     font-size:.88rem;
     color: var(--filalma-muted);
   }
-  
-  /* HERO CARD (stessa struttura, solo colori) */
+
   .hero-card{
     background: radial-gradient(circle at top, rgba(0,194,255,0.10), rgba(255,255,255,0.90) 65%, rgba(255,255,255,0.80) 100%);
     border-radius: 1.4rem;
@@ -172,7 +156,7 @@
     inset:-30%;
     background: radial-gradient(circle at 0 0, rgba(0,194,255,0.14), transparent 60%);
     opacity:.75;
-    mix-blend-mode: normal; /* su light evitiamo “screen” per non sporcare */
+    mix-blend-mode: normal; 
     pointer-events:none;
   }
   
@@ -223,9 +207,7 @@
     font-size: .86rem;
   }
   
-  /* ==========================================================
-     SECTION FORM (stesso layout, sfondo light)
-     ========================================================== */
+
   
   .section-join{
     padding: 60px 0;
@@ -247,7 +229,6 @@
     max-width: 560px;
   }
   
-  /* CARD ELEVATED (usata sia a sinistra sia per form) */
   .card-elevated{
     background: radial-gradient(circle at top, rgba(0,194,255,0.10), rgba(255,255,255,0.90) 65%, rgba(255,255,255,0.80) 100%);
     border-radius: 1.4rem;
@@ -305,9 +286,6 @@
   
   .join-highlights .hl i{ color: var(--filalma-turquoise); }
   
-  /* ==========================================================
-     FORM CONTROLS (stessa struttura, colori light)
-     ========================================================== */
   
   .form-label{
     font-size:.85rem;
@@ -360,9 +338,6 @@
     color: var(--filalma-muted);
   }
   
-  /* ==========================================================
-     BUTTONS (coerenti con index2 light)
-     ========================================================== */
   
   .btn-accent{
     border-radius: 999px;
@@ -380,7 +355,7 @@
     color:#fff;
   }
   
-  /* Questo bottone esiste nel dark e lo usi come download */
+  
   .btn-outline-soft{
     border-radius: 999px;
     border: 1px solid rgba(13,110,253,0.18);
@@ -401,9 +376,7 @@
     backdrop-filter: blur(10px);
   }
   
-  /* ==========================================================
-     FOOTER (light)
-     ========================================================== */
+ 
   
   .page-footer{
     padding-block: 18px;
@@ -413,18 +386,7 @@
     border-top: 1px solid var(--line);
   }
   
-  /* ==========================================================
-     TOP SLIDER (nel tuo HTML è in <style> e resta “dark”)
-     Se vuoi la resa light coerente, senza cambiare layout:
-     ========================================================== */
   
-  /* ==========================================================
-   TOP SLIDER — micro-rifinitura istituzionale (LIGHT)
-   Solo finiture/colore, NO layout changes
-   Incollare in fondo a form.light.css
-   ========================================================== */
-
-/* card del carousel: più “white layered” + cornice più pulita */
 .top-carousel{
   background:
     radial-gradient(circle at 18% 10%, rgba(0,194,255,0.10), transparent 45%),
@@ -435,7 +397,6 @@
   box-shadow: 0 28px 70px rgba(3,20,38,0.14) !important;
 }
 
-/* overlay: meno “nero”, più blu istituzionale (leggibilità caption) */
 .carousel-overlay{
   background:
     radial-gradient(circle at 20% 15%, rgba(0,194,255,0.14), transparent 55%),
@@ -443,7 +404,6 @@
     linear-gradient(to top, rgba(3,20,38,0.55), rgba(3,20,38,0.03)) !important;
 }
 
-/* kicker: pill glass coerente con index2 */
 .cap-kicker{
   background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.72)) !important;
   color: var(--filalma-blue) !important;
@@ -452,19 +412,16 @@
   backdrop-filter: blur(10px);
 }
 
-/* titolo: più “istituzionale” e stabile in contrasto */
 .cap-title{
   color: rgba(255,255,255,0.96) !important;
   text-shadow: 0 16px 42px rgba(3,20,38,0.58) !important;
 }
 
-/* testo: leggermente più leggibile e pulito */
 .cap-text{
   color: rgba(255,255,255,0.92) !important;
   text-shadow: 0 14px 34px rgba(3,20,38,0.52) !important;
 }
 
-/* indicatori: effetto “gioiello” come index2 */
 .top-carousel .carousel-indicators [data-bs-target]{
   border: 1px solid rgba(0,194,255,0.55) !important;
   background: rgba(255,255,255,0.75) !important;
@@ -477,7 +434,6 @@
   border-color: rgba(255,255,255,0.65) !important;
 }
 
-/* controlli: meno “dark” e più coerenti (solo filtro, no layout) */
 .top-carousel .carousel-control-prev-icon,
 .top-carousel .carousel-control-next-icon{
   filter: drop-shadow(0 10px 22px rgba(3,20,38,0.45)) saturate(1.05) !important;

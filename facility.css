@@ -100,8 +100,6 @@ body{ background:#020712; color:var(--filalma-text); }
 .meta-item{ display:inline-flex; align-items:center; gap:.45rem; }
 .meta-item i{ color: var(--filalma-turquoise); }
 .dot{ width:4px; height:4px; border-radius:999px; background: rgba(148,163,184,0.6); }
-
-/* HERO CARD */
 .hero-card{
   background: radial-gradient(circle at top, rgba(0,194,255,0.14), #020814 65%, #000 100%);
   border-radius: 1.4rem;
@@ -159,8 +157,6 @@ body{ background:#020712; color:var(--filalma-text); }
   color: var(--filalma-muted);
   font-size: .86rem;
 }
-
-/* SECTIONS */
 .section{ padding: 60px 0; background:#020712; }
 .section-alt{ background:#020814; }
 
@@ -175,7 +171,6 @@ body{ background:#020712; color:var(--filalma-text); }
 .section-title{ font-size: 1.6rem; font-weight: 900; margin-bottom:.5rem; }
 .section-subtitle{ max-width: 860px; margin:0 auto; color: var(--filalma-muted); font-size: .95rem; }
 
-/* FEATURE CARD */
 .feature-card{
   background: radial-gradient(circle at top, rgba(0,194,255,0.12), #020814);
   border-radius: 1.3rem;
@@ -211,7 +206,6 @@ body{ background:#020712; color:var(--filalma-text); }
   border-top: 1px dashed rgba(148,163,184,0.25);
 }
 
-/* SERVICE MINI CARD */
 .service-card{
   display:flex;
   gap:.85rem;
@@ -241,7 +235,6 @@ body{ background:#020712; color:var(--filalma-text); }
 .service-tag{ font-size: .82rem; color:#cbd5f5; }
 .service-tag i{ color: var(--filalma-turquoise); margin-right:.35rem; }
 
-/* Media boxes */
 .media-grid{
   display:grid;
   grid-template-rows: 1fr 1fr;
@@ -289,7 +282,6 @@ body{ background:#020712; color:var(--filalma-text); }
 .media-label i{ color: var(--filalma-turquoise); }
 .media-sub{ color: var(--filalma-muted); font-size: .9rem; }
 
-/* Value cards */
 .value-card{
   background: rgba(2,8,20,0.55);
   border: 1px solid rgba(148,163,184,0.18);
@@ -316,7 +308,6 @@ body{ background:#020712; color:var(--filalma-text); }
 .value-title{ font-weight: 950; margin-bottom: .25rem; }
 .value-text{ color: var(--filalma-muted); font-size: .92rem; }
 
-/* Timeline */
 .timeline-card{
   background: radial-gradient(circle at top, rgba(0,194,255,0.12), #020814);
   border-radius: 1.3rem;
@@ -355,7 +346,6 @@ body{ background:#020712; color:var(--filalma-text); }
   font-size: .9rem;
 }
 
-/* Quote */
 .quote-card{
   background: rgba(2,8,20,0.55);
   border: 1px solid rgba(0,194,255,0.22);
@@ -367,7 +357,6 @@ body{ background:#020712; color:var(--filalma-text); }
 .quote-text{ color:#dbe7ff; font-size: .96rem; line-height: 1.55; }
 .quote-author{ color: var(--filalma-muted); font-size: .85rem; margin-top: .6rem; }
 
-/* CTA */
 .cta-section{
   padding: 60px 0;
   background: radial-gradient(circle at center, #031426, #01030a);
@@ -384,7 +373,6 @@ body{ background:#020712; color:var(--filalma-text); }
 .cta-text{ color: var(--filalma-muted); font-size: .95rem; margin-bottom: 1rem; }
 .cta-pills{ display:flex; flex-wrap:wrap; gap:.6rem; }
 
-/* FOOTER */
 .page-footer{
   padding-block: 18px;
   background:#02030a;
@@ -398,10 +386,7 @@ body{ background:#020712; color:var(--filalma-text); }
   .mini-grid{ grid-template-columns: 1fr; }
   .media-box, .single-media{ min-height: 180px; }
 }
-/* ===========================
- SPECIAL SECTIONS (DARK)
- Portierato + Servizi museali
-=========================== */
+
 
 .spc-section{
 padding: 60px 0;
@@ -412,7 +397,6 @@ position: relative;
 overflow: hidden;
 }
 
-/* variante leggera per differenziare la seconda */
 .spc-section-alt{
 background: #020814;
 }
@@ -596,10 +580,6 @@ font-size: .86rem;
 .spc-wrap{ padding: 1.2rem 1rem; }
 .spc-mini-grid{ grid-template-columns: 1fr; }
 }
-/* ===========================
-   MEDIA (IMG) — DARK
-   sostituisce i placeholder 16:9
-=========================== */
 
 .media-box,
 .single-media{
@@ -611,7 +591,6 @@ font-size: .86rem;
   box-shadow: 0 26px 70px rgba(0,0,0,0.85);
 }
 
-/* altezze coerenti e responsive */
 .media-grid .media-box{
   min-height: 220px;
 }
@@ -620,7 +599,6 @@ font-size: .86rem;
   min-height: 260px;
 }
 
-/* img sempre dentro, senza deformazioni */
 .media-img{
   width: 100%;
   height: 100%;
@@ -638,7 +616,6 @@ font-size: .86rem;
   }
 }
 
-/* overlay sopra immagine */
 .media-overlay{
   position: absolute;
   inset: 0;
@@ -673,7 +650,6 @@ font-size: .86rem;
   text-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* responsive fine-tuning */
 @media (max-width: 991.98px){
   .media-grid .media-box{ min-height: 200px; }
   .single-media{ min-height: 220px; }

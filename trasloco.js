@@ -1,9 +1,8 @@
 (function () {
-  // year
+
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  // Smooth micro: if user clicks anchor, close any open offcanvas (if present from navbar)
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
@@ -11,7 +10,6 @@
     const target = document.querySelector(a.getAttribute('href'));
     if (!target) return;
 
-    // close bootstrap offcanvas if exists
     const ocEl = document.querySelector('.offcanvas.show');
     if (ocEl && window.bootstrap) {
       const instance = bootstrap.Offcanvas.getInstance(ocEl);
