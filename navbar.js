@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
             <ul class="navbar-nav me-3 mb-2 mb-lg-0 gap-lg-2">
               <li class="nav-item">
-                <a class="nav-link active" href="index2.html">
+                <a class="nav-link active" href="index.html">
                   <i class="fa-solid fa-house"></i> Home
                 </a>
               </li>
@@ -88,10 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
                   Consorzio
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="index2.html#chi-siamo">Chi siamo</a></li>
+                  <li><a class="dropdown-item" href="index.html#chi-siamo">Chi siamo</a></li>
                   <li><a class="dropdown-item" href="governance.html">Governance</a></li>
                   <li><a class="dropdown-item" href="formAdesione.html">Vantaggi soci</a></li>
-                  <li><a class="dropdown-item" href="index2.html#certificazioni">Certificazioni e iscrizioni</a></li>
+                  <li><a class="dropdown-item" href="index.html#certificazioni">Certificazioni e iscrizioni</a></li>
                   <li><a class="dropdown-item" href="governance.html#whistleblowing">Segnalazioni</a></li>
                 </ul>
               </li>
@@ -164,10 +164,10 @@ document.addEventListener("DOMContentLoaded", function () {
             </a>
 
             <div class="filalma-offcanvas-section-label">Consorzio</div>
-            <a class="nav-link" href="index2.html#chi-siamo" data-bs-dismiss="offcanvas">Chi siamo</a>
+            <a class="nav-link" href="index.html#chi-siamo" data-bs-dismiss="offcanvas">Chi siamo</a>
             <a class="nav-link" href="governance.html" data-bs-dismiss="offcanvas">Governance</a>
-            <a class="nav-link" href="index2.html#vantaggio-soci" data-bs-dismiss="offcanvas">Vantaggi soci</a>
-            <a class="nav-link mb-2" href="index2.html#certificazioni" data-bs-dismiss="offcanvas">Certificazioni e iscrizioni</a>
+            <a class="nav-link" href="index.html#vantaggio-soci" data-bs-dismiss="offcanvas">Vantaggi soci</a>
+            <a class="nav-link mb-2" href="index.html#certificazioni" data-bs-dismiss="offcanvas">Certificazioni e iscrizioni</a>
             <a class="nav-link mb-2" href="governance.html#whistleblowing" data-bs-dismiss="offcanvas">Segnalazioni</a>
 
             <div class="filalma-offcanvas-section-label">Servizi</div>

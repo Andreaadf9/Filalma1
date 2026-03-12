@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://consorziofilalma.it/sitemap.xml    
